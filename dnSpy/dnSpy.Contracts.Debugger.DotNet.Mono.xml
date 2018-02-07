@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Contracts.Debugger.DotNet.Mono</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.DbgMonoDebugInternalRuntime">
+            <summary>
+            Mono / Unity runtime. It must implement <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.DbgMonoDebugInternalRuntime.Kind">
+            <summary>
+            Gets the kind
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptions">
+            <summary>
+            Debugging options used when connecting to a Mono program
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase">
+            <summary>
+            Debugging options used when connecting to a Mono / Unity program
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.Address">
+            <summary>
+            The IP address <c>mono.exe</c> is listening on or null / empty string to use <c>127.0.0.1</c>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.Port">
+            <summary>
+            The port <c>mono.exe</c> is listening on
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.ConnectionTimeout">
+            <summary>
+            Gets the connection timeout. If it's <see cref="F:System.TimeSpan.Zero"/>, the default timeout is used.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.ProcessIsSuspended">
+            <summary>
+            true if the process is suspended and waiting for the debugger to connect
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.MonoConnectStartDebuggingOptionsBase)">
+            <summary>
+            Copies this instance to <paramref name="other"/>
+            </summary>
+            <param name="other">Destination</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoDebugRuntimeKind">
+            <summary>
+            Mono debug runtime kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoDebugRuntimeKind.Mono">
+            <summary>
+            Mono
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoDebugRuntimeKind.Unity">
+            <summary>
+            Unity
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions">
+            <summary>
+            Debugging options used when starting a Mono program
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions.MonoExePath">
+            <summary>
+            Path to <c>mono.exe</c> or null / empty string if it should be auto detected
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions.MonoExeOptions">
+            <summary>
+            <c>mono.exe</c> options
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions">
+            <summary>
+            <c>mono.exe</c> options
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions.Debug32">
+            <summary>
+            32-bit <c>mono.exe</c> can be used
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions.Debug64">
+            <summary>
+            64-bit <c>mono.exe</c> can be used
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions.Prefer32">
+            <summary>
+            Prefer 32-bit <c>mono.exe</c> over 64-bit <c>mono.exe</c>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Mono.MonoExeOptions.Prefer64">
+            <summary>
+            Prefer 64-bit <c>mono.exe</c> over 32-bit <c>mono.exe</c>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase">
+            <summary>
+            Debugging options used when debugging a Mono / Unity program
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.Filename">
+            <summary>
+            Path to application to debug
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.CommandLine">
+            <summary>
+            Command line
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.WorkingDirectory">
+            <summary>
+            Working directory
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.Environment">
+            <summary>
+            Environment variables
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.ConnectionPort">
+            <summary>
+            Connection port or 0 to use a random port
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.ConnectionTimeout">
+            <summary>
+            Gets the connection timeout. If it's <see cref="F:System.TimeSpan.Zero"/>, the default timeout is used.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.MonoStartDebuggingOptionsBase)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.ThreadStates">
+            <summary>
+            <see cref="P:dnSpy.Contracts.Debugger.DbgThread.State"/> values
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.UnityConnectStartDebuggingOptions">
+            <summary>
+            Debugging options used when connecting to a Unity program
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.UnityConnectStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.UnityConnectStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.UnityConnectStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Mono.UnityStartDebuggingOptions">
+            <summary>
+            Debugging options used when starting a Unity game. The game must use a patched mono.dll.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.UnityStartDebuggingOptions.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.UnityStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.Mono.UnityStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Mono.UnityStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

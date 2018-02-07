@@ -1,0 +1,4115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Contracts.Logic</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Contracts.Decompiler.AddressReference">
+            <summary>
+            An address reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.AddressReference.Filename">
+            <summary>
+            Filename
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.AddressReference.IsRVA">
+            <summary>
+            true if <see cref="P:dnSpy.Contracts.Decompiler.AddressReference.Address"/> is an RVA, false if it's a file offset
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.AddressReference.Address">
+            <summary>
+            Address, either an RVA or a file offset (<see cref="P:dnSpy.Contracts.Decompiler.AddressReference.IsRVA"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.AddressReference.Length">
+            <summary>
+            Length of range
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.AddressReference.#ctor(System.String,System.Boolean,System.UInt64,System.UInt64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="filename">Filename</param>
+            <param name="isRva">true if <paramref name="address"/> is an RVA, false if it's a file offset</param>
+            <param name="address">Address</param>
+            <param name="length">Length</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.AddressReference.Equals(dnSpy.Contracts.Decompiler.AddressReference)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.AddressReference.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.AddressReference.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.BamlDecompilerOptions">
+            <summary>
+            Baml decompiler options
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.BamlDecompilerOptions.InternalClassModifier">
+            <summary>
+            x:ClassModifier value string when type is internal
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BamlDecompilerOptions.Create(dnSpy.Contracts.Decompiler.IDecompiler)">
+            <summary>
+            Creates a new instance
+            </summary>
+            <param name="decompiler">Decompiler</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BamlDecompilerOptions.CreateCSharp">
+            <summary>
+            Creates a new instance with C# values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BamlDecompilerOptions.CreateVisualBasic">
+            <summary>
+            Creates a new instance with VB values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BamlDecompilerOptions.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.BinSpan">
+            <summary>
+            Binary span
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.BinSpan.Start">
+            <summary>
+            Start offset
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.BinSpan.End">
+            <summary>
+            End offset, exclusive
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.BinSpan.Length">
+            <summary>
+            Length (<see cref="P:dnSpy.Contracts.Decompiler.BinSpan.End"/> - <see cref="P:dnSpy.Contracts.Decompiler.BinSpan.Start"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.BinSpan.IsEmpty">
+            <summary>
+            true if it's empty (<see cref="P:dnSpy.Contracts.Decompiler.BinSpan.Length"/> is 0)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="start">Start offset</param>
+            <param name="length">Length</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.FromBounds(System.UInt32,System.UInt32)">
+            <summary>
+            Creates a new instance
+            </summary>
+            <param name="start">Start offset</param>
+            <param name="end">End offset</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.OrderAndCompact(System.Collections.Generic.IEnumerable{dnSpy.Contracts.Decompiler.BinSpan})">
+            <summary>
+            Sorts and compacts <paramref name="input"/>
+            </summary>
+            <param name="input">Input values</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.OrderAndCompactList(System.Collections.Generic.List{dnSpy.Contracts.Decompiler.BinSpan})">
+            <summary>
+            Sorts and compacts <paramref name="input"/>
+            </summary>
+            <param name="input">Input list. It can be sorted, and it can also be returned to the caller.</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.op_Equality(dnSpy.Contracts.Decompiler.BinSpan,dnSpy.Contracts.Decompiler.BinSpan)">
+            <summary>
+            operator ==()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.op_Inequality(dnSpy.Contracts.Decompiler.BinSpan,dnSpy.Contracts.Decompiler.BinSpan)">
+            <summary>
+            operator !=()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.Equals(dnSpy.Contracts.Decompiler.BinSpan)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.BinSpan.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.CodeBracesRange">
+            <summary>
+            Brace pair
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.CodeBracesRange.Left">
+            <summary>
+            Span of start brace
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.CodeBracesRange.Right">
+            <summary>
+            Span of end brace
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.CodeBracesRange.Flags">
+            <summary>
+            Gets the kind
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.CodeBracesRange.#ctor(dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="left">Span of left brace</param>
+            <param name="right">Span of right brace</param>
+            <param name="flags">Flags</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.CodeBracesRangeFlags">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRange"/> flags, see also <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRangeFlags"/> helper methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper.ToBraceKind(dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Extracts the brace kind
+            </summary>
+            <param name="flags">Flags</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper.ToBlockKind(dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Extracts the block kind
+            </summary>
+            <param name="flags">Flags</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper.IsBraces(dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Returns true if it's braces
+            </summary>
+            <param name="flags">Flags</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.CodeBracesRangeFlagsHelper.IsBlock(dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Returns true if it's a block
+            </summary>
+            <param name="flags">Flags</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilationContext">
+            <summary>
+            Decompilation options
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilationContext.CancellationToken">
+            <summary />
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilationContext.IsBodyModified">
+            <summary>
+            Returns true if the method body has been modified
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilationContext.GetDisableAssemblyLoad">
+            <summary>
+            Disables assembly loading until Dispose() gets called
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilationContext.CalculateBinSpans">
+            <summary>
+            true to calculate BinSpans. Used when debugging
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilationContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilationContext.DisableAssemblyLoad">
+            <summary />
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilationContext.GetOrCreate``1">
+            <summary>
+            Gets or creates a cached object
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilationContext.GetOrCreate``1(System.Func{``0})">
+            <summary>
+            Gets or creates a cached object
+            </summary>
+            <typeparam name="T">Type</typeparam>
+            <param name="creator">Creates the object if necessary</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilationType">
+            <summary>
+            Decompilation type
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilationType.PartialType">
+            <summary>
+            Decompiles a partial type, data is a <see cref="T:dnSpy.Contracts.Decompiler.DecompilePartialType"/> instance
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilationType.AssemblyInfo">
+            <summary>
+            Decompiles AssemblyInfo.{cs,vb}, data is a <see cref="T:dnSpy.Contracts.Decompiler.DecompileAssemblyInfo"/> instance
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilationType.TypeMethods">
+            <summary>
+            Decompiles selected methods, the other ones have empty bodies, data is a <see cref="T:dnSpy.Contracts.Decompiler.DecompileTypeMethods"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompileAssemblyInfo">
+            <summary>
+            Decompiles AssemblyInfo.{cs,vb}
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileAssemblyInfo.Module">
+            <summary>
+            Gets the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileAssemblyInfo.KeepAllAttributes">
+            <summary>
+            true to keep all attributes, false to remove attributes that are normally added by MSBuild tasks,
+            eg. <see cref="T:System.Runtime.Versioning.TargetFrameworkAttribute"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompileAssemblyInfo.#ctor(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext,dnlib.DotNet.ModuleDef)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+            <param name="module">Type</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilePartialType">
+            <summary>
+            Decompiles a partial type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.Type">
+            <summary>
+            Type to decompile
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.AddPartialKeyword">
+            <summary>
+            true to add the 'partial' keyword. It's true by default.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.Definitions">
+            <summary>
+            All definitions that must be hidden or shown must be added here
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.ShowDefinitions">
+            <summary>
+            true if members in <see cref="P:dnSpy.Contracts.Decompiler.DecompilePartialType.Definitions"/> should be shown, false if they should be removed
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.UseUsingDeclarations">
+            <summary>
+            true to use using declarations, false to use full namespaces (eg. useful when decompiling
+            WinForms designer files)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilePartialType.InterfacesToRemove">
+            <summary>
+            Interfaces to remove from the type
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilePartialType.#ctor(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext,dnlib.DotNet.TypeDef)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+            <param name="type">Type</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerConstants">
+            <summary>
+            Decompiler constants
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.CSHARP_ILSPY_ORDERUI">
+            <summary>Order of C# language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.VISUALBASIC_ILSPY_ORDERUI">
+            <summary>Order of Visual Basic language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.IL_ILSPY_ORDERUI">
+            <summary>Order of IL language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.CSHARP_ILSPY_DEBUG_ORDERUI">
+            <summary>Order of C# debug languages (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.ILAST_ILSPY_DEBUG_ORDERUI">
+            <summary>Order of ILAst debug languages (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_IL">
+            <summary>IL language</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_IL_ILSPY">
+            <summary>IL language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_ILAST_ILSPY">
+            <summary>ILAst language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_CSHARP">
+            <summary>C# language</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_CSHARP_ILSPY">
+            <summary>C# language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_VISUALBASIC">
+            <summary>Visual Basic language</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_VISUALBASIC_ILSPY">
+            <summary>Visual Basic language (ILSpy)</summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.GENERIC_NAMEUI_IL">
+            <summary>Name of IL language returned by <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericNameUI"/></summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.GENERIC_NAMEUI_CSHARP">
+            <summary>Name of C# language returned by <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericNameUI"/></summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerConstants.GENERIC_NAMEUI_VISUALBASIC">
+            <summary>Name of Visual Basic language returned by <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericNameUI"/></summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerOptionConstants">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOption"/> constants
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILComments_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILComments_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowXmlDocumentation_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowXmlDocumentation_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowTokenAndRvaComments_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowTokenAndRvaComments_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILBytes_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILBytes_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortMembers_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortMembers_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowPdbInfo_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowPdbInfo_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MemberOrder_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MemberOrder_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AnonymousMethods_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AnonymousMethods_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ExpressionTrees_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ExpressionTrees_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.YieldReturn_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.YieldReturn_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AsyncAwait_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AsyncAwait_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AutomaticProperties_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AutomaticProperties_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AutomaticEvents_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AutomaticEvents_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UsingStatement_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UsingStatement_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ForEachStatement_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ForEachStatement_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.LockStatement_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.LockStatement_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SwitchStatementOnString_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SwitchStatementOnString_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UsingDeclarations_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UsingDeclarations_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.QueryExpressions_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.QueryExpressions_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.FullyQualifyAmbiguousTypeNames_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.FullyQualifyAmbiguousTypeNames_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.FullyQualifyAllTypes_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.FullyQualifyAllTypes_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UseDebugSymbols_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UseDebugSymbols_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ObjectOrCollectionInitializers_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ObjectOrCollectionInitializers_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.RemoveEmptyDefaultConstructors_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.RemoveEmptyDefaultConstructors_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.IntroduceIncrementAndDecrement_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.IntroduceIncrementAndDecrement_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MakeAssignmentExpressions_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MakeAssignmentExpressions_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AlwaysGenerateExceptionVariableForCatchBlocksUnlessTypeIsObject_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AlwaysGenerateExceptionVariableForCatchBlocksUnlessTypeIsObject_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ForceShowAllMembers_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ForceShowAllMembers_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortSystemUsingStatementsFirst_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortSystemUsingStatementsFirst_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MaxArrayElements_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MaxArrayElements_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortCustomAttributes_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.SortCustomAttributes_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UseSourceCodeOrder_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.UseSourceCodeOrder_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AllowFieldInitializers_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.AllowFieldInitializers_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.OneCustomAttributePerLine_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.OneCustomAttributePerLine_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.TypeAddInternalModifier_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.TypeAddInternalModifier_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MemberAddPrivateModifier_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.MemberAddPrivateModifier_NAME">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.RemoveNewDelegateClass_GUID">
+            <summary />
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.RemoveNewDelegateClass_NAME">
+            <summary />
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags">
+            <summary>
+            Flags used by <see cref="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags.Definition">
+            <summary>
+            It's a definition (method declaration, field declaration etc) if set, else it's a reference to the definition
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags.Local">
+            <summary>
+            It's a local definition or reference, eg. a method parameter, method local, method label.
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags.IsWrite">
+            <summary>
+            The code writes to the reference
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.DecompilerReferenceFlags.Hidden">
+            <summary>
+            Reference shouldn't be highlighted
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerSettingsBase">
+            <summary>
+            Decompiler settings
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.Clone">
+            <summary>
+            Clones the settings
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.Options">
+            <summary>
+            Gets all options
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.TryGetOption(System.Guid)">
+            <summary>
+            Returns an option or null
+            </summary>
+            <param name="guid">Guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.TryGetOption(System.String)">
+            <summary>
+            Returns an option or null
+            </summary>
+            <param name="name">Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.GetBoolean(System.Guid)">
+            <summary>
+            Returns a boolean or false if the option doesn't exist
+            </summary>
+            <param name="guid">Guid</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.GetBoolean(System.String)">
+            <summary>
+            Returns a boolean or false if the option doesn't exist
+            </summary>
+            <param name="name">Name</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.Equals(System.Object)">
+            <summary>
+            Returns true if this instance equals <paramref name="obj"/>
+            </summary>
+            <param name="obj">Other object, may be null</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerSettingsBase.GetHashCode">
+            <summary>
+            Gets the hash code of this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompileTypeBase">
+            <summary>
+            Base class of <see cref="T:dnSpy.Contracts.Decompiler.DecompilationType"/> data
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeBase.Output">
+            <summary>
+            Output
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeBase.Context">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompileTypeBase.#ctor(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompileTypeMethods">
+            <summary>
+            Decompiles some methods
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.Type">
+            <summary>
+            Type to decompile
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.Methods">
+            <summary>
+            Methods to decompile. All the other methods will have an empty body, except for possible
+            <code>return default(XXX);</code> statements and other code to keep the compiler happy.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.ShowAll">
+            <summary>
+            true to decompile everything
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.DecompileHidden">
+            <summary>
+            true to only decompile methods and members not stored in <see cref="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.Methods"/>,
+            false to only decompile methods and members stored in <see cref="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.Methods"/>.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.DecompileTypeMethods.MakeEverythingPublic">
+            <summary>
+            true to make every type, method, field, property, event public
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompileTypeMethods.#ctor(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext,dnlib.DotNet.TypeDef)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+            <param name="type">Type</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.Extensions">
+            <summary>
+            Extensions
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.IsDefined(dnlib.DotNet.IHasCustomAttribute,dnlib.DotNet.UTF8String,dnlib.DotNet.UTF8String)">
+            <summary>
+            Checks whether a custom attribute exists
+            </summary>
+            <param name="provider">Custom attribute provider</param>
+            <param name="namespace">Namespace of custom attribute</param>
+            <param name="name">Name of custom attribute</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.GetRVA(dnlib.DotNet.IMemberDef,System.UInt32@,System.Int64@)">
+            <summary>
+            Gets the RVA and file offset of a member definition. Returns false if the RVA and
+            file offsets aren't known or if there's no RVA (eg. there's no method body)
+            </summary>
+            <param name="member">Member</param>
+            <param name="rva">Updated with the RVA</param>
+            <param name="fileOffset">Updated with the file offset</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.ToFileOffset(dnlib.DotNet.ModuleDef,System.UInt32)">
+            <summary>
+            Converts an RVA to a file offset
+            </summary>
+            <param name="module">Module</param>
+            <param name="rva">RVA</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.GetCodeSize(dnlib.DotNet.Emit.CilBody)">
+            <summary>
+            Gets the size of the code in the method body
+            </summary>
+            <param name="body">Method body, can be null</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.GetParameters(dnlib.DotNet.IMethod)">
+            <summary>
+            Gets all parameters
+            </summary>
+            <param name="method">Method</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.GetPropertyAndEventMethods(dnlib.DotNet.TypeDef)">
+            <summary>
+            Gets all methods that are part of properties or events
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.IsIndexer(dnlib.DotNet.PropertyDef)">
+            <summary>
+            Checks whether <paramref name="property"/> is an indexer property
+            </summary>
+            <param name="property">Property to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.Resolve(dnlib.DotNet.IType)">
+            <summary>
+            Resolves a type
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.CanSortFields(dnlib.DotNet.TypeDef)">
+            <summary>
+            Returns true if the fields can be sorted and false if the original metadata order must be used
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.CanSortMethods(dnlib.DotNet.TypeDef)">
+            <summary>
+            Returns true if the methods can be sorted and false if the original metadata order must be used
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.Extensions.GetNonSortedMethodsPropertiesEvents(dnlib.DotNet.TypeDef)">
+            <summary>
+            Gets all methods, properties and events. They're returned in the original metadata order.
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.FormatterOptions">
+            <summary>
+            Formatter options
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.GenericArgumentResolver">
+            <summary>
+            Resolves generic arguments
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.GenericArgumentResolver.Resolve(dnlib.DotNet.TypeSig,System.Collections.Generic.IList{dnlib.DotNet.TypeSig},System.Collections.Generic.IList{dnlib.DotNet.TypeSig})">
+            <summary>
+            Resolves the type signature with the specified generic arguments.
+            </summary>
+            <param name="typeSig">The type signature.</param>
+            <param name="typeGenArgs">The type generic arguments.</param>
+            <param name="methodGenArgs">The method generic arguments.</param>
+            <returns>Resolved type signature.</returns>
+            <exception cref="T:System.ArgumentException">No generic arguments to resolve.</exception>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.GenericArgumentResolver.Resolve(dnlib.DotNet.MethodBaseSig,System.Collections.Generic.IList{dnlib.DotNet.TypeSig},System.Collections.Generic.IList{dnlib.DotNet.TypeSig})">
+            <summary>
+            Resolves the method signature with the specified generic arguments.
+            </summary>
+            <param name="methodSig">The method signature.</param>
+            <param name="typeGenArgs">The type generic arguments.</param>
+            <param name="methodGenArgs">The method generic arguments.</param>
+            <returns>Resolved method signature.</returns>
+            <exception cref="T:System.ArgumentException">No generic arguments to resolve.</exception>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IBamlDecompiler">
+            <summary>
+            Baml to xaml decompiler
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IBamlDecompiler.Decompile(dnlib.DotNet.ModuleDef,System.Byte[],System.Threading.CancellationToken,dnSpy.Contracts.Decompiler.BamlDecompilerOptions,System.IO.Stream,dnSpy.Contracts.Decompiler.XamlOutputOptions)">
+            <summary>
+            Decompiles baml to xaml. Returns all assembly references.
+            </summary>
+            <param name="module">Module</param>
+            <param name="data">Baml data</param>
+            <param name="token">Cancellation token</param>
+            <param name="bamlDecompilerOptions">Options</param>
+            <param name="output">Output stream</param>
+            <param name="outputOptions">Output options</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IXamlOutputOptionsProvider">
+            <summary>
+            Provides <see cref="T:dnSpy.Contracts.Decompiler.XamlOutputOptions"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IXamlOutputOptionsProvider.Default">
+            <summary>
+            Gets the default options that gets changed by the user
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XamlOutputOptions">
+            <summary>
+            XAML output options
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.XamlOutputOptions.IndentChars">
+            <summary>
+            Indent characters
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.XamlOutputOptions.NewLineChars">
+            <summary>
+            Newline characters
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.XamlOutputOptions.NewLineOnAttributes">
+            <summary>
+            Add a newline after each attribute
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IDecompiler">
+            <summary>
+            A decompiler
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.Settings">
+            <summary>
+            Gets the settings
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.MetadataTextColorProvider">
+            <summary>
+            Gets the <see cref="T:dnSpy.Contracts.Decompiler.MetadataTextColorProvider"/> instance
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.ContentTypeString">
+            <summary>
+            Gets the content type string
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericNameUI">
+            <summary>
+            Real name of the language, eg. "C#" if it's C#. See also <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.UniqueNameUI"/>.
+            It's used when the real language name must be shown to the user.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.UniqueNameUI">
+            <summary>
+            Language name shown to the user, and can contain extra info eg. "C# XYZ", see also
+            <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericNameUI"/>.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.OrderUI">
+            <summary>
+            Order of language when shown to the user, eg. <see cref="F:dnSpy.Contracts.Decompiler.DecompilerConstants.CSHARP_ILSPY_ORDERUI"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericGuid">
+            <summary>
+            Language guid, eg. <see cref="F:dnSpy.Contracts.Decompiler.DecompilerConstants.LANGUAGE_CSHARP"/>, see also <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.UniqueGuid"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.UniqueGuid">
+            <summary>
+            Unique language guid, see also <see cref="P:dnSpy.Contracts.Decompiler.IDecompiler.GenericGuid"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.FileExtension">
+            <summary>
+            File extension, eg. .cs, can't be null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompiler.ProjectFileExtension">
+            <summary>
+            Project file extension, eg. .csproj or null if it's not supported
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteName(dnSpy.Contracts.Text.ITextColorWriter,dnlib.DotNet.TypeDef)">
+            <summary>
+            Writes a type name
+            </summary>
+            <param name="output">Output</param>
+            <param name="type">Type</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteName(dnSpy.Contracts.Text.ITextColorWriter,dnlib.DotNet.PropertyDef,System.Nullable{System.Boolean})">
+            <summary>
+            Writes a property name
+            </summary>
+            <param name="output">Output</param>
+            <param name="property">Type</param>
+            <param name="isIndexer">true if it's an indexer</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteType(dnSpy.Contracts.Text.ITextColorWriter,dnlib.DotNet.ITypeDefOrRef,System.Boolean,dnlib.DotNet.ParamDef)">
+            <summary>
+            Writes a type name
+            </summary>
+            <param name="output">Output</param>
+            <param name="type">Type</param>
+            <param name="includeNamespace">true to include namespace</param>
+            <param name="pd"><see cref="T:dnlib.DotNet.ParamDef"/> or null</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.MethodDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a method
+            </summary>
+            <param name="method">Method</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.PropertyDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a property
+            </summary>
+            <param name="property">Property</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.FieldDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a field
+            </summary>
+            <param name="field">Field</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.EventDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles an event
+            </summary>
+            <param name="ev">Event</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.TypeDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a type
+            </summary>
+            <param name="type">Type</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.DecompileNamespace(System.String,System.Collections.Generic.IEnumerable{dnlib.DotNet.TypeDef},dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a namespace
+            </summary>
+            <param name="namespace">Namespace</param>
+            <param name="types">Types in namespace</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.AssemblyDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles an assembly
+            </summary>
+            <param name="asm">Assembly</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnlib.DotNet.ModuleDef,dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.DecompilationContext)">
+            <summary>
+            Decompiles a module
+            </summary>
+            <param name="mod">Module</param>
+            <param name="output">Output</param>
+            <param name="ctx">Context</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteToolTip(dnSpy.Contracts.Text.ITextColorWriter,dnlib.DotNet.IMemberRef,dnlib.DotNet.IHasCustomAttribute)">
+            <summary>
+            Writes a tooltip
+            </summary>
+            <param name="output">Output</param>
+            <param name="member">Member</param>
+            <param name="typeAttributes">Type containing attributes, used to detect the dynamic types and out/ref params</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteToolTip(dnSpy.Contracts.Text.ITextColorWriter,dnSpy.Contracts.Decompiler.ISourceVariable)">
+            <summary>
+            Writes a tooltip
+            </summary>
+            <param name="output">Output</param>
+            <param name="variable">Local or argument</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteNamespaceToolTip(dnSpy.Contracts.Text.ITextColorWriter,System.String)">
+            <summary>
+            Writes a namespace tooltip
+            </summary>
+            <param name="output">Output</param>
+            <param name="namespace">Namespace</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Write(dnSpy.Contracts.Text.ITextColorWriter,dnlib.DotNet.IMemberRef,dnSpy.Contracts.Decompiler.FormatterOptions)">
+            <summary>
+            Writes <paramref name="member"/> to <paramref name="output"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="member">Member</param>
+            <param name="flags">Flags</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteCommentBegin(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.Boolean)">
+            <summary>
+            Writes a comment prefix
+            </summary>
+            <param name="output">Output</param>
+            <param name="addSpace">true to add a space before the comment prefix</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.WriteCommentEnd(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.Boolean)">
+            <summary>
+            Writes a comment suffix
+            </summary>
+            <param name="output">Output</param>
+            <param name="addSpace">true to add a space before the comment suffix (if it's written)</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.ShowMember(dnlib.DotNet.IMemberRef)">
+            <summary>
+            Returns true if the member is visible. Can be used to hide compiler generated types, methods etc
+            </summary>
+            <param name="member">Member</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.CanDecompile(dnSpy.Contracts.Decompiler.DecompilationType)">
+            <summary>
+            Returns true if <paramref name="decompilationType"/> is supported and
+            <see cref="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnSpy.Contracts.Decompiler.DecompilationType,System.Object)"/> can be called.
+            </summary>
+            <param name="decompilationType">Decompilation type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompiler.Decompile(dnSpy.Contracts.Decompiler.DecompilationType,System.Object)">
+            <summary>
+            Decompiles some data. Should only be called if <see cref="M:dnSpy.Contracts.Decompiler.IDecompiler.CanDecompile(dnSpy.Contracts.Decompiler.DecompilationType)"/>
+            returns true
+            </summary>
+            <param name="decompilationType">Decompilation type</param>
+            <param name="data">Data, see <see cref="T:dnSpy.Contracts.Decompiler.DecompilationType"/></param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerExtensionMethods">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerExtensionMethods.WriteCommentLine(dnSpy.Contracts.Decompiler.IDecompiler,dnSpy.Contracts.Decompiler.IDecompilerOutput,System.String)">
+            <summary>
+            Writes a comment and a new line
+            </summary>
+            <param name="self">This</param>
+            <param name="output">Output</param>
+            <param name="comment">Comment</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IDecompilerCreator">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Decompiler.IDecompiler"/>s
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerCreator.Create">
+            <summary>
+            Creates all decompilers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IDecompilerOption">
+            <summary>
+            Decompiler option
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOption.Guid">
+            <summary>
+            Guid, eg. <see cref="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILComments_GUID"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOption.Name">
+            <summary>
+            Name or null, eg. <see cref="F:dnSpy.Contracts.Decompiler.DecompilerOptionConstants.ShowILComments_NAME"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOption.Description">
+            <summary>
+            Description or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOption.Type">
+            <summary>
+            Type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOption.Value">
+            <summary>
+            Gets/sets the value
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IDecompilerOutput">
+            <summary>
+            Interface used by decompilers to write text
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOutput.Length">
+            <summary>
+            Gets the total number of written characters
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOutput.NextPosition">
+            <summary>
+            This equals <see cref="P:dnSpy.Contracts.Decompiler.IDecompilerOutput.Length"/> plus any indentation that must be written
+            before the next text.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.IncreaseIndent">
+            <summary>
+            Increments the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.DecreaseIndent">
+            <summary>
+            Decrements the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.WriteLine">
+            <summary>
+            Writes a new line without writing any indentation
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.AddCustomData``1(System.String,``0)">
+            <summary>
+            Adds custom data to a list
+            </summary>
+            <typeparam name="TData">Type of data to store</typeparam>
+            <param name="id">Key, eg., <see cref="F:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds.DebugInfo"/></param>
+            <param name="data">Data to add. If a span is needed, see <see cref="T:dnSpy.Contracts.Decompiler.TextSpanData`1"/></param>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IDecompilerOutput.UsesCustomData">
+            <summary>
+            true if custom data added by <see cref="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.AddCustomData``1(System.String,``0)"/> is used
+            and isn't ignored. If this is false, <see cref="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.AddCustomData``1(System.String,``0)"/> doesn't
+            have to be called.
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOutput"/> extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddDebugInfo(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.MethodDebugInfo)">
+            <summary>
+            Adds debug info to the custom data collection, see also <see cref="P:dnSpy.Contracts.Decompiler.IDecompilerOutput.UsesCustomData"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="methodDebugInfo">Debug info</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddSpanReference(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.SpanReference)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.SpanReference"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="spanReference">Data</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddSpanReference(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.Object,System.Int32,System.Int32,System.String)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.SpanReference"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="reference">Reference</param>
+            <param name="start">Start position</param>
+            <param name="end">End position</param>
+            <param name="id">Reference id or null, eg. <see cref="F:dnSpy.Contracts.Decompiler.PredefinedSpanReferenceIds.HighlightRelatedKeywords"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddCodeBracesRange(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.CodeBracesRange)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRange"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="range">Range</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddBracePair(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.CodeBracesRangeFlags)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRange"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="start">Start span</param>
+            <param name="end">End span</param>
+            <param name="flags">Flags</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddLineSeparator(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.Int32)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.LineSeparator"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="position">Position of the line that gets a line separator</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.WriteLine(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.String,System.Object)">
+            <summary>
+            Writes text and a new line
+            </summary>
+            <param name="output">Output</param>
+            <param name="text">Text</param>
+            <param name="color">Color</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.WriteXmlDoc(dnSpy.Contracts.Decompiler.IDecompilerOutput,System.String)">
+            <summary>
+            Writes XML documentation
+            </summary>
+            <param name="output">Output</param>
+            <param name="xmlDocText">XML documentation</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IDecompilerProvider">
+            <summary>
+            Returns decompilers. It must have a default constructor.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IDecompilerProvider.Create">
+            <summary>
+            Creates all decompilers it can create
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IdentifierEscaper">
+            <summary>
+            Escapes identifiers
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IdentifierEscaper.Truncate(System.String)">
+            <summary>
+            Truncates the length of <paramref name="s"/> if it's too long
+            </summary>
+            <param name="s">Identifier string</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IdentifierEscaper.Escape(System.String)">
+            <summary>
+            Escapes an identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.IInstructionBytesReader">
+            <summary>
+            Instruction bytes reader
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.IInstructionBytesReader.IsOriginalBytes">
+            <summary>
+            true if it's reading the original bytes, false if the method has been modified
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IInstructionBytesReader.ReadByte">
+            <summary>
+            Reads the next byte or returns a value less than 0 if the byte is unknown
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.IInstructionBytesReader.SetInstruction(System.Int32,System.UInt32)">
+            <summary>
+            Initializes the next instruction that should be read
+            </summary>
+            <param name="index">Index of the instruction in the method body</param>
+            <param name="offset">Offset of the instruction in the stream</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.InstructionReference">
+            <summary>
+            Instruction reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.InstructionReference.Method">
+            <summary>
+            Method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.InstructionReference.Instruction">
+            <summary>
+            Instruction
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.InstructionReference.#ctor(dnlib.DotNet.MethodDef,dnlib.DotNet.Emit.Instruction)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="method">Method</param>
+            <param name="instruction">Instruction</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.InstructionReference.Equals(dnSpy.Contracts.Decompiler.InstructionReference)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.InstructionReference.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.InstructionReference.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.ISimpleILPrinter">
+            <summary>
+            Simple IL printer. Only used by the asm editor
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISimpleILPrinter.Order">
+            <summary>
+            Gets the order
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.ISimpleILPrinter.Write(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnlib.DotNet.IMemberRef)">
+            <summary>
+            Writes a line to <paramref name="output"/>
+            </summary>
+            <param name="output">Output</param>
+            <param name="member">Member</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.ISimpleILPrinter.Write(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnlib.DotNet.MethodSig)">
+            <summary>
+            Writes a method signature
+            </summary>
+            <param name="output">Output</param>
+            <param name="sig">Signature</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.ISimpleILPrinter.Write(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnlib.DotNet.TypeSig)">
+            <summary>
+            Writes a type
+            </summary>
+            <param name="output">Output</param>
+            <param name="type">Type</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.ISourceVariable">
+            <summary>
+            A local or parameter present in decompiled code
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.Variable">
+            <summary>
+            Gets the real local or parameter or null if it's a decompiler generated variable
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.IsLocal">
+            <summary>
+            true if this is a local
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.IsParameter">
+            <summary>
+            true if this is a parameter
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.Name">
+            <summary>
+            Gets the name of the variable the decompiler used. It could be different from the real name if the decompiler renamed it.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.Type">
+            <summary>
+            Gets the type of the variable
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ISourceVariable.IsDecompilerGenerated">
+            <summary>
+            true if this is a decompiler generated variable
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.LineSeparator">
+            <summary>
+            Line separator
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.LineSeparator.Position">
+            <summary>
+            Gets the position of the line that gets a line separator
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.LineSeparator.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="position">Position of the line that gets a line separator</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MemberRefComparer`1">
+            <summary>
+            Member comparer base class
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MemberRefComparer`1.Compare(`0,`0)">
+            <summary>
+            Compares two instances
+            </summary>
+            <param name="x">First instance to compare</param>
+            <param name="y">Second instance to compare</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TypeDefComparer">
+            <summary>
+            <see cref="T:dnlib.DotNet.TypeDef"/> comparer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.TypeDefComparer.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.FieldDefComparer">
+            <summary>
+            <see cref="T:dnlib.DotNet.FieldDef"/> comparer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.FieldDefComparer.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.EventDefComparer">
+            <summary>
+            <see cref="T:dnlib.DotNet.EventDef"/> comparer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.EventDefComparer.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.PropertyDefComparer">
+            <summary>
+            <see cref="T:dnlib.DotNet.PropertyDef"/> comparer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PropertyDefComparer.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDefComparer">
+            <summary>
+            <see cref="T:dnlib.DotNet.MethodDef"/> comparer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.MethodDefComparer.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDefComparer.Compare(dnlib.DotNet.MethodDef,dnlib.DotNet.MethodDef)">
+            <summary>
+            Compares two instances
+            </summary>
+            <param name="x">First instance to compare</param>
+            <param name="y">Second instance to compare</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MetadataTextColorProvider">
+            <summary>
+            Provides text colors
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.TypeDef)">
+            <summary>
+            Gets a type color
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.TypeRef)">
+            <summary>
+            Gets a type color
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.IMemberRef)">
+            <summary>
+            Gets a member color
+            </summary>
+            <param name="memberRef">Member</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.GenericSig)">
+            <summary>
+            Gets a generic signature color
+            </summary>
+            <param name="genericSig">Generic signature</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.GenericParam)">
+            <summary>
+            Gets a generic parameter color
+            </summary>
+            <param name="genericParam">Generic parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.ExportedType)">
+            <summary>
+            Gets an exported type color
+            </summary>
+            <param name="exportedType">Exported type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(dnlib.DotNet.TypeSig)">
+            <summary>
+            Gets a type signature color
+            </summary>
+            <param name="typeSig">Type signature</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MetadataTextColorProvider.GetColor(System.Object)">
+            <summary>
+            Gets a color
+            </summary>
+            <param name="obj">Object, eg. an instruction operand</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.CSharpMetadataTextColorProvider">
+            <summary>
+            C# <see cref="T:dnSpy.Contracts.Text.TextColor"/> provider
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.CSharpMetadataTextColorProvider.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.VisualBasicMetadataTextColorProvider">
+            <summary>
+            Visual Basic <see cref="T:dnSpy.Contracts.Text.TextColor"/> provider
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.VisualBasicMetadataTextColorProvider.Instance">
+            <summary>
+            Gets the instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.VisualBasicMetadataTextColorProvider.GetColor(dnlib.DotNet.TypeDef)">
+            <summary>
+            Gets a type color
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDebugInfo">
+            <summary>
+            Method statements
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.DecompilerOptionsVersion">
+            <summary>
+            Decompiler options version number
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.Method">
+            <summary>
+            Gets the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.Statements">
+            <summary>
+            Gets all statements, sorted by <see cref="P:dnSpy.Contracts.Decompiler.BinSpan.Start"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.Scope">
+            <summary>
+            Gets the root scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.Span">
+            <summary>
+            Method span or the default value (position 0, length 0) if it's not known
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.HasSpan">
+            <summary>
+            true if <see cref="P:dnSpy.Contracts.Decompiler.MethodDebugInfo.Span"/> is a valid method span
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfo.#ctor(System.Int32,dnlib.DotNet.MethodDef,dnSpy.Contracts.Decompiler.SourceStatement[],dnSpy.Contracts.Decompiler.MethodDebugScope,System.Nullable{dnSpy.Contracts.Decompiler.TextSpan})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="decompilerOptionsVersion">Decompiler options version number. This version number should get incremented when the options change.</param>
+            <param name="method">Method</param>
+            <param name="statements">Statements</param>
+            <param name="scope">Root scope</param>
+            <param name="methodSpan">Method span or null to calculate it from <paramref name="statements"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfo.GetRanges(dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            Gets step ranges
+            </summary>
+            <param name="sourceStatement">Source statement</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfo.GetUnusedRanges">
+            <summary>
+            Gets unused step ranges
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfo.GetSourceStatementByTextOffset(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Gets a <see cref="T:dnSpy.Contracts.Decompiler.SourceStatement"/>
+            </summary>
+            <param name="lineStart">Offset of start of line</param>
+            <param name="lineEnd">Offset of end of line</param>
+            <param name="textPosition">Position in text document</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfo.GetSourceStatementByCodeOffset(System.UInt32)">
+            <summary>
+            Gets a <see cref="T:dnSpy.Contracts.Decompiler.SourceStatement"/>
+            </summary>
+            <param name="ilOffset">IL offset</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder">
+            <summary>
+            Builds <see cref="T:dnSpy.Contracts.Decompiler.MethodDebugInfo"/> instances
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.Scope">
+            <summary>
+            Gets the scope builder
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.StartPosition">
+            <summary>
+            Start of method (eg. position of the first character of the modifier or return type)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.EndPosition">
+            <summary>
+            End of method (eg. after the last brace)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.#ctor(System.Int32,dnlib.DotNet.MethodDef)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="decompilerOptionsVersion">Decompiler options version number. This version number should get incremented when the options change.</param>
+            <param name="method">Method</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.#ctor(System.Int32,dnlib.DotNet.MethodDef,dnSpy.Contracts.Decompiler.SourceLocal[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="decompilerOptionsVersion">Decompiler options version number. This version number should get incremented when the options change.</param>
+            <param name="method">Method</param>
+            <param name="locals">Locals</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.Add(dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            Adds a <see cref="T:dnSpy.Contracts.Decompiler.SourceStatement"/>
+            </summary>
+            <param name="statement">Statement</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugInfoBuilder.Create">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Decompiler.MethodDebugInfo"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDebugScope">
+            <summary>
+            Method scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScope.Span">
+            <summary>
+            Gets the span of this scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScope.Scopes">
+            <summary>
+            Gets all child scopes
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScope.Locals">
+            <summary>
+            Gets all new locals in the scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScope.Imports">
+            <summary>
+            Gets all new imports in the scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScope.Constants">
+            <summary>
+            Gets all new constants in the scope
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugScope.#ctor(dnSpy.Contracts.Decompiler.BinSpan,dnSpy.Contracts.Decompiler.MethodDebugScope[],dnSpy.Contracts.Decompiler.SourceLocal[],dnSpy.Contracts.Decompiler.ImportInfo[],dnSpy.Contracts.Decompiler.MethodDebugConstant[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="span">Scope span</param>
+            <param name="scopes">Child scopes</param>
+            <param name="locals">Locals</param>
+            <param name="imports">Imports</param>
+            <param name="constants">Constants</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.ImportInfoKind">
+            <summary>
+            Import kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.Namespace">
+            <summary>
+            Namespace import
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.Type">
+            <summary>
+            Type import
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.NamespaceOrType">
+            <summary>
+            Namespace or type import
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.Assembly">
+            <summary>
+            C#: extern alias
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.XmlNamespace">
+            <summary>
+            VB: XML import
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.MethodToken">
+            <summary>
+            VB: token of method with imports
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.CurrentNamespace">
+            <summary>
+            VB: containing namespace
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.ImportInfoKind.DefaultNamespace">
+            <summary>
+            VB: root namespace
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.VBImportScopeKind">
+            <summary>
+            Visual Basic import scope kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.VBImportScopeKind.None">
+            <summary>
+            Unspecified scope
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.VBImportScopeKind.File">
+            <summary>
+            File scope
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.VBImportScopeKind.Project">
+            <summary>
+            Project scope
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.ImportInfo">
+            <summary>
+            Import info
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ImportInfo.TargetKind">
+            <summary>
+            Target kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ImportInfo.VBImportScopeKind">
+            <summary>
+            Gets the VB import scope kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ImportInfo.Target">
+            <summary>
+            Target
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ImportInfo.Alias">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.ImportInfo.ExternAlias">
+            <summary>
+            Extern alias
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.ImportInfo.#ctor(dnSpy.Contracts.Decompiler.ImportInfoKind,System.String,System.String,System.String,dnSpy.Contracts.Decompiler.VBImportScopeKind)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="targetKind">Target kind</param>
+            <param name="target">Target string</param>
+            <param name="alias">Alias</param>
+            <param name="externAlias">Extern alias</param>
+            <param name="importScopeKind">VB import scope kind</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDebugConstant">
+            <summary>
+            A constant value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugConstant.Name">
+            <summary>
+            Gets the name of the constant
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugConstant.Type">
+            <summary>
+            Gets the type of the constant
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugConstant.Value">
+            <summary>
+            Gets the constant value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugConstant.#ctor(System.String,dnlib.DotNet.TypeSig,System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of constant</param>
+            <param name="type">Type of constant</param>
+            <param name="value">Constant value</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Decompiler.MethodDebugScope"/> builder
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.Span">
+            <summary>
+            Gets the span of this scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.Scopes">
+            <summary>
+            Gets all child scopes
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.Locals">
+            <summary>
+            Gets all new locals in the scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.Imports">
+            <summary>
+            Gets all new imports in the scope
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.Constants">
+            <summary>
+            Gets all new constants in the scope
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodDebugScopeBuilder.ToScope">
+            <summary>
+            Creates a new <see cref="T:dnSpy.Contracts.Decompiler.MethodDebugScope"/> instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodSourceStatement">
+            <summary>
+            Method and statement
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodSourceStatement.Method">
+            <summary>
+            Gets the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodSourceStatement.Statement">
+            <summary>
+            Gets the statement
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.#ctor(dnlib.DotNet.MethodDef,dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="method">Method</param>
+            <param name="statement">Statement</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.op_Equality(dnSpy.Contracts.Decompiler.MethodSourceStatement,dnSpy.Contracts.Decompiler.MethodSourceStatement)">
+            <summary>
+            operator ==()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.op_Inequality(dnSpy.Contracts.Decompiler.MethodSourceStatement,dnSpy.Contracts.Decompiler.MethodSourceStatement)">
+            <summary>
+            operator !=()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.Equals(dnSpy.Contracts.Decompiler.MethodSourceStatement)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodSourceStatement.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.MethodStatementReference">
+            <summary>
+            Method statement reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodStatementReference.Method">
+            <summary>
+            Gets the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.MethodStatementReference.Offset">
+            <summary>
+            Gets the offset or null
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodStatementReference.#ctor(dnlib.DotNet.MethodDef,System.Nullable{System.UInt32})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="method">Method</param>
+            <param name="offset">Offset or null</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodStatementReference.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.MethodStatementReference.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.NamespaceReference">
+            <summary>
+            Namespace reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.NamespaceReference.Namespace">
+            <summary>
+            Gets the namespace or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.NamespaceReference.Assembly">
+            <summary>
+            Gets the assembly, could be null
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.NamespaceReference.#ctor(dnlib.DotNet.IAssembly,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="assembly">Target assembly</param>
+            <param name="namespace">Namespace</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.NamespaceReference.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.NamespaceReference.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds">
+            <summary>
+            Predefined custom data IDs passed to <see cref="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.AddCustomData``1(System.String,``0)"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds.DebugInfo">
+            <summary>
+            TData = <see cref="T:dnSpy.Contracts.Decompiler.MethodDebugInfo"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds.SpanReference">
+            <summary>
+            TData = <see cref="T:dnSpy.Contracts.Decompiler.SpanReference"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds.CodeBracesRange">
+            <summary>
+            TData = <see cref="T:dnSpy.Contracts.Decompiler.CodeBracesRange"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PredefinedCustomDataIds.LineSeparator">
+            <summary>
+            TData = <see cref="T:dnSpy.Contracts.Decompiler.LineSeparator"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.PredefinedSpanReferenceIds">
+            <summary>
+            Ids used by <see cref="T:dnSpy.Contracts.Decompiler.SpanReference"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.PredefinedSpanReferenceIds.HighlightRelatedKeywords">
+            <summary>
+            Highlighted keyword reference, eg. related keywords are highlighted by default in Visual Basic,
+            eg. 'If' and 'End If'.
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.SourceLocal">
+            <summary>
+            A local present in decompiled code
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceLocal.Local">
+            <summary>
+            The local or null if it's a decompiler generated local (see <see cref="P:dnSpy.Contracts.Decompiler.SourceLocal.IsDecompilerGenerated"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceLocal.Name">
+            <summary>
+            Gets the name of the local the decompiler used. It could be different from the real name if the decompiler renamed it.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceLocal.Type">
+            <summary>
+            Gets the type of the local
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceLocal.IsDecompilerGenerated">
+            <summary>
+            true if this is a decompiler generated local
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceLocal.#ctor(dnlib.DotNet.Emit.Local,System.String,dnlib.DotNet.TypeSig)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="local">Local or null if it's a decompiler generated local</param>
+            <param name="name">Name used by the decompiler</param>
+            <param name="type">Type of local</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.SourceParameter">
+            <summary>
+            A parameter present in decompiled code
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceParameter.Parameter">
+            <summary>
+            The parameter
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceParameter.Name">
+            <summary>
+            Gets the name of the parameter the decompiler used. It could be different from the real name if the decompiler renamed it.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceParameter.Type">
+            <summary>
+            Gets the type of the parameter
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceParameter.#ctor(dnlib.DotNet.Parameter,System.String,dnlib.DotNet.TypeSig)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parameter">Parameter</param>
+            <param name="name">Name used by the decompiler</param>
+            <param name="type">Type of local</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.SourceStatement">
+            <summary>
+            Source statement
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceStatement.BinSpan">
+            <summary>
+            Binary span
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SourceStatement.TextSpan">
+            <summary>
+            Text span
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.#ctor(dnSpy.Contracts.Decompiler.BinSpan,dnSpy.Contracts.Decompiler.TextSpan)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="binSpan">Binary span</param>
+            <param name="textSpan">Text span</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.op_Equality(dnSpy.Contracts.Decompiler.SourceStatement,dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            operator ==()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.op_Inequality(dnSpy.Contracts.Decompiler.SourceStatement,dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            operator !=()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.Equals(dnSpy.Contracts.Decompiler.SourceStatement)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SourceStatement.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.SpanReference">
+            <summary>
+            Contains a span, a reference and a reference id. Should be used for references to eg. keywords
+            and is used by the Visual Basic decompiler to highlight eg. 'While', 'End While', etc.
+            
+            Normal clickable references should be created by calling
+            <see cref="M:dnSpy.Contracts.Decompiler.IDecompilerOutput.Write(System.String,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)"/>.
+            
+            Use <see cref="M:dnSpy.Contracts.Decompiler.DecompilerOutputExtensions.AddSpanReference(dnSpy.Contracts.Decompiler.IDecompilerOutput,dnSpy.Contracts.Decompiler.SpanReference)"/>
+            to add an instance.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SpanReference.Reference">
+            <summary>
+            Gets the reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SpanReference.Span">
+            <summary>
+            Gets the span
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.SpanReference.Id">
+            <summary>
+            Id or null (eg. <see cref="F:dnSpy.Contracts.Decompiler.PredefinedSpanReferenceIds.HighlightRelatedKeywords"/>). This is used to enable
+            or disable the reference. If null, it's always enabled.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.SpanReference.#ctor(System.Object,dnSpy.Contracts.Decompiler.TextSpan,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="reference">Reference</param>
+            <param name="span">Span</param>
+            <param name="id">Reference id or null, eg. <see cref="F:dnSpy.Contracts.Decompiler.PredefinedSpanReferenceIds.HighlightRelatedKeywords"/></param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput">
+            <summary>
+            Implements <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOutput"/> and writes the text to a <see cref="T:System.Text.StringBuilder"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Length">
+            <summary>
+            Gets the total length of the written text
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.NextPosition">
+            <summary>
+            This equals <see cref="P:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Length"/> plus any indentation that must be written
+            before the next text.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.#ctor(dnSpy.Contracts.Text.Indenter)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="indenter">Indenter</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.#ctor(System.Text.StringBuilder,dnSpy.Contracts.Text.Indenter)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="stringBuilder">String builder to use. Its <see cref="M:System.Text.StringBuilder.Clear"/> method gets called by the constructor</param>
+            <param name="indenter">Indenter or null</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.IncreaseIndent">
+            <summary>
+            Increments the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.DecreaseIndent">
+            <summary>
+            Decrements the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.WriteLine">
+            <summary>
+            Writes a new line without writing any indentation
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Write(System.String)">
+            <summary>
+            Writes text. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Write(System.String,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Write(System.String,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.GetText">
+            <summary>
+            Gets the text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderDecompilerOutput.ToString">
+            <summary>
+            Gets the text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.StringBuilderExtensions.CheckEquals(System.Text.StringBuilder,System.String)">
+            <summary>
+            Compares <paramref name="sb"/> with <paramref name="s"/>. No string is created.
+            </summary>
+            <param name="sb">This</param>
+            <param name="s">String</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TextColorWriterToDecompilerOutput">
+            <summary>
+            Converts a <see cref="T:dnSpy.Contracts.Text.ITextColorWriter"/> to a <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOutput"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextColorWriterToDecompilerOutput.Create(dnSpy.Contracts.Text.ITextColorWriter)">
+            <summary>
+            Creates a new <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOutput"/> instance
+            </summary>
+            <param name="output">Output to use</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TextSpan">
+            <summary>
+            Text span
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpan.Start">
+            <summary>
+            Start offset
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpan.End">
+            <summary>
+            End offset, exclusive
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpan.Length">
+            <summary>
+            Length (<see cref="P:dnSpy.Contracts.Decompiler.TextSpan.End"/> - <see cref="P:dnSpy.Contracts.Decompiler.TextSpan.Start"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpan.IsEmpty">
+            <summary>
+            true if it's empty (<see cref="P:dnSpy.Contracts.Decompiler.TextSpan.Length"/> is 0)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="start">Start offset</param>
+            <param name="length">Length</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.FromBounds(System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance
+            </summary>
+            <param name="start">Start offset</param>
+            <param name="end">End offset</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.op_Equality(dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.TextSpan)">
+            <summary>
+            operator ==()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.op_Inequality(dnSpy.Contracts.Decompiler.TextSpan,dnSpy.Contracts.Decompiler.TextSpan)">
+            <summary>
+            operator !=()
+            </summary>
+            <param name="left"></param>
+            <param name="right"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.Equals(dnSpy.Contracts.Decompiler.TextSpan)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpan.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TextSpanData`1">
+            <summary>
+            Span and data
+            </summary>
+            <typeparam name="TData">Type of data</typeparam>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpanData`1.Span">
+            <summary>
+            Gets the span
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextSpanData`1.Data">
+            <summary>
+            Gets the data
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextSpanData`1.#ctor(dnSpy.Contracts.Decompiler.TextSpan,`0)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="span">Span</param>
+            <param name="data">Data</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput">
+            <summary>
+            Implements <see cref="T:dnSpy.Contracts.Decompiler.IDecompilerOutput"/> and writes the text to a <see cref="T:System.IO.TextWriter"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Length">
+            <summary>
+            Gets the total length of the written text
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.NextPosition">
+            <summary>
+            This equals <see cref="P:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Length"/> plus any indentation that must be written
+            before the next text.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.#ctor(System.IO.TextWriter,dnSpy.Contracts.Text.Indenter)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="writer">Text writer to use</param>
+            <param name="indenter">Indenter or null</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.IncreaseIndent">
+            <summary>
+            Increments the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.DecreaseIndent">
+            <summary>
+            Decrements the indentation level. Nothing is added to the output stream.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.WriteLine">
+            <summary>
+            Writes a new line without writing any indentation
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Write(System.String)">
+            <summary>
+            Writes text. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Write(System.String,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Writes text and color. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Write(System.String,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Write(System.String,System.Int32,System.Int32,System.Object,dnSpy.Contracts.Decompiler.DecompilerReferenceFlags,System.Object)">
+            <summary>
+            Writes text, color and a reference. The text will be indented if needed.
+            </summary>
+            <param name="text">Text</param>
+            <param name="index">Index in <paramref name="text"/></param>
+            <param name="length">Number of characters to write</param>
+            <param name="reference">Reference</param>
+            <param name="flags">Flags</param>
+            <param name="color">Color, eg. <see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Keyword"/></param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.ToString">
+            <summary>
+            Returns the result from <see cref="T:System.IO.TextWriter"/>'s <see cref="M:System.Object.ToString"/> method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TextWriterDecompilerOutput.Dispose">
+            <summary>
+            Disposes this instance and its underlying <see cref="T:System.IO.TextWriter"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.TokenReference">
+            <summary>
+            Token reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TokenReference.ModuleDef">
+            <summary>
+            Owner module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.TokenReference.Token">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.#ctor(dnlib.DotNet.IMemberRef)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="reference">Reference</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.#ctor(dnlib.DotNet.ModuleDef,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Owner module</param>
+            <param name="token">Token</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.Equals(dnSpy.Contracts.Decompiler.TokenReference)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.GetHashCode">
+            <summary>
+            Equals()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TokenReference.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TypesHierarchyHelpers.IsBaseMethod(dnlib.DotNet.MethodDef,dnlib.DotNet.MethodDef)">
+            <summary>
+            Determines whether one method overrides or hides another method.
+            </summary>
+            <param name="parentMethod">The method declared in a base type.</param>
+            <param name="childMethod">The method declared in a derived type.</param>
+            <returns>true if <paramref name="childMethod"/> hides or overrides <paramref name="parentMethod"/>,
+            otherwise false.</returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TypesHierarchyHelpers.IsBaseProperty(dnlib.DotNet.PropertyDef,dnlib.DotNet.PropertyDef)">
+            <summary>
+            Determines whether a property overrides or hides another property.
+            </summary>
+            <param name="parentProperty">The property declared in a base type.</param>
+            <param name="childProperty">The property declared in a derived type.</param>
+            <returns>true if the <paramref name="childProperty"/> hides or overrides <paramref name="parentProperty"/>,
+            otherwise false.</returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TypesHierarchyHelpers.FindBaseMethods(dnlib.DotNet.MethodDef)">
+            <summary>
+            Finds all methods from base types overridden or hidden by the specified method.
+            </summary>
+            <param name="method">The method which overrides or hides methods from base types.</param>
+            <returns>Methods overriden or hidden by the specified method.</returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TypesHierarchyHelpers.FindBaseProperties(dnlib.DotNet.PropertyDef)">
+            <summary>
+            Finds all properties from base types overridden or hidden by the specified property.
+            </summary>
+            <param name="property">The property which overrides or hides properties from base types.</param>
+            <returns>Properties overriden or hidden by the specified property.</returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.TypesHierarchyHelpers.IsVisibleFromDerived(dnlib.DotNet.IMemberDef,dnlib.DotNet.TypeDef)">
+            <summary>
+            Determinates whether member of the base type is visible from a derived type.
+            </summary>
+            <param name="baseMember">The member which visibility is checked.</param>
+            <param name="derivedType">The derived type.</param>
+            <returns>true if the member is visible from derived type, othewise false.</returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocKeyProvider">
+            <summary>
+            Provides XML documentation tags.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocKeyProvider.GetKey(dnlib.DotNet.IMemberRef,System.Text.StringBuilder)">
+            <summary>
+            Gets an XML doc key
+            </summary>
+            <param name="member">Member</param>
+            <param name="b">String builder</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocKeyProvider.SplitTypeParameterCountFromReflectionName(System.String,System.Int32@)">
+            <summary>
+            Removes the ` with type parameter count from the reflection name.
+            </summary>
+            <remarks>Do not use this method with the full name of inner classes.</remarks>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocKeyProvider.FindMemberByKey(dnlib.DotNet.ModuleDef,System.String)">
+            <summary>
+            Finds a member by key
+            </summary>
+            <param name="module">Module to search</param>
+            <param name="key">Key</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocLoader">
+            <summary>
+            Helps finding and loading .xml documentation.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocLoader.MscorlibDocumentation">
+            <summary>
+            mscorlib documentation
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocLoader.LoadDocumentation(dnlib.DotNet.ModuleDef)">
+            <summary>
+            Loads XML documentation
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocLoader.LoadDocumentation(System.Object,System.String,System.String)">
+            <summary>
+            Loads XML documentation
+            </summary>
+            <param name="key">Key used to lookup cached documentation, eg. the <see cref="T:dnlib.DotNet.ModuleDef"/> instance</param>
+            <param name="assemblyFilename">Filename of the assembly or module</param>
+            <param name="runtimeVersion">Optional runtime version, eg. <see cref="P:dnlib.DotNet.ModuleDef.RuntimeVersion"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XmlDoc.IXmlDocOutput">
+            <summary>
+            XML doc output
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.IXmlDocOutput.WriteNewLine">
+            <summary>
+            Writes a new line
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.IXmlDocOutput.WriteSpace">
+            <summary>
+            Writes a space character
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.IXmlDocOutput.Write(System.String,System.Object)">
+            <summary>
+            Writes text
+            </summary>
+            <param name="s">Text</param>
+            <param name="data">Data</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer">
+            <summary>
+            Renders XML documentation
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.AppendText(System.String)">
+            <summary>
+            Appends text
+            </summary>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.AddXmlDocumentation(System.String)">
+            <summary>
+            Adds xml documentation
+            </summary>
+            <param name="xmlDocumentation">XML documentation</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.WriteXmlDoc(dnSpy.Contracts.Decompiler.XmlDoc.IXmlDocOutput,System.String)">
+            <summary>
+            Writes XML documentation
+            </summary>
+            <param name="output">Output</param>
+            <param name="xmlDocumentation">XML documentation</param>
+            <returns></returns>
+        </member>
+        <member name="P:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.WhitespaceRegex">
+            <summary>
+            Whitespace regex
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.GetCref(System.String)">
+            <summary>
+            Gets a cref
+            </summary>
+            <param name="cref"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocRenderer.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider">
+            <summary>
+            Provides documentation from an .xml file (as generated by the Microsoft C# compiler).
+            </summary>
+            <remarks>
+            This class first creates an in-memory index of the .xml file, and then uses that to read only the requested members.
+            This way, we avoid keeping all the documentation in memory.
+            The .xml file is only opened when necessary, the file handle is not kept open all the time.
+            If the .xml file is changed, the index will automatically be recreated.
+            </remarks>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.IndexEntry.HashCode">
+            <summary>
+            Hash code of the documentation tag
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.IndexEntry.PositionInFile">
+            <summary>
+            Position in the .xml file where the documentation starts
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.Create(System.String)">
+            <summary>
+            Creates a new XmlDocumentationProvider. Can return null if we couldn't read the file.
+            </summary>
+            <param name="fileName">Name of the .xml file.</param>
+            <returns>null if we couldn't create it</returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Creates a new XmlDocumentationProvider.
+            </summary>
+            <param name="fileName">Name of the .xml file.</param>
+            <exception cref="T:System.IO.IOException">Error reading from XML file (or from redirected file)</exception>
+            <exception cref="T:System.Xml.XmlException">Invalid XML file</exception>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.LookupLocalizedXmlDoc(System.String)">
+            <summary>
+            Given the assembly file name, looks up the XML documentation file name.
+            Returns null if no XML documentation file is found.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.GetHashCode(System.String)">
+            <summary>
+            Hash algorithm used for the index.
+            This is a custom implementation so that old index files work correctly
+            even when the .NET string.GetHashCode implementation changes
+            (e.g. due to .NET 4.5 hash randomization)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.GetDocumentation(System.String)">
+            <summary>
+            Get the documentation for the member with the specified documentation key.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.GetDocumentation(System.Text.StringBuilder)">
+            <summary>
+            Get the documentation for the member with the specified documentation key.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Decompiler.XmlDoc.XmlDocumentationProvider.OnDeserialization(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="T:dnSpy.Contracts.Metadata.ModuleId">
+            <summary>
+            Module ID
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.op_Implicit(System.String)~dnSpy.Contracts.Metadata.ModuleId">
+            <summary>implicit operator</summary>
+            <param name="moduleFilename">Module filename</param>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleId.AssemblyFullName">
+            <summary>
+            Gets the full name, identical to the dnlib assembly full name
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleId.ModuleName">
+            <summary>
+            Name of module. This is the filename if <see cref="P:dnSpy.Contracts.Metadata.ModuleId.IsInMemory"/> is false, else it's <see cref="P:dnlib.DotNet.ModuleDef.Name"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleId.IsDynamic">
+            <summary>
+            true if it's a dynamic module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleId.IsInMemory">
+            <summary>
+            true if it's an in-memory module and the file doesn't exist on disk
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleId.ModuleNameOnly">
+            <summary>
+            true if <see cref="P:dnSpy.Contracts.Metadata.ModuleId.AssemblyFullName"/> isn't used when comparing this instance against
+            other instances.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="asmFullName">Assembly full name</param>
+            <param name="moduleName">Module name</param>
+            <param name="isDynamic">true if it's a dynamic module</param>
+            <param name="isInMemory">true if it's an in-memory module</param>
+            <param name="nameOnly">true if <paramref name="asmFullName"/> is ignored</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.Create(System.String)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/> that was loaded from a file
+            </summary>
+            <param name="moduleFilename">Module filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.CreateFromFile(dnlib.DotNet.ModuleDef)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/> that was loaded from a file
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.CreateInMemory(dnlib.DotNet.ModuleDef)">
+            <summary>
+            Creates an in-memory <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/>
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.Create(dnlib.DotNet.ModuleDef,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/>
+            </summary>
+            <param name="module">Module</param>
+            <param name="isDynamic">true if it's a dynamic module</param>
+            <param name="isInMemory">true if it's an in-memory module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.Create(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/>
+            </summary>
+            <param name="asmFullName">Full name of assembly. Must be identical to <see cref="P:dnlib.DotNet.AssemblyDef.FullName"/></param>
+            <param name="moduleName">Name of module. This is the filename if <paramref name="isInMemory"/>
+            is false, else it must be identical to <see cref="P:dnlib.DotNet.ModuleDef.Name"/></param>
+            <param name="isDynamic">true if it's a dynamic module</param>
+            <param name="isInMemory">true if it's an in-memory module</param>
+            <param name="moduleNameOnly">true if <paramref name="asmFullName"/> is ignored</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.op_Equality(dnSpy.Contracts.Metadata.ModuleId,dnSpy.Contracts.Metadata.ModuleId)">
+            <summary>
+            operator==()
+            </summary>
+            <param name="a">a</param>
+            <param name="b">b</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.op_Inequality(dnSpy.Contracts.Metadata.ModuleId,dnSpy.Contracts.Metadata.ModuleId)">
+            <summary>
+            operator!=()
+            </summary>
+            <param name="a">a</param>
+            <param name="b">b</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.Equals(dnSpy.Contracts.Metadata.ModuleId)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other">Other instance</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj">Other instance</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleId.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Metadata.ModuleTokenId">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/> and token
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleTokenId.Module">
+            <summary>
+            Gets the module id
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Metadata.ModuleTokenId.Token">
+            <summary>
+            Gets the token in the module
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.#ctor(dnSpy.Contracts.Metadata.ModuleId,dnlib.DotNet.MDToken)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Module id</param>
+            <param name="mdToken">Token</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.#ctor(dnSpy.Contracts.Metadata.ModuleId,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Module id</param>
+            <param name="token">Token</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.#ctor(dnSpy.Contracts.Metadata.ModuleId,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Module id</param>
+            <param name="token">Token</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.Equals(dnSpy.Contracts.Metadata.ModuleTokenId)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="other">Other instance</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.Equals(System.Object)">
+            <summary>
+            Equals()
+            </summary>
+            <param name="obj">Object</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.GetHashCode">
+            <summary>
+            GetHashCode()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Metadata.ModuleTokenId.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.MVVM.ViewModelBase">
+            <summary>
+            Base class of view models
+            </summary>
+        </member>
+        <member name="E:dnSpy.Contracts.MVVM.ViewModelBase.PropertyChanged">
+            <inheritdoc/>
+        </member>
+        <member name="M:dnSpy.Contracts.MVVM.ViewModelBase.OnPropertyChanged(System.String)">
+            <summary>
+            Raises <see cref="E:dnSpy.Contracts.MVVM.ViewModelBase.PropertyChanged"/>
+            </summary>
+            <param name="propName">Name of property that got changed</param>
+        </member>
+        <member name="M:dnSpy.Contracts.MVVM.ViewModelBase.OnPropertyChanged(System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Raises <see cref="E:dnSpy.Contracts.MVVM.ViewModelBase.PropertyChanged"/>
+            </summary>
+            <param name="e">Changed event args</param>
+        </member>
+        <member name="P:dnSpy.Contracts.MVVM.ViewModelBase.HasError">
+            <summary>
+            true if there's an error
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.MVVM.ViewModelBase.Verify(System.String)">
+            <summary>
+            Called to check if a property is valid. Returns null or an empty string if there's no error,
+            else an error string that can be shown to the user
+            </summary>
+            <param name="columnName">Name of property</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.MVVM.ViewModelBase.HasErrorUpdated">
+            <summary>
+            Call this method if some property's error state changed
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidBoolean">
+            <summary>
+              Looks up a localized string similar to Value must be a boolean value (True or False).
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidChar">
+            <summary>
+              Looks up a localized string similar to A character must be enclosed in single quotes (&apos;).
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidDateTime">
+            <summary>
+              Looks up a localized string similar to Value must be a DateTime.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidDecimal">
+            <summary>
+              Looks up a localized string similar to Value must be a Decimal.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidDouble">
+            <summary>
+              Looks up a localized string similar to Value must be a 64-bit floating point number.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidEscapeSequence">
+            <summary>
+              Looks up a localized string similar to Unknown character escape sequence: \{0}.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidEscapeSequence2">
+            <summary>
+              Looks up a localized string similar to Unknown string escape sequence: \{0}.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidHexCharacter">
+            <summary>
+              Looks up a localized string similar to A hex string must contain only hex digits: 0-9 and A-F.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidHexStringSize">
+            <summary>
+              Looks up a localized string similar to A hex string must contain an even number of hex digits.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidInteger1">
+            <summary>
+              Looks up a localized string similar to The value is not a hexadecimal or decimal integer.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidInteger2">
+            <summary>
+              Looks up a localized string similar to The value is too small.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidInteger3">
+            <summary>
+              Looks up a localized string similar to The value is too big.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidInteger4">
+            <summary>
+              Looks up a localized string similar to Value must be between {0} and {1} (0x{1:X}) inclusive.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidInteger5">
+            <summary>
+              Looks up a localized string similar to Value must be between {0} ({2}0x{0:X}) and {1} (0x{1:X}) inclusive.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidListValue">
+            <summary>
+              Looks up a localized string similar to Value in list can&apos;t be empty.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidListValue2">
+            <summary>
+              Looks up a localized string similar to List elements must be separated with commas.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidSingle">
+            <summary>
+              Looks up a localized string similar to Value must be a 32-bit floating point number.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidString1">
+            <summary>
+              Looks up a localized string similar to A string must contain the value &apos;null&apos; or must be enclosed in double quotes (&quot;).
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidString2">
+            <summary>
+              Looks up a localized string similar to A string must be enclosed in double quotes (&quot;).
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidTimeSpan">
+            <summary>
+              Looks up a localized string similar to Value must be a TimeSpan.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidUnsignedInteger1">
+            <summary>
+              Looks up a localized string similar to Only non-negative integers are allowed.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidUnsignedInteger2">
+            <summary>
+              Looks up a localized string similar to The value is not an unsigned hexadecimal or decimal integer.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidUnsignedInteger3">
+            <summary>
+              Looks up a localized string similar to Value must be between {0} and {1} (0x{1:X}) inclusive.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Properties.dnSpy_Contracts_Logic_Resources.InvalidUnsignedInteger4">
+            <summary>
+              Looks up a localized string similar to Value must be between {0} (0x{0:X}) and {1} (0x{1:X}) inclusive.
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Resources.ResourceManagerTokenCache">
+            <summary>
+            Caches the info so we don't have to call <see cref="M:System.Reflection.Module.GetTypes"/> which is very slow
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Resources.ResourceHelper">
+            <summary>
+            Converts strings to resource strings
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Resources.ResourceHelper.GetString(System.Object,System.String)">
+            <summary>
+            Converts <paramref name="value"/> to a string in the resources if it has been prefixed with "res:"
+            </summary>
+            <param name="obj">Can be any object in the assembly containing the resources or the assembly itself (<see cref="T:System.Reflection.Assembly"/>).</param>
+            <param name="value">String</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.Indenter">
+            <summary>
+            Creates indentation strings
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Text.Indenter.String">
+            <summary>
+            Gets the indentation string
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.Indenter.#ctor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="indentSize">Size in characters of one indent</param>
+            <param name="tabSize">Size of a tab in characters</param>
+            <param name="useTabs">true to use tabs, false to use spaces</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.Indenter.IncreaseIndent">
+            <summary>
+            Increments the indentation level
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.Indenter.DecreaseIndent">
+            <summary>
+            Decrements the indentation level
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.Indenter.Reset">
+            <summary>
+            Resets the instance so it can be re-used
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.ITextColorWriter">
+            <summary>
+            Text writer
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriter.Write(System.Object,System.String)">
+            <summary>
+            Writes text
+            </summary>
+            <param name="color">Color</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriter.Write(dnSpy.Contracts.Text.TextColor,System.String)">
+            <summary>
+            Writes text
+            </summary>
+            <param name="color">Color</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.TextColorWriterExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.TextColorWriterExtensions.Write(dnSpy.Contracts.Text.ITextColorWriter,System.String)">
+            <summary>
+            Writes text using default text color (<see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Text"/>)
+            </summary>
+            <param name="writer">Writer</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.TextColorWriterExtensions.WriteLine(dnSpy.Contracts.Text.ITextColorWriter,System.String)">
+            <summary>
+            Writes text and a newline using default text color (<see cref="F:dnSpy.Contracts.Text.BoxedTextColor.Text"/>)
+            </summary>
+            <param name="writer">Writer</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.ITextColorWriterExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteLine``1(``0)">
+            <summary>
+            Writes a newline
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteSpace``1(``0)">
+            <summary>
+            Writes a space
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteCommaSpace``1(``0)">
+            <summary>
+            Writes a comma followed by a space
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.Write``1(``0,System.Version)">
+            <summary>
+            Writes a version
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <param name="version">Version</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.Write``1(``0,dnlib.DotNet.IAssembly)">
+            <summary>
+            Writes an assembly
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <param name="asm">Assembly</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteNamespace``1(``0,System.String)">
+            <summary>
+            Writes a namespace
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <param name="namespace">Namespace</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteModule``1(``0,System.String)">
+            <summary>
+            Writes a module name
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <param name="name">Module name</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.ITextColorWriterExtensions.WriteFilename``1(``0,System.String)">
+            <summary>
+            Writes a filename
+            </summary>
+            <typeparam name="T">Writer type</typeparam>
+            <param name="output">Output</param>
+            <param name="filename">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.NameUtilities">
+            <summary>
+            Utility methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.NameUtilities.CleanName(System.String)">
+            <summary>
+            Cleans a name
+            </summary>
+            <param name="n">name</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.NameUtilities.CleanIdentifier(System.String)">
+            <summary>
+            Cleans an identifier
+            </summary>
+            <param name="id">Identifier</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.TextColor">
+            <summary>
+            Text color
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Text.TextColor.Last">
+            <summary>
+            Must be last
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Text.BoxedTextColor">
+            <summary>
+            Boxed colors
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Text.BoxedTextColor.Box(dnSpy.Contracts.Text.TextColor)">
+            <summary>
+            Boxes <paramref name="color"/>
+            </summary>
+            <param name="color">Color to box</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Utilities.GacFileInfo">
+            <summary>
+            GAC file info
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Utilities.GacFileInfo.Assembly">
+            <summary>
+            Assembly
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Utilities.GacFileInfo.Path">
+            <summary>
+            Path to file
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Utilities.GacInfo">
+            <summary>
+            GAC
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Utilities.GacInfo.GacPaths">
+            <summary>
+            All GAC paths
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Utilities.GacInfo.OtherGacPaths">
+            <summary>
+            Other GAC paths
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Utilities.GacInfo.WinmdPaths">
+            <summary>
+            WinMD paths
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.GacInfo.IsGacPath(System.String)">
+            <summary>
+            Checks whether <paramref name="filename"/> is in the GAC
+            </summary>
+            <param name="filename">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.GacInfo.FindInGac(dnlib.DotNet.IAssembly)">
+            <summary>
+            Finds an assembly in the GAC
+            </summary>
+            <param name="asm">Assembly</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.GacInfo.GetAssemblies(System.Int32)">
+            <summary>
+            Gets all assemblies in the GAC
+            </summary>
+            <param name="majorVersion">CLR major version, eg. 2 or 4</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Utilities.SimpleTypeConverter">
+            <summary>
+            Converts numbers, strings and a few other types to or from strings
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseByteArray(System.String,System.String@)">
+            <summary>
+            Parses a byte array string
+            </summary>
+            <param name="s">Input string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ByteArrayToString(System.Collections.Generic.IList{System.Byte},System.Boolean)">
+            <summary>
+            Converts a <see cref="T:System.Byte"/> array to a string
+            </summary>
+            <param name="value">Bytes</param>
+            <param name="upper">true to use upper case hex numbers</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.UInt64,System.UInt64,System.UInt64,System.Nullable{System.Boolean})">
+            <summary>
+            Converts an unsigned integer to a string
+            </summary>
+            <param name="value">Value</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Int64,System.Int64,System.Int64,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a signed integer to a string
+            </summary>
+            <param name="value">Value</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Int64)">
+            <summary>
+            Converts a <see cref="T:System.Int64"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.UInt64)">
+            <summary>
+            Converts a <see cref="T:System.UInt64"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Single)">
+            <summary>
+            Converts a <see cref="T:System.Single"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Double)">
+            <summary>
+            Converts a <see cref="T:System.Double"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Decimal)">
+            <summary>
+            Converts a <see cref="T:System.Decimal"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.DateTime)">
+            <summary>
+            Converts a <see cref="T:System.DateTime"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.TimeSpan)">
+            <summary>
+            Converts a <see cref="T:System.TimeSpan"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Boolean)">
+            <summary>
+            Converts a <see cref="T:System.Boolean"/> to a string
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Char)">
+            <summary>
+            Converts a <see cref="T:System.Char"/> to a C# char string in single quotes
+            </summary>
+            <param name="value">Character</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.String,System.Boolean)">
+            <summary>
+            Converts a <see cref="T:System.String"/> to a C# string in double quotes
+            </summary>
+            <param name="s">String, may be null</param>
+            <param name="canHaveNull">true if the return value will be the string "null" without
+            the quotes if <paramref name="s"/> is null, otherwise an empty string is returned if
+            the input string is null</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseSingle(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Single"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseDouble(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Double"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseDecimal(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Decimal"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseDateTime(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.DateTime"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseTimeSpan(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.TimeSpan"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseBoolean(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Boolean"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseChar(System.String,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Char"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseString(System.String,System.Boolean,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.String"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="canHaveNull">true if the string value "null" can be converted to a null string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseByte(System.String,System.Byte,System.Byte,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Byte"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt16(System.String,System.UInt16,System.UInt16,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.UInt16"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt32(System.String,System.UInt32,System.UInt32,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.UInt32"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt64(System.String,System.UInt64,System.UInt64,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.UInt64"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseSByte(System.String,System.SByte,System.SByte,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.SByte"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt16(System.String,System.Int16,System.Int16,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Int16"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt32(System.String,System.Int32,System.Int32,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Int32"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt64(System.String,System.Int64,System.Int64,System.String@)">
+            <summary>
+            Converts a string to a <see cref="T:System.Int64"/>
+            </summary>
+            <param name="s">String</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.Boolean"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Char})">
+            <summary>
+            Converts a list of <see cref="T:System.Char"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Byte},System.Byte,System.Byte,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.Byte"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.UInt16},System.UInt16,System.UInt16,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.UInt16"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.UInt32},System.UInt32,System.UInt32,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.UInt32"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.UInt64},System.UInt64,System.UInt64,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.UInt64"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.SByte},System.SByte,System.SByte,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.SByte"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Int16},System.Int16,System.Int16,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.Int16"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Int32},System.Int32,System.Int32,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.Int32"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Int64},System.Int64,System.Int64,System.Nullable{System.Boolean})">
+            <summary>
+            Converts a list of <see cref="T:System.Int64"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximum value</param>
+            <param name="useDecimal">true to use decimal, false to use hex, null to use decimal if possible, hex otherwise</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Single})">
+            <summary>
+            Converts a list of <see cref="T:System.Single"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.Double})">
+            <summary>
+            Converts a list of <see cref="T:System.Double"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ToString(System.Collections.Generic.IList{System.String},System.Boolean)">
+            <summary>
+            Converts a list of <see cref="T:System.String"/>s to a string
+            </summary>
+            <param name="values">Values</param>
+            <param name="canHaveNull">true if null strings are converted to a string with the value "null",
+            false if the empty string is used if the input string is null</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseBooleanList(System.String,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Boolean"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseCharList(System.String,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Char"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseByteList(System.String,System.Byte,System.Byte,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Byte"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt16List(System.String,System.UInt16,System.UInt16,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.UInt16"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt32List(System.String,System.UInt32,System.UInt32,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.UInt32"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseUInt64List(System.String,System.UInt64,System.UInt64,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.UInt64"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseSByteList(System.String,System.SByte,System.SByte,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.SByte"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt16List(System.String,System.Int16,System.Int16,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Int16"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt32List(System.String,System.Int32,System.Int32,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Int32"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseInt64List(System.String,System.Int64,System.Int64,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Int64"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="min">Minimum value</param>
+            <param name="max">Maximium value</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseSingleList(System.String,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Single"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseDoubleList(System.String,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.Double"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Utilities.SimpleTypeConverter.ParseStringList(System.String,System.Boolean,System.String@)">
+            <summary>
+            Converts a string containing a list of <see cref="T:System.String"/>s to an array
+            </summary>
+            <param name="s">Input string</param>
+            <param name="canHaveNull">true if the string value "null" can be converted to a null string</param>
+            <param name="error">Updated with error string or null if no error</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

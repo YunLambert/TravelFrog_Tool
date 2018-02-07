@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Contracts.Debugger.DotNet.CorDebug</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation">
+            <summary>
+            A .NET method body location including an exact native address
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.Module">
+            <summary>
+            Gets the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.Token">
+            <summary>
+            Gets the token of a method within the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.Offset">
+            <summary>
+            Gets the IL offset within the method body
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.ILOffsetMapping">
+            <summary>
+            Gets the IL offset mapping
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.DbgModule">
+            <summary>
+            Gets the debugger module or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgDotNetNativeCodeLocation.NativeAddress">
+            <summary>
+            Gets the native address
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping">
+            <summary>
+            IL offset mapping result. This enum is similar to <c>CorDebugMappingResult</c>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.Unknown">
+            <summary>
+            Unknown
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.Prolog">
+            <summary>
+            The native code is in the prolog
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.Epilog">
+            <summary>
+            The native code is in an epilog
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.Exact">
+            <summary>
+            Either the method maps exactly to MSIL code or the frame has been interpreted, so the value of the IP is accurate
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.Approximate">
+            <summary>
+            The method was successfully mapped, but the value of the IP may be approximate
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.NoInfo">
+            <summary>
+            No mapping information is available for the method
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.Code.DbgILOffsetMapping.UnmappedAddress">
+            <summary>
+            Although there is mapping information for the method, the current address cannot be mapped to Microsoft intermediate language (MSIL) code
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions">
+            <summary>
+            Debugging options base class shared by .NET Framework code and .NET Core code
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.Filename">
+            <summary>
+            Path to application to debug
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.CommandLine">
+            <summary>
+            Command line
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.WorkingDirectory">
+            <summary>
+            Working directory
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.Environment">
+            <summary>
+            Environment variables
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/>
+            </summary>
+            <param name="other">Destination</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorThreadUserStates">
+            <summary>
+            <see cref="P:dnSpy.Contracts.Debugger.DbgThread.State"/> values
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime">
+            <summary>
+            .NET Framework / .NET Core runtime. It must implement <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime.Version">
+            <summary>
+            Gets the runtime version
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime.Kind">
+            <summary>
+            Gets the kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime.ClrFilename">
+            <summary>
+            Path to the CLR dll (clr.dll, mscorwks.dll, mscorsvr.dll, coreclr.dll)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime.RuntimeDirectory">
+            <summary>
+            Path to the runtime directory
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions">
+            <summary>
+            Debugging options that will start and debug an application when passed to <see cref="M:dnSpy.Contracts.Debugger.DbgManager.Start(dnSpy.Contracts.Debugger.DebugProgramOptions)"/>.
+            This is used to debug .NET Core assemblies.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions.Host">
+            <summary>
+            Path to host (eg. dotnet.exe) or null if dnSpy should try to find dotnet.exe
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions.HostArguments">
+            <summary>
+            Host arguments (eg. "exec" if .NET Core's dotnext.exe is used)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetCoreStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetFrameworkStartDebuggingOptions">
+            <summary>
+            Debugging options that will start and debug an application when passed to <see cref="M:dnSpy.Contracts.Debugger.DbgManager.Start(dnSpy.Contracts.Debugger.DebugProgramOptions)"/>.
+            This is used to debug .NET Framework assemblies.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetFrameworkStartDebuggingOptions.Clone">
+            <summary>
+            Clones this instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetFrameworkStartDebuggingOptions.CopyTo(dnSpy.Contracts.Debugger.DotNet.CorDebug.DotNetFrameworkStartDebuggingOptions)">
+            <summary>
+            Copies this instance to <paramref name="other"/> and returns it
+            </summary>
+            <param name="other">Destination</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeKind">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.DbgCorDebugInternalRuntime"/> kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeKind.DotNetFramework">
+            <summary>
+            .NET Framework
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeKind.DotNetCore">
+            <summary>
+            .NET Core
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeVersion">
+            <summary>
+            Runtime version
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeVersion.Kind">
+            <summary>
+            Gets the kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeVersion.Version">
+            <summary>
+            Gets the version string, eg. "v2.0.50727" or "v4.0.30319" if it's .NET Framework.
+            If it's .NET Core, this is currently an empty string.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeVersion.#ctor(dnSpy.Contracts.Debugger.DotNet.CorDebug.CorDebugRuntimeKind,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="kind">Kind</param>
+            <param name="version">Version string</param>
+        </member>
+    </members>
+</doc>

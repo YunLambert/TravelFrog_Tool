@@ -1,0 +1,561 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Roslyn.Shared</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Roslyn.Shared.Debugger.ValueNodes.CSharp.UnicodeCharacterUtilities">
+            <summary>
+            Defines a set of helper methods to classify Unicode characters.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.CSharp.UnicodeCharacterUtilities.IsIdentifierPartCharacter(System.Char)">
+            <summary>
+            Returns true if the Unicode character can be a part of an identifier.
+            </summary>
+            <param name="ch">The Unicode character.</param>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.CSharp.UnicodeCharacterUtilities.IsValidIdentifier(System.String)">
+            <summary>
+            Check that the name is a valid Unicode identifier.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.CSharp.UnicodeCharacterUtilities.IsFormattingChar(System.Char)">
+            <summary>
+            Returns true if the Unicode character is a formatting character (Unicode class Cf).
+            </summary>
+            <param name="ch">The Unicode character.</param>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.CSharp.UnicodeCharacterUtilities.IsFormattingChar(System.Globalization.UnicodeCategory)">
+            <summary>
+            Returns true if the Unicode character is a formatting character (Unicode class Cf).
+            </summary>
+            <param name="cat">The Unicode character.</param>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.DbgDotNetValueNodeProviderFactory.HasNoChildren(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Returns true if <paramref name="type"/> is a primitive type that doesn't show any members,
+            eg. integers, booleans, floating point numbers, strings
+            </summary>
+            <param name="type">Type to check</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Debugger.ValueNodes.EnumerableDebugViewHelper.GetEnumerableDebugViewConstructor(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Returns an enumerable debug view. These types are located in System.Core / System.Linq. If <paramref name="enumerableType"/>
+            is <see cref="T:System.Collections.IEnumerable"/>, then <c>System.Linq.SystemCore_EnumerableDebugView</c>'s constructor
+            is returned, else if <paramref name="enumerableType"/> is <see cref="T:System.Collections.Generic.IEnumerable`1"/>, then
+            <c>System.Linq.SystemCore_EnumerableDebugView`1</c>'s constructor is returned.
+            </summary>
+            <param name="enumerableType">Enumerable type, must be one of <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/></param>
+            <returns></returns>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Debugger.ValueNodes.MemberValueNodeInfo.InheritanceLevel">
+            <summary>
+            Most derived class is level 0, and least derived class (<see cref="T:System.Object"/>) has the highest level
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Debugger.ValueNodes.TupleField.DefaultName">
+            <summary>
+            Item1, Item2, etc
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Debugger.ValueNodes.TupleField.Fields">
+            <summary>
+            All fields that must be accessed in order to get the value shown in the UI, eg. Rest.Rest.Item3
+            </summary>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Documentation.IRoslynDocumentationProviderFactory">
+            <summary>
+            Creates <see cref="T:Microsoft.CodeAnalysis.DocumentationProvider"/>s
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Documentation.IRoslynDocumentationProviderFactory.TryCreate(System.String)">
+            <summary>
+            Creates a <see cref="T:Microsoft.CodeAnalysis.DocumentationProvider"/> or returns null if it wasn't possible to create one
+            </summary>
+            <param name="filename">Filename</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Intellisense.Completions.RoslynCompletionSet.GetDescriptionAsync(dnSpy.Roslyn.Shared.Intellisense.Completions.RoslynCompletion,System.Threading.CancellationToken)">
+            <summary>
+            Gets the description or null if none
+            </summary>
+            <param name="completion">Completion</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Intellisense.QuickInfo.InformationQuickInfoContentControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Intellisense.SignatureHelp.SignatureHelpSession.TryGetSession(Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession)">
+            <summary>
+            Gets the Roslyn sig help session stored in a <see cref="T:Microsoft.VisualStudio.Language.Intellisense.ISignatureHelpSession"/> or null if none
+            </summary>
+            <param name="session">Intellisense sig help session</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.ClassesToolTip">
+            <summary>
+              Looks up a localized string similar to Classes.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.CompletionSet_All">
+            <summary>
+              Looks up a localized string similar to All.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.ConstantsToolTip">
+            <summary>
+              Looks up a localized string similar to Constants.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerExpressionHasNoValue">
+            <summary>
+              Looks up a localized string similar to Expression has been evaluated and has no value.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_CSharp_StaticMembers">
+            <summary>
+              Looks up a localized string similar to Static members.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_Empty_PropertyName">
+            <summary>
+              Looks up a localized string similar to Empty.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_Error_PropertyName">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_ExpandResultsViewMessage">
+            <summary>
+              Looks up a localized string similar to Expanding the Results View will enumerate the IEnumerable.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_InstanceMembers">
+            <summary>
+              Looks up a localized string similar to Instance members.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_RawView">
+            <summary>
+              Looks up a localized string similar to Raw View.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_ResultsView">
+            <summary>
+              Looks up a localized string similar to Results View.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_ResultsView_NoResults">
+            <summary>
+              Looks up a localized string similar to Enumeration yielded no results.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DebuggerVarsWindow_VisualBasic_SharedMembers">
+            <summary>
+              Looks up a localized string similar to Shared members.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.DelegatesToolTip">
+            <summary>
+              Looks up a localized string similar to Delegates.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.EnumsToolTip">
+            <summary>
+              Looks up a localized string similar to Enums.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.EventsToolTip">
+            <summary>
+              Looks up a localized string similar to Events.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.ExtensionMethodsToolTip">
+            <summary>
+              Looks up a localized string similar to Extension methods.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.FieldsToolTip">
+            <summary>
+              Looks up a localized string similar to Fields.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.FilterExpressionEvaluator_CompiledExpressionThrewAnException">
+            <summary>
+              Looks up a localized string similar to Compiled expression threw an exception: {0}.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.FilterExpressionEvaluator_InvalidExpression">
+            <summary>
+              Looks up a localized string similar to Expression is invalid.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.InterfacesToolTip">
+            <summary>
+              Looks up a localized string similar to Interfaces.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.KeywordsToolTip">
+            <summary>
+              Looks up a localized string similar to Keywords.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.LocalsAndParametersToolTip">
+            <summary>
+              Looks up a localized string similar to Locals and parameters.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.LocalsWindow_MethodOrProperty_Returned">
+            <summary>
+              Looks up a localized string similar to {0} returned.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.LocalsWindow_TypeVariables">
+            <summary>
+              Looks up a localized string similar to Type variables.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.MethodsToolTip">
+            <summary>
+              Looks up a localized string similar to Methods.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.ModulesToolTip">
+            <summary>
+              Looks up a localized string similar to Modules.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.NamespacesToolTip">
+            <summary>
+              Looks up a localized string similar to Namespaces.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.PropertiesToolTip">
+            <summary>
+              Looks up a localized string similar to Properties.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.SnippetsToolTip">
+            <summary>
+              Looks up a localized string similar to Snippets.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.StructuresToolTip">
+            <summary>
+              Looks up a localized string similar to Structures.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.SystemCoreDllNotLoaded">
+            <summary>
+              Looks up a localized string similar to Results View requires {0} to be referenced.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Properties.dnSpy_Roslyn_Shared_Resources.TypeDoesNotExistInAssembly">
+            <summary>
+              Looks up a localized string similar to Type &apos;{0}&apos; doesn&apos;t exist in assembly &apos;{1}&apos;.
+            </summary>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.ITaggedTextElementProvider">
+            <summary>
+            Creates a <see cref="T:System.Windows.Controls.TextBlock"/>. Call its <see cref="M:System.IDisposable.Dispose"/> method
+            to clean up its resources.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.ITaggedTextElementProvider.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.TaggedText},System.Boolean)">
+            <summary>
+            Creates a <see cref="T:System.Windows.Controls.TextBlock"/>
+            </summary>
+            <param name="tag">Tag, can be null</param>
+            <param name="taggedParts">Tagged parts to classify</param>
+            <param name="colorize">true if it should be colorized</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.ITaggedTextElementProviderService.Create(Microsoft.VisualStudio.Utilities.IContentType,System.String)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Roslyn.Shared.Text.Classification.ITaggedTextElementProvider"/>
+            </summary>
+            <param name="contentType">Content type</param>
+            <param name="category">Category, eg. <see cref="F:dnSpy.Contracts.Settings.AppearanceCategory.AppearanceCategoryConstants.TextEditor"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes">
+            <summary>
+            Classification types used by <see cref="T:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes.GetClassificationTypeInstance(dnSpy.Contracts.Text.Classification.IThemeClassificationTypeService)">
+            <summary>
+            Gets the cached instance that contains <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType"/> values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes2">
+            <summary>
+            Classification types used by <see cref="T:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes2.Default">
+            <summary>
+            Gets the default instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes2.GetClassificationTypeInstance(dnSpy.Contracts.Text.Classification.IThemeClassificationTypeService)">
+            <summary>
+            Gets the cached instance that contains <see cref="T:Microsoft.VisualStudio.Text.Classification.IClassificationType"/> values
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult">
+            <summary>
+            Classifier result
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult.Span">
+            <summary>
+            Span
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult.Type">
+            <summary>
+            Classification type
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult.#ctor(Microsoft.VisualStudio.Text.Span,Microsoft.VisualStudio.Text.Classification.IClassificationType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="span">Span</param>
+            <param name="type">Classification type</param>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult2">
+            <summary>
+            Classifier result
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult2.Span">
+            <summary>
+            Span
+            </summary>
+        </member>
+        <member name="F:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult2.Color">
+            <summary>
+            Color
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.ClassifierResult2.#ctor(Microsoft.VisualStudio.Text.Span,System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="span">Span</param>
+            <param name="color">Color</param>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier">
+            <summary>
+            Roslyn classifier
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier.#ctor(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.Workspace,dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes,Microsoft.VisualStudio.Text.Classification.IClassificationType,System.Threading.CancellationToken)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="syntaxRoot">Syntax root</param>
+            <param name="semanticModel">Semantic model</param>
+            <param name="workspace">Workspace</param>
+            <param name="roslynClassificationTypes">Classification types</param>
+            <param name="defaultClassificationType">Default classification type if a token can't be classified or null to not use anything</param>
+            <param name="cancellationToken">Cancellation token</param>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier.#ctor(Microsoft.CodeAnalysis.SyntaxNode,Microsoft.CodeAnalysis.SemanticModel,Microsoft.CodeAnalysis.Workspace,dnSpy.Roslyn.Shared.Text.Classification.RoslynClassificationTypes2,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="syntaxRoot">Syntax root</param>
+            <param name="semanticModel">Semantic model</param>
+            <param name="workspace">Workspace</param>
+            <param name="roslynClassificationTypes">Colors</param>
+            <param name="defaultColor">Default color if a token can't be classified or null to not use anything</param>
+            <param name="cancellationToken">Cancellation token</param>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier.GetClassifications(Microsoft.CodeAnalysis.Text.TextSpan)">
+            <summary>
+            Returns all classifications
+            </summary>
+            <param name="textSpan">Span to classify</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.RoslynClassifier.GetColors(Microsoft.CodeAnalysis.Text.TextSpan)">
+            <summary>
+            Returns all colors
+            </summary>
+            <param name="textSpan">Span to classify</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.TaggedTextClassifierContext">
+            <summary>
+            Context passed to the <see cref="T:Microsoft.CodeAnalysis.TaggedText"/> classifiers
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Text.Classification.TaggedTextClassifierContext.TaggedParts">
+            <summary>
+            Gets all tagged parts
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.TaggedTextClassifierContext.Create(System.String,System.Collections.Immutable.ImmutableArray{Microsoft.CodeAnalysis.TaggedText},System.Boolean)">
+            <summary>
+            Creates an instance
+            </summary>
+            <param name="tag">Tag, can be null</param>
+            <param name="taggedParts">Tagged parts</param>
+            <param name="colorize">true if it should be colorized</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Classification.TextTagsHelper">
+            <summary>
+            Converts <see cref="T:Microsoft.CodeAnalysis.TextTags"/> tags to <see cref="T:dnSpy.Contracts.Text.TextColor"/> values
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Classification.TextTagsHelper.ToTextColor(System.String)">
+            <summary>
+            Converts <paramref name="textTag"/> to a <see cref="T:dnSpy.Contracts.Text.TextColor"/> value
+            </summary>
+            <param name="textTag">One of the text tags found in <see cref="T:Microsoft.CodeAnalysis.TextTags"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Extensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.AsText(Microsoft.VisualStudio.Text.ITextSnapshot)">
+            <summary>
+            Converts <paramref name="textSnapshot"/> to a <see cref="T:Microsoft.CodeAnalysis.Text.SourceText"/>
+            </summary>
+            <param name="textSnapshot">Snapshot</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.AsTextContainer(Microsoft.VisualStudio.Text.ITextBuffer)">
+            <summary>
+            Converts <paramref name="textBuffer"/> to a <see cref="T:Microsoft.CodeAnalysis.Text.SourceTextContainer"/>
+            </summary>
+            <param name="textBuffer">Text buffer</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.TryGetTextBuffer(Microsoft.CodeAnalysis.Text.SourceTextContainer)">
+            <summary>
+            Returns a <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer"/> or null
+            </summary>
+            <param name="textContainer">Text container</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.TryGetWorkspace(Microsoft.VisualStudio.Text.ITextBuffer)">
+            <summary>
+            Returns the workspace or null
+            </summary>
+            <param name="buffer">Text buffer</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.TryGetTextSnapshot(Microsoft.CodeAnalysis.Text.SourceText)">
+            <summary>
+            Gets the snapshot or null
+            </summary>
+            <param name="sourceText">Source text</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.ToTextSpan(Microsoft.VisualStudio.Text.Span)">
+            <summary>
+            Converts <paramref name="span"/> to a <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan"/>
+            </summary>
+            <param name="span">Span</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.ToSpan(Microsoft.CodeAnalysis.Text.TextSpan)">
+            <summary>
+            Converts <paramref name="textSpan"/> to a <see cref="T:Microsoft.VisualStudio.Text.Span"/>
+            </summary>
+            <param name="textSpan"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.GetOpenDocumentInCurrentContextWithChanges(Microsoft.VisualStudio.Text.ITextSnapshot)">
+            <summary>
+            Gets the document or null
+            </summary>
+            <param name="snapshot">Snapshot</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Text.Extensions.GetOpenDocumentInCurrentContextWithChanges(Microsoft.CodeAnalysis.Text.SourceText)">
+            <summary>
+            Gets the document or null
+            </summary>
+            <param name="text">Source text</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.RoslynMefHostServices">
+            <summary>
+            Shared <see cref="T:Microsoft.CodeAnalysis.Host.Mef.MefHostServices"/> instance
+            </summary>
+        </member>
+        <member name="P:dnSpy.Roslyn.Shared.Text.RoslynMefHostServices.DefaultServices">
+            <summary>
+            Gets the shared <see cref="T:Microsoft.CodeAnalysis.Host.Mef.MefHostServices"/> instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Text.Tagging.AsyncTagger`2">
+             <summary>
+             Async tagger base class. Multiple <see cref="M:dnSpy.Roslyn.Shared.Text.Tagging.AsyncTagger`2.GetTags(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection)"/>
+             calls are handled by one task to prevent too many created tasks.
+             </summary>
+             <typeparam name="TTagType">Type of tag, eg. <see cref="T:Microsoft.VisualStudio.Text.Tagging.IClassificationTag"/></typeparam>
+             <typeparam name="TUserAsyncState">User async state type</typeparam>
+             <remarks>
+             All tags are cached. The cache is invalidated whenever <see cref="M:dnSpy.Roslyn.Shared.Text.Tagging.AsyncTagger`2.GetTags(Microsoft.VisualStudio.Text.NormalizedSnapshotSpanCollection)"/>
+             is called with a new snapshot.
+            
+             It currently doesn't try to re-use the old calculated tags. It could return those (after
+             TranslateTo()'ing them to the new snapshot) while it executes the async code in the background
+             that calculates the new tags.
+             </remarks>
+        </member>
+        <member name="T:dnSpy.Roslyn.Shared.Utilities.ImmutableArrayUtilities`1">
+            <summary>
+            Roslyn uses <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> but other parts of dnSpy don't. Even if
+            all of dnSpy did, some code need to process some byte arrays before use, eg. by making
+            every type public by modifying the metadata. Roslyn's use of <see cref="T:System.Collections.Immutable.ImmutableArray`1"/>
+            will then lead to extra memory being allocated, and this memory would most likely be
+            in the LOH (Large Object Heap). This class creates new <see cref="T:System.Collections.Immutable.ImmutableArray`1"/>s
+            and overwrites the internal array field with our data to save memory.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.Shared.Utilities.ImmutableArrayUtilities`1.ToImmutableArray(`0[])">
+            <summary>
+            Creates a new <see cref="T:System.Collections.Immutable.ImmutableArray`1"/> by copying <paramref name="data"/>
+            to the <see cref="T:System.Collections.Immutable.ImmutableArray`1"/>'s internal field. It doesn't waste any
+            extra memory by allocating a duplicate array.
+            </summary>
+            <param name="data">Data to use</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

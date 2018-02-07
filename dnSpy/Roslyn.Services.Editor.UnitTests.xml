@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Roslyn.Services.Editor.UnitTests</name>
+    </assembly>
+    <members>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.FindCorrespondingEditorTextSnapshot(Microsoft.CodeAnalysis.Text.SourceText)">
+            <summary>
+            Returns the ITextSnapshot behind this SourceText, or null if it wasn't created from one.
+            
+            Note that multiple ITextSnapshots may map to the same SourceText instance if
+            ITextSnapshot.Version.ReiteratedVersionNumber doesn't change.
+            </summary>
+            <returns>The underlying ITextSnapshot.</returns>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetWorkspace(Microsoft.VisualStudio.Text.ITextBuffer)">
+            <summary>
+            Gets the workspace corresponding to the text buffer.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetRelatedDocumentsWithChanges(Microsoft.VisualStudio.Text.ITextSnapshot)">
+            <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.Document"/>s from the corresponding <see cref="P:Microsoft.CodeAnalysis.Workspace.CurrentSolution"/> that are associated with the <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot"/>'s buffer,
+            updated to contain the same text as the snapshot if necessary. There may be multiple <see cref="T:Microsoft.CodeAnalysis.Document"/>s associated with the buffer
+            if the file is linked into multiple projects or is part of a Shared Project.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetOpenDocumentInCurrentContextWithChanges(Microsoft.VisualStudio.Text.ITextSnapshot)">
+            <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.Document"/> from the corresponding <see cref="P:Microsoft.CodeAnalysis.Workspace.CurrentSolution"/> that is associated with the <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot"/>'s buffer
+            in its current project context, updated to contain the same text as the snapshot if necessary. There may be multiple <see cref="T:Microsoft.CodeAnalysis.Document"/>s
+            associated with the buffer if it is linked into multiple projects or is part of a Shared Project. In this case, the <see cref="T:Microsoft.CodeAnalysis.Workspace"/>
+            is responsible for keeping track of which of these <see cref="T:Microsoft.CodeAnalysis.Document"/>s is in the current project context.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetRelatedDocuments(Microsoft.VisualStudio.Text.ITextBuffer)">
+            <summary>
+            Gets the <see cref="T:Microsoft.CodeAnalysis.Document"/>s from the corresponding <see cref="P:Microsoft.CodeAnalysis.Workspace.CurrentSolution"/> that are associated with the <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer"/>.
+            There may be multiple <see cref="T:Microsoft.CodeAnalysis.Document"/>s associated with the buffer if it is linked into multiple projects or is part of a Shared Project. 
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetDocumentWithFrozenPartialSemanticsAsync(Microsoft.CodeAnalysis.Text.SourceText,System.Threading.CancellationToken)">
+            <summary>
+            Tries to get the document corresponding to the text from the current partial solution 
+            associated with the text's container. If the document does not contain the exact text a document 
+            from a new solution containing the specified text is constructed. If no document is associated
+            with the specified text's container, or the text's container isn't associated with a workspace,
+            then the method returns false.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.Extensions2.GetEncodingOrUTF8(Microsoft.VisualStudio.Text.ITextBuffer)">
+            <summary>
+            Get the encoding used to load this <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer"/> if possible.
+            <para>
+            Note that this will return <see cref="P:System.Text.Encoding.UTF8"/> if the <see cref="T:Microsoft.VisualStudio.Text.ITextBuffer"/>
+            didn't come from an <see cref="T:Microsoft.VisualStudio.Text.ITextDocument"/>, or if the <see cref="T:Microsoft.VisualStudio.Text.ITextDocument"/>
+            is already closed.
+            </para>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.ITextSnapshotLineExtensions.GetFirstNonWhitespacePosition(Microsoft.VisualStudio.Text.ITextSnapshotLine)">
+            <summary>
+            Returns the first non-whitespace position on the given line, or null if 
+            the line is empty or contains only whitespace.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.ITextSnapshotLineExtensions.GetFirstNonWhitespaceOffset(Microsoft.VisualStudio.Text.ITextSnapshotLine)">
+            <summary>
+            Returns the first non-whitespace position on the given line as an offset
+            from the start of the line, or null if the line is empty or contains only
+            whitespace.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.ITextSnapshotLineExtensions.GetLastNonWhitespacePosition(Microsoft.VisualStudio.Text.ITextSnapshotLine)">
+            <summary>
+            Returns the last non-whitespace position on the given line, or null if 
+            the line is empty or contains only whitespace.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.ITextSnapshotLineExtensions.IsEmptyOrWhitespace(Microsoft.VisualStudio.Text.ITextSnapshotLine)">
+            <summary>
+            Determines whether the specified line is empty or contains whitespace only.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.ITextSnapshotLineExtensions.StartsWith(Microsoft.VisualStudio.Text.ITextSnapshotLine,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Checks if the given line at the given snapshot index starts with the provided value.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.TextSpanExtensions.ToSpan(Microsoft.CodeAnalysis.Text.TextSpan)">
+            <summary>
+            Convert a <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan"/> instance to an <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan"/>.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Extensions.TextSpanExtensions.ToSnapshotSpan(Microsoft.CodeAnalysis.Text.TextSpan,Microsoft.VisualStudio.Text.ITextSnapshot)">
+            <summary>
+            Convert a <see cref="T:Microsoft.CodeAnalysis.Text.TextSpan"/> to a <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan"/> on the given <see cref="T:Microsoft.VisualStudio.Text.ITextSnapshot"/> instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.Host.IWaitIndicator.Wait(System.String,System.String,System.Boolean,System.Boolean,System.Action{dnSpy.Roslyn.EditorFeatures.Host.IWaitContext})">
+            <summary>
+            Schedule the action on the caller's thread and wait for the task to complete.
+            </summary>
+        </member>
+        <member name="T:dnSpy.Roslyn.EditorFeatures.Host.ProgressTracker">
+            <summary>
+            Utility class that can be used to track the progress of an operation in a threadsafe manner.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.TextStructureNavigation.AbstractTextStructureNavigatorProvider.TextStructureNavigator.FindLeafNode(Microsoft.VisualStudio.Text.SnapshotSpan,System.Threading.CancellationToken)">
+            <summary>
+            Finds deepest node that covers given <see cref="T:Microsoft.VisualStudio.Text.SnapshotSpan"/>.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.TextStructureNavigation.AbstractTextStructureNavigatorProvider.TextStructureNavigator.TryFindLeafToken(Microsoft.VisualStudio.Text.SnapshotPoint,Microsoft.CodeAnalysis.SyntaxToken@,System.Threading.CancellationToken)">
+            <summary>
+            Given position in a text buffer returns the leaf syntax node it belongs to.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.TextStructureNavigation.AbstractTextStructureNavigatorProvider.TextStructureNavigator.SkipSameSpanParents(Microsoft.CodeAnalysis.SyntaxNodeOrToken)">
+            <summary>
+            Returns first ancestor of the node which has a span wider than node's span.
+            If none exist, returns the last available ancestor.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Roslyn.EditorFeatures.TextStructureNavigation.AbstractTextStructureNavigatorProvider.TextStructureNavigator.GetEnclosingNode(Microsoft.CodeAnalysis.SyntaxNodeOrToken)">
+            <summary>
+            Finds node enclosing current from navigation point of view (that is, some immediate ancestors
+            may be skipped during this process).
+            </summary>
+        </member>
+    </members>
+</doc>

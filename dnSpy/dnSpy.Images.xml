@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Images</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Images.Dummy">
+            <summary>
+            Dummy class that can be referenced to make sure this assembly gets copied to the correct directory
+            </summary>
+        </member>
+    </members>
+</doc>

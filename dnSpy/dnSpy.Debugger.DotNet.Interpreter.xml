@@ -1,0 +1,1059 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Debugger.DotNet.Interpreter</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime">
+            <summary>
+            Class implemented by the debugger. It provides access to the debugged process' locals,
+            arguments, allows calling methods etc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.PointerSize">
+            <summary>
+            Gets the size of a pointer in bytes
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.Initialize(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,dnSpy.Debugger.DotNet.Metadata.DmdMethodBody)">
+            <summary>
+            Called before executing the method
+            </summary>
+            <param name="method">Method</param>
+            <param name="body">Method body</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadArgument(System.Int32)">
+            <summary>
+            Gets an argument value or returns null on failure
+            </summary>
+            <param name="index">Argument index</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadLocal(System.Int32)">
+            <summary>
+            Gets a local value or returns null on failure
+            </summary>
+            <param name="index">Local index</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadArgumentAddress(System.Int32,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Gets the address of an argument or returns null on failure
+            </summary>
+            <param name="index">Argument index</param>
+            <param name="type">Type of the argument</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadLocalAddress(System.Int32,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Gets the address of a local or returns null on failure
+            </summary>
+            <param name="index">Local index</param>
+            <param name="type">Type of the local</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.StoreArgument(System.Int32,dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Writes to an argument or returns false on failure
+            </summary>
+            <param name="index">Argument index</param>
+            <param name="type">Type of the argument</param>
+            <param name="value">New value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.StoreLocal(System.Int32,dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Writes to a local or returns false on failure
+            </summary>
+            <param name="index">Local index</param>
+            <param name="type">Type of the local</param>
+            <param name="value">New value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateSZArray(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int64)">
+            <summary>
+            Creates an SZ array or returns null on failure
+            </summary>
+            <param name="elementType">Element type</param>
+            <param name="length">Number of elements</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateRuntimeTypeHandle(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Creates a <see cref="T:System.RuntimeTypeHandle"/> value or returns null on failure
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateRuntimeFieldHandle(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo)">
+            <summary>
+            Creates a <see cref="T:System.RuntimeFieldHandle"/> value or returns null on failure
+            </summary>
+            <param name="field">Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateRuntimeMethodHandle(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase)">
+            <summary>
+            Creates a <see cref="T:System.RuntimeMethodHandle"/> value or returns null on failure
+            </summary>
+            <param name="method">Method</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateTypeNoConstructor(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Creates a type without calling its constructor or returns null on failure. All fields are initialized to 0 or null depending on field type
+            </summary>
+            <param name="type">Type to create</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.Box(dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Boxes a value or returns null on failure
+            </summary>
+            <param name="value">Value to box</param>
+            <param name="type">Target type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CallStatic(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,dnSpy.Debugger.DotNet.Interpreter.ILValue[],dnSpy.Debugger.DotNet.Interpreter.ILValue@)">
+            <summary>
+            Calls a static method or returns false on failure
+            </summary>
+            <param name="method">Method to call</param>
+            <param name="arguments">Method arguments</param>
+            <param name="returnValue">Return value. It's ignored if the method returns <see cref="T:System.Void"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CreateInstance(dnSpy.Debugger.DotNet.Metadata.DmdConstructorInfo,dnSpy.Debugger.DotNet.Interpreter.ILValue[])">
+            <summary>
+            Creates a new instance and calls its constructor or returns null on failure. The constructor could be a CLR-generated array constructor
+            </summary>
+            <param name="ctor">Constructor</param>
+            <param name="arguments">Constructor arguments</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CallStaticIndirect(dnSpy.Debugger.DotNet.Metadata.DmdMethodSignature,dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Interpreter.ILValue[],dnSpy.Debugger.DotNet.Interpreter.ILValue@)">
+            <summary>
+            Calls a static method or returns false on failure
+            </summary>
+            <param name="methodAddress">Method address</param>
+            <param name="methodSig">Method signature</param>
+            <param name="arguments">Method arguments</param>
+            <param name="returnValue">Return value. It's ignored if the method returns <see cref="T:System.Void"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadStaticField(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo)">
+            <summary>
+            Returns the value of a static field or returns null on failure
+            </summary>
+            <param name="field">Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadStaticFieldAddress(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo)">
+            <summary>
+            Returns the address of a static field or returns null on failure
+            </summary>
+            <param name="field">Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.StoreStaticField(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Stores a value in a static field or returns false on failure
+            </summary>
+            <param name="field">Field</param>
+            <param name="value">Value to store in the field</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.LoadString(dnSpy.Debugger.DotNet.Metadata.DmdType,System.String)">
+            <summary>
+            Returns a new string value
+            </summary>
+            <param name="type">String type</param>
+            <param name="value">String value. This is never null.</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CompareSigned(dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Compares <paramref name="left"/> and <paramref name="right"/>, returning less than 0, 0 or greater than 0.
+            This method is called if one of the inputs is a non-constant native int or by-ref.
+            </summary>
+            <param name="left">Left operand</param>
+            <param name="right">Right operand</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.CompareUnsigned(dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Compares <paramref name="left"/> and <paramref name="right"/>, returning less than 0, 0 or greater than 0.
+            This method is called if one of the inputs is a non-constant native int or by-ref.
+            </summary>
+            <param name="left">Left operand</param>
+            <param name="right">Right operand</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.Equals(dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Checks if <paramref name="left"/> equals <paramref name="right"/> or returns null on failure
+            </summary>
+            <param name="left">Left operand</param>
+            <param name="right">Right operand</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime.GetSizeOfValueType(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Gets the size of a value type
+            </summary>
+            <param name="type">Value type</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ILValueKind">
+            <summary>
+            IL stack value kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Int32">
+            <summary>
+            32-bit integer. 1-byte and 2-byte integers are sign/zero extended to 32 bits. Booleans and chars are zero extended.
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Int64">
+            <summary>
+            64-bit integer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Float">
+            <summary>
+            64-bit float (32-bit floats are extended to 64-bit floats)
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.NativeInt">
+            <summary>
+            Unmanaged pointer or native int
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.ByRef">
+            <summary>
+            Managed pointer
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Type">
+            <summary>
+            Any other reference type or value type
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ILValue">
+            <summary>
+            A value that can be stored on the IL stack
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ILValue.Kind">
+            <summary>
+            Gets the stack value kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ILValue.IsNull">
+            <summary>
+            true if this is a null value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Clone">
+            <summary>
+            Makes a copy of this instance so the new instance can be pushed onto the stack. The default implementation
+            returns itself. Only mutable value types need to override this method.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ILValue.Type">
+            <summary>
+            Gets the type of the value or null if it's unknown, eg. it's a null reference
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.LoadField(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo)">
+            <summary>
+            Loads an instance field. Returns null if it's not supported.
+            </summary>
+            <param name="field">Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.StoreField(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Stores a value in an instance field. Returns false if it's not supported.
+            </summary>
+            <param name="field">Field</param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.LoadFieldAddress(dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo)">
+            <summary>
+            Returns the address of an instance field. Returns null if it's not supported.
+            </summary>
+            <param name="field">Field</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Call(System.Boolean,dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,dnSpy.Debugger.DotNet.Interpreter.ILValue[],dnSpy.Debugger.DotNet.Interpreter.ILValue@)">
+            <summary>
+            Calls an instance method. The method could be a CLR-generated method, eg. an array Address() method, see <see cref="T:dnSpy.Debugger.DotNet.Metadata.DmdSpecialMethodKind"/>.
+            Returns false if it's not supported.
+            </summary>
+            <param name="isCallvirt">true if this is a virtual call, false if it's a non-virtual call</param>
+            <param name="method">Method</param>
+            <param name="arguments">Arguments. The hidden 'this' value isn't included, it's this instance.</param>
+            <param name="returnValue">Updated with the return value. Can be null if the return type is <see cref="T:System.Void"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.CallIndirect(dnSpy.Debugger.DotNet.Metadata.DmdMethodSignature,dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Interpreter.ILValue[],dnSpy.Debugger.DotNet.Interpreter.ILValue@)">
+            <summary>
+            Calls an instance method or returns false on failure
+            </summary>
+            <param name="methodAddress">Method address</param>
+            <param name="methodSig">Method signature</param>
+            <param name="arguments">Method arguments</param>
+            <param name="returnValue">Return value. It's ignored if the method returns <see cref="T:System.Void"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Box(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Boxes this instance. Returns null if it's not supported.
+            </summary>
+            <param name="type">Target type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.UnboxAny(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Unboxes this instance. Returns null if it's not supported.
+            </summary>
+            <param name="type">Target type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Unbox(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Unboxes this instance. Returns null if it's not supported.
+            </summary>
+            <param name="type">Target type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.LoadSZArrayElement(dnSpy.Debugger.DotNet.Interpreter.LoadValueType,System.Int64,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Loads an SZ array element. Returns null if it's not supported.
+            </summary>
+            <param name="loadValueType">Type of value to load</param>
+            <param name="index">Array index</param>
+            <param name="elementType">Optional element type (eg. it's the ldelem instruction)</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.StoreSZArrayElement(dnSpy.Debugger.DotNet.Interpreter.LoadValueType,System.Int64,dnSpy.Debugger.DotNet.Interpreter.ILValue,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Writes an SZ array element. Returns false if it's not supported.
+            </summary>
+            <param name="loadValueType">Type of value to store</param>
+            <param name="index">Index</param>
+            <param name="value">Value</param>
+            <param name="elementType">Optional element type (eg. it's the stelem instruction)</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.LoadSZArrayElementAddress(System.Int64,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Loads the address of an SZ array element. Returns null if it's not supported.
+            </summary>
+            <param name="index">Index</param>
+            <param name="elementType">Element type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.GetSZArrayLength(System.Int64@)">
+            <summary>
+            Gets the length of an SZ array. Returns false if it's not supported.
+            </summary>
+            <param name="length">Updated with the length of the array</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.LoadIndirect(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.LoadValueType)">
+            <summary>
+            Loads a value. Returns null if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <param name="loadValueType">Type of value to load</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.StoreIndirect(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.LoadValueType,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Stores a value. Returns false if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <param name="loadValueType">Type of value to store</param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.InitializeObject(dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Clears the memory. Returns false if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.CopyObject(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Copies <paramref name="source"/> to this value. Returns false if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <param name="source">Source value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.InitializeMemory(System.Byte,System.Int64)">
+            <summary>
+            Initializes memory. Returns false if it's not supported.
+            </summary>
+            <param name="value">Value to write</param>
+            <param name="size">Size of data</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.CopyMemory(dnSpy.Debugger.DotNet.Interpreter.ILValue,System.Int64)">
+            <summary>
+            Copies memory to this value. Returns false if it's not supported.
+            </summary>
+            <param name="source">Source value</param>
+            <param name="size">Size in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Add(dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind,System.Int64,System.Int32)">
+            <summary>
+            Adds a constant to a copy of this value and returns the result. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <param name="value">Value to add</param>
+            <param name="pointerSize">Size of a pointer in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Sub(dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind,System.Int64,System.Int32)">
+            <summary>
+            Subtracts a constant from a copy of this value and returns the result. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <param name="value">Value to subtract</param>
+            <param name="pointerSize">Size of a pointer in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Sub(dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind,dnSpy.Debugger.DotNet.Interpreter.ILValue,System.Int32)">
+            <summary>
+            Subtracts <paramref name="value"/> from a copy of this value and returns the result. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <param name="value">Value to subtract</param>
+            <param name="pointerSize">Size of a pointer in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILValue.Conv(dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind)">
+            <summary>
+            Converts this value to a new value. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind">
+            <summary>
+            Add opcode kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind.Add">
+            <summary>
+            Normal addition
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind.Add_Ovf">
+            <summary>
+            Signed addition with an overflow check
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind.Add_Ovf_Un">
+            <summary>
+            Unsigned addition with an overflow check
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind">
+            <summary>
+            Sub opcode kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind.Sub">
+            <summary>
+            Normal subtraction
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind.Sub_Ovf">
+            <summary>
+            Signed subtraction with an overflow check
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind.Sub_Ovf_Un">
+            <summary>
+            Unsigned subtraction with an overflow check
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind">
+            <summary>
+            Convert opcode kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_I">
+            <summary>
+            Convert to a <see cref="T:System.IntPtr"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_Ovf_I">
+            <summary>
+            Convert to a <see cref="T:System.IntPtr"/>, signed, overflow check
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_Ovf_I_Un">
+            <summary>
+            Convert to a <see cref="T:System.IntPtr"/>, unsigned, overflow check
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_U">
+            <summary>
+            Convert to a <see cref="T:System.UIntPtr"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_Ovf_U">
+            <summary>
+            Convert to a <see cref="T:System.UIntPtr"/>, signed, overflow check
+            </summary>
+        </member>
+        <member name="F:dnSpy.Debugger.DotNet.Interpreter.ConvOpCodeKind.Conv_Ovf_U_Un">
+            <summary>
+            Convert to a <see cref="T:System.UIntPtr"/>, unsigned, overflow check
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue">
+            <summary>
+            32-bit integer. 1-byte, 2-byte and 4-byte integer values, booleans, and chars use this class.
+            Smaller values are sign or zero extended.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Int32"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.Value">
+            <summary>
+            Gets the value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.UnsignedValue">
+            <summary>
+            Gets the value as a <see cref="T:System.UInt32"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.Int32"/></param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt32ILValue.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue">
+            <summary>
+            64-bit integer
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Int64"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.Value">
+            <summary>
+            Gets the value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.UnsignedValue">
+            <summary>
+            Gets the value as a <see cref="T:System.UInt64"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.Int64"/></param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantInt64ILValue.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue">
+            <summary>
+            64-bit floating point value (32-bit floating point numbers are extended to 64 bits)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Float"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.Value">
+            <summary>
+            Gets the value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.Double"/></param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantFloatILValue.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.NativeIntILValue">
+            <summary>
+            native integer or unmanaged pointer
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.NativeIntILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.NativeInt"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue">
+            <summary>
+            native integer or unmanaged pointer
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Value32">
+            <summary>
+            Gets the value as a <see cref="T:System.Int32"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Value64">
+            <summary>
+            Gets the value as a <see cref="T:System.Int64"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.UnsignedValue32">
+            <summary>
+            Gets the value as a <see cref="T:System.UInt32"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.UnsignedValue64">
+            <summary>
+            Gets the value as a <see cref="T:System.UInt64"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Create32(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int32)">
+            <summary>
+            Creates a 32-bit native int
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Create64(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int64)">
+            <summary>
+            Creates a 64-bit native int
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Create32(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int32)">
+            <summary>
+            Creates a 32-bit native int
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.IntPtr"/></param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Create64(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int64)">
+            <summary>
+            Creates a 64-bit native int
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.IntPtr"/></param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.IntPtr"/></param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="type">Type, eg. <see cref="T:System.IntPtr"/></param>
+            <param name="value">Value</param>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ConstantNativeIntILValue.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue">
+            <summary>
+            Function pointer, created by the ldftn/ldvirtftn instructions
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.IsVirtual">
+            <summary>
+            true if it was created by a ldvirtftn instruction, false it was created by a ldftn instruction
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.VirtualThisObject">
+            <summary>
+            Gets the this value if and only if this was created by a ldvirtftn instruction, otherwise it's null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.Method">
+            <summary>
+            Gets the method
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase)">
+            <summary>
+            Constructor (used by ldftn instruction)
+            </summary>
+            <param name="method">Method</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Constructor (used by ldvirtftn instruction)
+            </summary>
+            <param name="method">Method</param>
+            <param name="thisValue">This object</param>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.FunctionPointerILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue">
+            <summary>
+            Pointer to a block of memory. Used by eg. localloc
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain,System.Int32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="appDomain">AppDomain</param>
+            <param name="size">Size of memory</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.Add(dnSpy.Debugger.DotNet.Interpreter.AddOpCodeKind,System.Int64,System.Int32)">
+            <summary>
+            Adds a constant to a copy of this value and returns the result. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <param name="value">Value to add</param>
+            <param name="pointerSize">Size of a pointer in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.Sub(dnSpy.Debugger.DotNet.Interpreter.SubOpCodeKind,System.Int64,System.Int32)">
+            <summary>
+            Subtracts a constant from a copy of this value and returns the result. Returns null if it's not supported.
+            </summary>
+            <param name="kind">Opcode kind</param>
+            <param name="value">Value to subtract</param>
+            <param name="pointerSize">Size of a pointer in bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.LoadIndirect(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.LoadValueType)">
+            <summary>
+            Loads a value. Returns null if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <param name="loadValueType">Type of value to load</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.StoreIndirect(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Interpreter.LoadValueType,dnSpy.Debugger.DotNet.Interpreter.ILValue)">
+            <summary>
+            Stores a value. Returns false if it's not supported.
+            </summary>
+            <param name="type">Type</param>
+            <param name="loadValueType">Type of value to store</param>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.InitializeMemory(System.Byte,System.Int64)">
+            <summary>
+            Initializes memory or returns false if it's not supported
+            </summary>
+            <param name="value">Value to write</param>
+            <param name="size">Size of data</param>
+            <returns></returns>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.NativeMemoryILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ByRefILValue">
+            <summary>
+            Managed pointer
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.ByRefILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.ByRef"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.TypeILValue">
+            <summary>
+            A reference type or a value type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.TypeILValue.Kind">
+            <summary>
+            Always returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.ILValueKind.Type"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.NullObjectRefILValue">
+            <summary>
+            A null reference
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.NullObjectRefILValue.IsNull">
+            <summary>
+            Returns true since it's a null value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.NullObjectRefILValue.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.NullObjectRefILValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ILVM">
+            <summary>
+            Interprets IL code and returns the result
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILVM.CreateExecuteState(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase)">
+            <summary>
+            Creates state that can be passed in to <see cref="M:dnSpy.Debugger.DotNet.Interpreter.ILVM.Execute(dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime,dnSpy.Debugger.DotNet.Interpreter.ILVMExecuteState)"/>
+            </summary>
+            <param name="method">Method to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILVM.Execute(dnSpy.Debugger.DotNet.Interpreter.DebuggerRuntime,dnSpy.Debugger.DotNet.Interpreter.ILVMExecuteState)">
+            <summary>
+            Interprets the IL instructions in the method body. All calls are handled by <paramref name="debuggerRuntime"/>
+            </summary>
+            <param name="debuggerRuntime">Debugger class that can call methods in the debugged process</param>
+            <param name="state">State created by <see cref="M:dnSpy.Debugger.DotNet.Interpreter.ILVM.CreateExecuteState(dnSpy.Debugger.DotNet.Metadata.DmdMethodBase)"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ILVMExecuteState">
+            <summary>
+            State created by <see cref="T:dnSpy.Debugger.DotNet.Interpreter.ILVM"/> to speed up executing a method
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.ILVMFactory">
+            <summary>
+            Creates <see cref="T:dnSpy.Debugger.DotNet.Interpreter.ILVM"/> instances
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.ILVMFactory.Create">
+            <summary>
+            Creates a new <see cref="T:dnSpy.Debugger.DotNet.Interpreter.ILVM"/> instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.Impl.OpCode">
+            <summary>
+            1-byte opcode, xx
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.Impl.OpCodeFE">
+            <summary>
+            2-byte opcode, FE xx
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.InterpreterException">
+            <summary>
+            Interpreter exception
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.InterpreterException.Kind">
+            <summary>
+            Gets the exception kind
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Message</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.TooManyInstructionsInterpreterException">
+            <summary>
+            Thrown when too many instructions have been interpreted
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.TooManyInstructionsInterpreterException.Kind">
+            <summary>
+            Returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.InterpreterExceptionKind.TooManyInstructions"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.TooManyInstructionsInterpreterException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.InvalidMethodBodyInterpreterException">
+            <summary>
+            Invalid method body, eg. last instruction isn't an unconditional branch instruction (eg. ret/throw)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.InvalidMethodBodyInterpreterException.Kind">
+            <summary>
+            Returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.InterpreterExceptionKind.InvalidMethodBody"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InvalidMethodBodyInterpreterException.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InvalidMethodBodyInterpreterException.#ctor(System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.InstructionNotSupportedInterpreterException">
+            <summary>
+            Unsupported IL instruction
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.InstructionNotSupportedInterpreterException.Kind">
+            <summary>
+            Returns <see cref="F:dnSpy.Debugger.DotNet.Interpreter.InterpreterExceptionKind.InstructionNotSupported"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InstructionNotSupportedInterpreterException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Message</param>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.InterpreterMessageException">
+            <summary>
+            Thrown when IL code is being interpreted and an error is detected.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterMessageException.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Error message</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterMessageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="message">Error message</param>
+            <param name="innerException">Other exception</param>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterMessageException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="info"></param>
+            <param name="context"></param>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Interpreter.InterpreterThrownExceptionException">
+            <summary>
+            Contains a thrown exception value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Debugger.DotNet.Interpreter.InterpreterThrownExceptionException.ThrownValue">
+            <summary>
+            Gets the thrown value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Interpreter.InterpreterThrownExceptionException.#ctor(System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="thrownValue">Thrown value</param>
+        </member>
+    </members>
+</doc>

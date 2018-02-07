@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Scripting.Roslyn.x</name>
+    </assembly>
+    <members>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplCommandConstants.RoslynReplGroup">
+            <summary>
+            Roslyn REPL command IDs (<see cref="T:dnSpy.Scripting.Roslyn.Commands.RoslynReplIds"/>)
+            </summary>
+        </member>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplCommandConstants.CommandInfoProvider_RoslynREPL">
+            <summary>
+            Order of Roslyn REPL editor <see cref="T:dnSpy.Contracts.Command.ICommandInfoProvider"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplCommandConstants.CommandTargetFilter_RoslynREPL">
+            <summary>
+            Order of Roslyn REPL editor <see cref="T:dnSpy.Contracts.Command.ICommandTargetFilter"/>
+            </summary>
+        </member>
+        <member name="T:dnSpy.Scripting.Roslyn.Commands.RoslynReplIds">
+            <summary>
+            Roslyn REPL command IDs
+            </summary>
+        </member>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplIds.Reset">
+            <summary>
+            Resets the REPL
+            </summary>
+        </member>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplIds.SaveText">
+            <summary>
+            Saves text
+            </summary>
+        </member>
+        <member name="F:dnSpy.Scripting.Roslyn.Commands.RoslynReplIds.SaveCode">
+            <summary>
+            Saves code
+            </summary>
+        </member>
+        <member name="T:dnSpy.Scripting.Roslyn.Commands.RoslynReplIdsExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Commands.RoslynReplIdsExtensions.ToCommandInfo(dnSpy.Scripting.Roslyn.Commands.RoslynReplIds)">
+            <summary>
+            Converts <paramref name="id"/> to a <see cref="T:dnSpy.Contracts.Command.CommandInfo"/>
+            </summary>
+            <param name="id">ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Commands.RoslynReplIdsExtensions.ToCommandInfo(dnSpy.Scripting.Roslyn.Commands.RoslynReplIds,System.Object)">
+            <summary>
+            Converts <paramref name="id"/> to a <see cref="T:dnSpy.Contracts.Command.CommandInfo"/>
+            </summary>
+            <param name="id">ID</param>
+            <param name="arguments">Arguments or null</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Scripting.Roslyn.Common.IScriptCommand">
+            <summary>
+            Script command, eg. '#mycommand'
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Common.IScriptCommand.Names">
+            <summary>
+            Name, eg. 'mycommand'
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Common.IScriptCommand.ShortDescription">
+            <summary>
+            Short one-line description
+            </summary>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Common.IScriptCommand.Execute(dnSpy.Scripting.Roslyn.Common.ScriptControlVM,System.String[])">
+            <summary>
+            Executes the command
+            </summary>
+            <param name="vm">Owner</param>
+            <param name="args">Args</param>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Common.RoslynReplEditorUtils.AddInstance(dnSpy.Scripting.Roslyn.Common.ScriptControlVM,Microsoft.VisualStudio.Text.Editor.ITextView)">
+            <summary>
+            Adds the <see cref="T:dnSpy.Scripting.Roslyn.Common.ScriptControlVM"/> instance to the <see cref="T:Microsoft.VisualStudio.Text.Editor.ITextView"/> properties
+            </summary>
+            <param name="vm">Script control</param>
+            <param name="textView">REPL editor text view</param>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Common.RoslynReplEditorUtils.TryGetInstance(Microsoft.VisualStudio.Text.Editor.ITextView)">
+            <summary>
+            Returns the <see cref="T:dnSpy.Scripting.Roslyn.Common.ScriptControlVM"/> instance if it has been added by <see cref="M:dnSpy.Scripting.Roslyn.Common.RoslynReplEditorUtils.AddInstance(dnSpy.Scripting.Roslyn.Common.ScriptControlVM,Microsoft.VisualStudio.Text.Editor.ITextView)"/>
+            </summary>
+            <param name="textView">Text view</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Common.ScriptControl.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:dnSpy.Scripting.Roslyn.Common.ScriptControlVM.IsCurrentScript(dnSpy.Scripting.Roslyn.Common.ScriptGlobals)">
+            <summary>
+            Returns true if it's the current script
+            </summary>
+            <param name="globals">Globals</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.AllFiles">
+            <summary>
+              Looks up a localized string similar to All Files.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ClearScreenCommand">
+            <summary>
+              Looks up a localized string similar to Clear Screen.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CompilationAdditionalError">
+            <summary>
+              Looks up a localized string similar to + additional {0} error.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CompilationAdditionalErrors">
+            <summary>
+              Looks up a localized string similar to + additional {0} errors.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CopyCodeCommand">
+            <summary>
+              Looks up a localized string similar to Copy Code.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CopyCommand">
+            <summary>
+              Looks up a localized string similar to Cop_y.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CSharpScriptFiles">
+            <summary>
+              Looks up a localized string similar to C# Script Files.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.CutCommand">
+            <summary>
+              Looks up a localized string similar to Cu_t.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpAltDown">
+            <summary>
+              Looks up a localized string similar to Show next command.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpAltUp">
+            <summary>
+              Looks up a localized string similar to Show previous command.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpClearDescription">
+            <summary>
+              Looks up a localized string similar to Clear the script editor.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpCtrlA">
+            <summary>
+              Looks up a localized string similar to Select input text. Press again to select all text.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpCtrlAltDown">
+            <summary>
+              Looks up a localized string similar to Show next command matching the current input text.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpCtrlAltUp">
+            <summary>
+              Looks up a localized string similar to Show previous command matching the current input text.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpCtrlEnter">
+            <summary>
+              Looks up a localized string similar to Execute the command.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpEnter">
+            <summary>
+              Looks up a localized string similar to Execute the command.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpEscape">
+            <summary>
+              Looks up a localized string similar to Clear current input.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpHelpDescription">
+            <summary>
+              Looks up a localized string similar to Display the help.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpKeyboardShortcuts">
+            <summary>
+              Looks up a localized string similar to Keyboard shortcuts:.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpReplCommands">
+            <summary>
+              Looks up a localized string similar to REPL commands:.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpResetDescription">
+            <summary>
+              Looks up a localized string similar to Reset the execution environment.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpScriptDirective_load">
+            <summary>
+              Looks up a localized string similar to Load and execute a script, #load &quot;myscript.csx&quot;.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpScriptDirective_r">
+            <summary>
+              Looks up a localized string similar to Add a reference, either an assembly or a path to a file on disk or a path relative to the dnSpy or user directory, #r &quot;myfile.dll&quot;.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpScriptDirectives">
+            <summary>
+              Looks up a localized string similar to Script directives:.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpShiftEnter">
+            <summary>
+              Looks up a localized string similar to Insert a new line.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.HelpString">
+            <summary>
+              Looks up a localized string similar to Type &quot;#help&quot; for more information..
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.LoadingContextFromFile">
+            <summary>
+              Looks up a localized string similar to Loading context from &apos;{0}&apos;..
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.PasteCommand">
+            <summary>
+              Looks up a localized string similar to _Paste.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Plugin_ShortDescription">
+            <summary>
+              Looks up a localized string similar to Scripting.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Repl_Save_ToolTip">
+            <summary>
+              Looks up a localized string similar to Save.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Repl_WordWrap_ToolTip">
+            <summary>
+              Looks up a localized string similar to Toggle Word Wrap.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ResettingExecutionEngine">
+            <summary>
+              Looks up a localized string similar to Resetting execution engine..
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.SaveCodeCommand">
+            <summary>
+              Looks up a localized string similar to Save Code....
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.SaveCommand">
+            <summary>
+              Looks up a localized string similar to Save....
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Script_ToolTip_ClearScreen">
+            <summary>
+              Looks up a localized string similar to Clear Screen.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Script_ToolTip_HistoryNext">
+            <summary>
+              Looks up a localized string similar to History Next.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Script_ToolTip_HistoryPrevious">
+            <summary>
+              Looks up a localized string similar to History Previous.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Script_ToolTip_Reset">
+            <summary>
+              Looks up a localized string similar to Reset.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyAltDown">
+            <summary>
+              Looks up a localized string similar to Alt+Down Arrow.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyAltUp">
+            <summary>
+              Looks up a localized string similar to Alt+Up Arrow.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlA">
+            <summary>
+              Looks up a localized string similar to Ctrl+A.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlAltDown">
+            <summary>
+              Looks up a localized string similar to Ctrl+Alt+Down Arrow.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlAltI">
+            <summary>
+              Looks up a localized string similar to Ctrl+Alt+I.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlAltN">
+            <summary>
+              Looks up a localized string similar to Ctrl+Alt+N.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlAltUp">
+            <summary>
+              Looks up a localized string similar to Ctrl+Alt+Up Arrow.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlC">
+            <summary>
+              Looks up a localized string similar to Ctrl+C.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlECtrlW">
+            <summary>
+              Looks up a localized string similar to Ctrl+E, Ctrl+W.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlEnter">
+            <summary>
+              Looks up a localized string similar to Ctrl+Enter.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlL">
+            <summary>
+              Looks up a localized string similar to Ctrl+L.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlS">
+            <summary>
+              Looks up a localized string similar to Ctrl+S.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlShiftC">
+            <summary>
+              Looks up a localized string similar to Ctrl+Shift+C.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlShiftS">
+            <summary>
+              Looks up a localized string similar to Ctrl+Shift+S.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlV">
+            <summary>
+              Looks up a localized string similar to Ctrl+V.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyCtrlX">
+            <summary>
+              Looks up a localized string similar to Ctrl+X.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyEnter">
+            <summary>
+              Looks up a localized string similar to Enter.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyEscape">
+            <summary>
+              Looks up a localized string similar to Esc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShortCutKeyShiftEnter">
+            <summary>
+              Looks up a localized string similar to Shift+Enter.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.ShowLineNumbersCommand">
+            <summary>
+              Looks up a localized string similar to Show Line Numbers.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.TextFiles">
+            <summary>
+              Looks up a localized string similar to Text Files.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.VisualBasicScriptFiles">
+            <summary>
+              Looks up a localized string similar to Visual Basic Script Files.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Window_CSharp">
+            <summary>
+              Looks up a localized string similar to C# Interactive.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.Window_VisualBasic">
+            <summary>
+              Looks up a localized string similar to Visual Basic Interactive.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Scripting.Roslyn.Properties.dnSpy_Scripting_Roslyn_Resources.WordWrapHeader">
+            <summary>
+              Looks up a localized string similar to _Word Wrap.
+            </summary>
+        </member>
+    </members>
+</doc>

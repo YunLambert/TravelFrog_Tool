@@ -1,0 +1,2717 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Contracts.Debugger.DotNet</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory">
+            <summary>
+            Creates breakpoints and tracepoints
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory.Create(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32)">
+            <summary>
+            Creates an enabled breakpoint. If there's already a breakpoint at the location, null is returned.
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the breakpoint within the method body</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory.CreateTracepoint(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32,System.String)">
+            <summary>
+            Creates an enabled tracepoint. If there's already a breakpoint at the location, null is returned.
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the tracepoint within the method body</param>
+            <param name="message">Message</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory.Create(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32,dnSpy.Contracts.Debugger.Breakpoints.Code.DbgCodeBreakpointSettings)">
+            <summary>
+            Creates a breakpoint or a tracepoint. If there's already a breakpoint at the location, null is returned.
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the breakpoint within the method body</param>
+            <param name="settings">Breakpoint settings</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory.Create(dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo[])">
+            <summary>
+            Creates breakpoints or tracepoints. Duplicate breakpoints are ignored.
+            </summary>
+            <param name="breakpoints">Breakpoint infos</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointFactory.TryGetBreakpoint(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32)">
+            <summary>
+            Returns an existing breakpoint or null if none exists
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the breakpoint within the method body</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo">
+            <summary>
+            Contains all required data to create a breakpoint
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo.Module">
+            <summary>
+            Module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo.Token">
+            <summary>
+            Token of a method within the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo.Offset">
+            <summary>
+            IL offset of the breakpoint within the method body
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo.Settings">
+            <summary>
+            Breakpoint settings
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Breakpoints.Code.DbgDotNetBreakpointInfo.#ctor(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32,dnSpy.Contracts.Debugger.Breakpoints.Code.DbgCodeBreakpointSettings)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the breakpoint within the method body</param>
+            <param name="settings">Breakpoint settings</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange">
+            <summary>
+            Code range
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange.Start">
+            <summary>
+            Gets the start offset relative to the start of the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange.End">
+            <summary>
+            Gets the end method offset (exclusive) relative to the start of the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange.Length">
+            <summary>
+            Gets the length of the range
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange.#ctor(System.UInt32,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="start">Start offset relative to the start of the method</param>
+            <param name="end">End method offset (exclusive) relative to the start of the method</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation">
+            <summary>
+            .NET code location
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation.Module">
+            <summary>
+            Gets the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation.Token">
+            <summary>
+            Gets the token of a method within the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation.Offset">
+            <summary>
+            Gets the IL offset within the method body
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation.DbgModule">
+            <summary>
+            Gets the debugger module or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation.NativeAddress">
+            <summary>
+            Gets the native address
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationFactory">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation"/> instances
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationFactory.Create(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32)">
+            <summary>
+            Creates a new <see cref="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation"/> instance
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the location within the method body</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationFactory.Create(dnSpy.Contracts.Metadata.ModuleId,System.UInt32,System.UInt32,dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationOptions)">
+            <summary>
+            Creates a new <see cref="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocation"/> instance
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Token of a method within the module</param>
+            <param name="offset">IL offset of the location within the method body</param>
+            <param name="options">Options</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationOptions">
+            <summary>
+            Options
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationOptions.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeLocationOptions.InvalidOffset">
+            <summary>
+            Offset is invalid, eg. it's a method with no managed method body
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService">
+            <summary>
+            Provides code ranges for .NET steppers
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService.EPILOG">
+            <summary>
+            The offset is in an epilog
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService.PROLOG">
+            <summary>
+            The offset is in the prolog
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService.GetCodeRanges(dnSpy.Contracts.Debugger.DbgModule,System.UInt32,System.UInt32,System.Action{dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult})">
+            <summary>
+            Gets code ranges
+            </summary>
+            <param name="module">Module</param>
+            <param name="token">Method token</param>
+            <param name="offset">Offset of IL instruction, or one of <see cref="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService.PROLOG"/>, <see cref="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetCodeRangeService.EPILOG"/></param>
+            <param name="callback">Gets called when the lookup is complete</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult">
+            <summary>
+            Contains the code ranges of the requested statement
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult.StatementRanges">
+            <summary>
+            Code ranges of the statement if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult.Success"/> is true
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult.Success">
+            <summary>
+            true if the code ranges were found
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult.#ctor(System.Boolean,dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="success">true if successful</param>
+            <param name="statementRanges">Code ranges of the statement</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.GetCodeRangeResult.#ctor(dnSpy.Contracts.Debugger.DotNet.Code.DbgCodeRange[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="statementRanges">Code ranges of the statement</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerGuidProvider">
+            <summary>
+            Converts <see cref="T:dnSpy.Contracts.Debugger.Evaluation.DbgLanguage"/>s to decompiler GUIDs. Use <see cref="T:dnSpy.Contracts.Debugger.DotNet.Code.ExportDbgDotNetDecompilerGuidProviderAttribute"/>
+            to export an instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerGuidProvider.GetDecompilerGuid(dnSpy.Contracts.Debugger.Evaluation.DbgLanguage)">
+            <summary>
+            Gets the decompiler GUID or null
+            </summary>
+            <param name="language">Language</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetDecompilerGuidProviderMetadata">
+            <summary>Metadata</summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetDecompilerGuidProviderMetadata.Order">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Code.ExportDbgDotNetDecompilerGuidProviderAttribute.Order"/></summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.ExportDbgDotNetDecompilerGuidProviderAttribute">
+            <summary>
+            Exports a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerGuidProvider"/> instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.ExportDbgDotNetDecompilerGuidProviderAttribute.#ctor(System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="order">Order</param>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.ExportDbgDotNetDecompilerGuidProviderAttribute.Order">
+            <summary>
+            Order
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerService">
+            <summary>
+            Returns the decompiler that should be used by code that needs to use a decompiler to format methods.
+            The decompiler gets updated when the <see cref="T:dnSpy.Contracts.Debugger.Evaluation.DbgLanguage"/> gets changed.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerService.Decompiler">
+            <summary>
+            Gets the decompiler
+            </summary>
+        </member>
+        <member name="E:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerService.DecompilerChanged">
+            <summary>
+            Raised after <see cref="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetDecompilerService.Decompiler"/> is changed
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation">
+            <summary>
+            .NET code location
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation.Module">
+            <summary>
+            Gets the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation.Token">
+            <summary>
+            Gets the token of a method within the module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation.Offset">
+            <summary>
+            Gets the IL offset within the method body
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation.DbgModule">
+            <summary>
+            Gets the debugger module or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.IDbgDotNetCodeLocation.NativeAddress">
+            <summary>
+            Gets the native address
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress">
+            <summary>
+            Native address info
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.None">
+            <summary>
+            No address
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.Address">
+            <summary>
+            Gets the address or 0 if it's not available
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.Offset">
+            <summary>
+            Gets the offset relative to <see cref="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.Address"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.IP">
+            <summary>
+            Gets the instruction pointer
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Code.DbgDotNetNativeFunctionAddress.#ctor(System.UInt64,System.UInt64)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="address">Address or 0 if it's not available</param>
+            <param name="offset">Offset relative to <paramref name="address"/></param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalAppDomain">
+            <summary>
+            Base class of a .NET app domain object implemented by the .NET debug engine
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalAppDomain.ReflectionAppDomain">
+            <summary>
+            Gets the reflection app domain
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalModule">
+            <summary>
+            Base class of a .NET module object implemented by the .NET debug engine
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalModule.ReflectionModule">
+            <summary>
+            Gets the reflection module or null if this isn't a managed module
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalRuntime">
+            <summary>
+            Base class of a .NET runtime object implemented by the .NET debug engine. It must implement <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.DbgDotNetInternalRuntime.ReflectionRuntime">
+            <summary>
+            Gets the reflection runtime
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.Kind">
+            <summary>
+            Alias kind
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.Type">
+            <summary>
+            Alias type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.Id">
+            <summary>
+            Alias id
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.CustomTypeInfo">
+            <summary>
+            Custom type info understood by the EE or null
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.CustomTypeInfoId">
+            <summary>
+            Custom type info ID
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfo.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfoKind,dnSpy.Debugger.DotNet.Metadata.DmdType,System.UInt32,System.Guid,System.Collections.ObjectModel.ReadOnlyCollection{System.Byte})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="kind">Alias kind</param>
+            <param name="type">Alias type</param>
+            <param name="id">Alias id</param>
+            <param name="customTypeInfoId">Custom type info ID</param>
+            <param name="customTypeInfo">Custom type info understood by the EE or null</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfoKind">
+            <summary>
+            Alias kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfoKind.Exception">
+            <summary>
+            An exception, eg. "$exception"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfoKind.StowedException">
+            <summary>
+            A stowed exception, eg. "$stowedexception"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetAliasInfoKind.ReturnValue">
+            <summary>
+            A return value, eg. "$ReturnValue1"
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCustomTypeInfo">
+            <summary>
+            Extra custom type info provided by the expression compiler and used by language formatters
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCustomTypeInfo.CustomTypeInfoId">
+            <summary>
+            Gets the custom type info ID
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCustomTypeInfo.CustomTypeInfo">
+            <summary>
+            Gets the custom type info
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCustomTypeInfo.#ctor(System.Guid,System.Collections.ObjectModel.ReadOnlyCollection{System.Byte})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="customTypeInfoId">Custom type info ID</param>
+            <param name="customTypeInfo">Custom type info</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher">
+            <summary>
+            Invokes code on another thread.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher.VerifyAccess">
+            <summary>
+            Throws if the current thread isn't the dispatcher thread
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher.CheckAccess">
+            <summary>
+            Checks whether the current thread is the dispatcher thread
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher.BeginInvoke(System.Action)">
+            <summary>
+            Executes code asynchronously on the dispatcher thread. This method returns immediately even if
+            it happens to be called on the dispatcher thread.
+            </summary>
+            <param name="callback">Code to execute</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher.Invoke``1(System.Func{``0})">
+            <summary>
+            Executes code on the dispatcher thread
+            </summary>
+            <typeparam name="T">Return type</typeparam>
+            <param name="callback">Code to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetDispatcher.Invoke(System.Action)">
+            <summary>
+            Executes code on the dispatcher thread
+            </summary>
+            <param name="callback">Code to execute</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo">
+            <summary>
+            Exception info
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo.Flags">
+            <summary>
+            Gets the flags
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo.IsStowedException">
+            <summary>
+            true if it's a stowed exception
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo.Id">
+            <summary>
+            Gets the exception id
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo.Value">
+            <summary>
+            Gets the exception instance. There's no guarantee that it derives from <see cref="T:System.Exception"/>.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfo.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,System.UInt32,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfoFlags)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="value">Exception value</param>
+            <param name="id">Exception id</param>
+            <param name="flags">Flags</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfoFlags">
+            <summary>
+            Exception info flags
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfoFlags.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetExceptionInfoFlags.StowedException">
+            <summary>
+            If set, it's a stowed exception, else it's an exception
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids">
+            <summary>
+            .NET language guids
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids.CSharp">
+            <summary>
+            C# language
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids.VisualBasic">
+            <summary>
+            Visual Basic language
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId">
+            <summary>
+            References a value in the debugged process
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId.Id">
+            <summary>
+            Gets the unique id in the runtime
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId.Dispose">
+            <summary>
+            Called when its owner (<see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectId"/>) gets closed
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo">
+            <summary>
+            Contains a method and its return value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo.Id">
+            <summary>
+            Gets the return value id
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo.Method">
+            <summary>
+            Gets the method
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo.Value">
+            <summary>
+            Gets the value returned by <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo.Method"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetReturnValueInfo.#ctor(System.UInt32,dnSpy.Debugger.DotNet.Metadata.DmdMethodInfo,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="id">Return value id</param>
+            <param name="method">Method</param>
+            <param name="value">Value returned by <paramref name="method"/></param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue">
+            <summary>
+            Result of evaluating an expression. All values are automatically closed when the runtime continues
+            but they implement <see cref="T:System.IDisposable"/> and should be disposed of earlier if possible.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.Type">
+            <summary>
+            Gets the type of the value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.IsNull">
+            <summary>
+            true if this is a null value
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.LoadIndirect">
+            <summary>
+            Gets the referenced value if it's a by-ref
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.StoreIndirect(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Writes to the referenced valued. The return value is null or an error message.
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="value">Value to store: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetArrayCount(System.UInt32@)">
+            <summary>
+            Gets the number of elements of the array
+            </summary>
+            <param name="elementCount">Total number of elements in the array</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetArrayInfo(System.UInt32@,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo[]@)">
+            <summary>
+            Gets array information if it's an array or returns false
+            </summary>
+            <param name="elementCount">Total number of elements in the array</param>
+            <param name="dimensionInfos">Dimension base indexes and lengths</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetArrayElementAddressAt(System.UInt32)">
+            <summary>
+            Gets the address of the element at <paramref name="index"/> in the array or null if it's not supported.
+            This method can be called even if it's a multi-dimensional array.
+            </summary>
+            <param name="index">Zero-based index of the element</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetArrayElementAt(System.UInt32)">
+            <summary>
+            Gets the element at <paramref name="index"/> in the array. This method can be called even if it's
+            a multi-dimensional array.
+            </summary>
+            <param name="index">Zero-based index of the element</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.SetArrayElementAt(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Stores a value at <paramref name="index"/> in the array. This method can be called even if it's
+            a multi-dimensional array.
+            The return value is null or an error message.
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Zero-based index of the element</param>
+            <param name="value">Value to store: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.Box(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Boxes the value type, returns null on failure
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetRawAddressValue(System.Boolean)">
+            <summary>
+            Gets the address of the value or null if there's no address available.
+            The returned address gets invalid when the runtime continues.
+            </summary>
+            <param name="onlyDataAddress">If true and if it's a supported type (eg. a simple type such as integers,
+            floating point values, strings or byte arrays) the returned object contains the address of the actual
+            value, else the returned address and length covers the whole object including vtable, method table or other
+            special data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.GetRawValue">
+            <summary>
+            Gets the raw value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.TryGetDotNetRuntime">
+            <summary>
+            Returns the <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime"/> instance or null if it's unknown
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue.Dispose">
+            <summary>
+            Called when its owner (<see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineValue"/>) gets closed
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo">
+            <summary>
+            Contains base index and length of an array dimension
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo.BaseIndex">
+            <summary>
+            Base index
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo.Length">
+            <summary>
+            Number of elements in this dimension
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo.#ctor(System.Int32,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="baseIndex">Base index</param>
+            <param name="length">Number of elements in this dimension</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue">
+            <summary>
+            Raw value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.ValueType">
+            <summary>
+            Type of the value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.HasRawValue">
+            <summary>
+            true if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.RawValue"/> is valid
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.RawValue">
+            <summary>
+            The value. It's only valid if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.HasRawValue"/> is true. A null value is a valid value.
+            If it's an enum value, it's stored as the enum's underlying type (eg. <see cref="T:System.Int32"/>)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.#ctor(dnSpy.Contracts.Debugger.Evaluation.DbgSimpleValueType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="valueType">Type</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawValue.#ctor(dnSpy.Contracts.Debugger.Evaluation.DbgSimpleValueType,System.Object)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="valueType">Type</param>
+            <param name="rawValue">Value</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult">
+            <summary>
+            Return value of methods creating <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/>s
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.Value">
+            <summary>
+            Gets the value or null if there was an error (<see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.ErrorMessage"/>) or if the method didn't
+            return a value. If <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.ValueIsException"/> is true, this is the thrown exception value.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.ValueIsException">
+            <summary>
+            true if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.Value"/> contains the thrown exception instead of the expected return value / field value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.ErrorMessage">
+            <summary>
+            Gets the error message or null if there was no error
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.HasError">
+            <summary>
+            true if there was an error, see <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.ErrorMessage"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.IsNormalResult">
+            <summary>
+            true if there's no error and no exception was thrown
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="value">Value</param>
+            <param name="valueIsException">true if <paramref name="value"/> contains the thrown exception instead of the expected return value / field value</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValueResult.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">Error message</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo">
+            <summary>
+            Method debug info used by a .NET debugger language. An instance of this class is attached to
+            a <see cref="T:dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext"/>, see <see cref="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions.TryGetLanguageDebugInfo(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext)"/>
+            and <see cref="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions.GetLanguageDebugInfo(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext)"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.MethodDebugInfo">
+            <summary>
+            Gets the method debug info
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.MethodToken">
+            <summary>
+            Gets the method token
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.LocalVarSigTok">
+            <summary>
+            Gets the method local variables signature token
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.MethodVersion">
+            <summary>
+            Gets the method version number, a 1-based number
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.ILOffset">
+            <summary>
+            Gets the IL offset
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo.#ctor(dnSpy.Contracts.Decompiler.MethodDebugInfo,System.Int32,System.Int32,System.Int32,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="methodDebugInfo">Method debug info</param>
+            <param name="methodToken">Method token</param>
+            <param name="localVarSigTok">Method local variables signature token</param>
+            <param name="methodVersion">Method version number, a 1-based number</param>
+            <param name="ilOffset">IL offset</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions.TryGetLanguageDebugInfo(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext)">
+            <summary>
+            Gets the debug info or null if there's none
+            </summary>
+            <param name="context">Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions.GetLanguageDebugInfo(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext)">
+            <summary>
+            Gets the debug info and throws if there is none
+            </summary>
+            <param name="context">Context</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfoExtensions.SetLanguageDebugInfo(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgLanguageDebugInfo)">
+            <summary>
+            Attaches <paramref name="debugInfo"/> to <paramref name="context"/>
+            </summary>
+            <param name="context">Context</param>
+            <param name="debugInfo">Debug info</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory">
+            <summary>
+            A .NET <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectIdFactory"/>.
+            Use <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.ExportDbgEngineObjectIdFactoryAttribute"/> to export an instance.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.#ctor(System.Guid,dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetLanguageService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runtimeGuid">Runtime guid, see <see cref="T:dnSpy.Contracts.Debugger.PredefinedDbgRuntimeGuids"/></param>
+            <param name="dbgDotNetLanguageService">.NET language service instance</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.CanCreateObjectId(dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineValue)">
+            <summary>
+            Returns true if it's possible to create an object id
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.CreateObjectId(dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineValue,System.UInt32)">
+            <summary>
+            Creates an object id or returns null
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <param name="id">Unique id</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.Equals(dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectId,dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineValue)">
+            <summary>
+            Checks if an object id and a value refer to the same data
+            </summary>
+            <param name="objectId">Object id created by this class</param>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.GetHashCode(dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectId)">
+            <summary>
+            Gets the hash code of an object id
+            </summary>
+            <param name="objectId">Object id created by this class</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetEngineObjectIdFactory.GetHashCode(dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineValue)">
+            <summary>
+            Gets the hash code of a value created by this runtime
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetLanguageService">
+            <summary>
+            Used by a <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectIdFactory"/> to create object id factories
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Engine.DbgDotNetLanguageService.GetEngineObjectIdFactory(System.Guid)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.DbgEngineObjectIdFactory"/>
+            </summary>
+            <param name="runtimeGuid">Runtime guid, see <see cref="T:dnSpy.Contracts.Debugger.PredefinedDbgRuntimeGuids"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind">
+            <summary>
+            Alias kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind.Exception">
+            <summary>
+            An exception, eg. "$exception"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind.StowedException">
+            <summary>
+            A stowed exception, eg. "$stowedexception"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind.ReturnValue">
+            <summary>
+            A return value, eg. "$ReturnValue", "$ReturnValue1"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind.Variable">
+            <summary>
+            A variable created by the user that doesn't exist in code
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind.ObjectId">
+            <summary>
+            An object ID, eg. "$1", "$3"
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias">
+            <summary>
+            An alias (eg. return value, object id, etc)
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.Kind">
+            <summary>
+            Alias kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.CustomTypeInfo">
+            <summary>
+            Custom type info understood by the EE or null
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.CustomTypeInfoId">
+            <summary>
+            Custom type info ID
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.Name">
+            <summary>
+            Name, eg. "$ReturnValue", "$1"
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.Type">
+            <summary>
+            Serialized type name, see <see cref="P:System.Type.AssemblyQualifiedName"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind,System.String,System.String,System.Guid,System.Collections.ObjectModel.ReadOnlyCollection{System.Byte})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="kind">Alias kind</param>
+            <param name="type">Serialized type name, see <see cref="P:System.Type.AssemblyQualifiedName"/></param>
+            <param name="name">Name, eg. "$ReturnValue", "$1"</param>
+            <param name="customTypeInfoId">Custom type info ID</param>
+            <param name="customTypeInfo">Custom type info understood by the EE or null</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult">
+            <summary>
+            Contains the compiled assembly and info on which method to evaluate to get the result of an expression
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.IsError">
+            <summary>
+            true if it has an error message (<see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.ErrorMessage"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.ErrorMessage">
+            <summary>
+            Gets the error message or null if there was no error
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.Assembly">
+            <summary>
+            Gets the .NET assembly bytes or null if there was an error (<see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.ErrorMessage"/>). It's
+            empty if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.CompiledExpressions"/> is empty.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.CompiledExpressions">
+            <summary>
+            Gets the result of all compiled expressions or null if there was an error (<see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.ErrorMessage"/>)
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">Error message</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompilationResult.#ctor(System.Byte[],dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="assembly">.NET assembly bytes</param>
+            <param name="compiledExpressions">Compiled expressions info</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResultFlags">
+            <summary>
+            Compiled expression result flags
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResultFlags.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResultFlags.CompilerGenerated">
+            <summary>
+            Compiler generated variable
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult">
+            <summary>
+            Compiled expression result
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.ErrorMessage">
+            <summary>
+            Error message or null if no error. See also <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.PredefinedEvaluationErrorMessages"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.TypeName">
+            <summary>
+            Name of the type that contains the method (<see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.MethodName"/>) that should be evaluated
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.MethodName">
+            <summary>
+            Name of the method that should be evaluated. The declaring type is <see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.TypeName"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.Expression">
+            <summary>
+            Gets the expression that was evaluated. This is eg. a C# or Visual Basic expression.
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.Name">
+            <summary>
+            Display name shown in the UI
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.Flags">
+            <summary>
+            Gets the evaluation result flags
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.ImageName">
+            <summary>
+            Gets the image, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgValueNodeImageNames"/>
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.CustomTypeInfo">
+            <summary>
+            Gets extra custom type info or null if none
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.Index">
+            <summary>
+            Parameter/local index or -1 if unknown
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.ResultFlags">
+            <summary>
+            Gets the compiled expression flags
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.Create(System.String,System.String,System.String,dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText,dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationResultFlags,System.String,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCustomTypeInfo,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResultFlags,System.Int32)">
+            <summary>
+            Creates a successful compiled expression with no error
+            </summary>
+            <param name="typeName">Name of type that contains the method to evaluate</param>
+            <param name="methodName">Name of the method to evaluate</param>
+            <param name="expression">Original expression</param>
+            <param name="name">Display name shown in the UI</param>
+            <param name="flags">Evaluation result flags</param>
+            <param name="imageName">Image, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgValueNodeImageNames"/></param>
+            <param name="customTypeInfo">Optional custom type info known by the language expression compiler and the language value formatter</param>
+            <param name="resultFlags">Result flags</param>
+            <param name="index">Parameter/local index or -1 if unknown</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetCompiledExpressionResult.CreateError(System.String,dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText,System.String)">
+            <summary>
+            Creates an error
+            </summary>
+            <param name="expression">Expression</param>
+            <param name="name">Display name shown in the UI</param>
+            <param name="errorMessage">Error message, see also <see cref="T:dnSpy.Contracts.Debugger.Engine.Evaluation.PredefinedEvaluationErrorMessages"/></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler">
+            <summary>
+            A .NET expression compiler. Use <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute"/>
+            to export an instance.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler.CompileExpression(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference[],dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias[],System.String,dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Compiles an expression
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="references">.NET module references</param>
+            <param name="aliases">Aliases</param>
+            <param name="expression">Expression</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler.CompileTypeExpression(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference[],dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias[],System.String,dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Compiles a type expression (compiles <see cref="T:System.Diagnostics.DebuggerDisplayAttribute"/> expressions)
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="type">Type</param>
+            <param name="references">.NET module references</param>
+            <param name="aliases">Aliases</param>
+            <param name="expression">Expression</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler.CompileGetLocals(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference[],dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates an assembly that is used to get all the locals
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="references">.NET module references</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler.CompileAssignment(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference[],dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAlias[],System.String,System.String,dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Compiles an assignment
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="references">.NET module references</param>
+            <param name="aliases">Aliases</param>
+            <param name="target">Target expression (lhs)</param>
+            <param name="expression">Expression (rhs)</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler.TryGetAliasInfo(System.String,dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetParsedAlias@)">
+            <summary>
+            Gets alias info
+            </summary>
+            <param name="aliasName">Alias name</param>
+            <param name="aliasInfo">Updated with alias info</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata">
+            <summary>Metadata</summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata.LanguageGuid">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageGuid"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata.LanguageName">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageName"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata.LanguageDisplayName">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageDisplayName"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata.DecompilerGuid">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.DecompilerGuid"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.IDbgDotNetExpressionCompilerMetadata.Order">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.Order"/></summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute">
+            <summary>
+            Exports a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetExpressionCompiler"/> instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.#ctor(System.String,System.String,System.String,System.String,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="languageGuid">Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/></param>
+            <param name="languageName">Language name, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgLanguageNames"/></param>
+            <param name="languageDisplayName">Language's display name (shown in the UI)</param>
+            <param name="decompilerGuid">Decompiler GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDecompilerGuids"/> or one of the decompiler GUIDs (<see cref="T:dnSpy.Contracts.Decompiler.DecompilerConstants"/>)</param>
+            <param name="order">Order, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDbgDotNetExpressionCompilerOrders"/></param>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageGuid">
+            <summary>
+            Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageName">
+            <summary>
+            Gets the language name, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgLanguageNames"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.LanguageDisplayName">
+            <summary>
+            Gets the language's display name (shown in the UI)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.DecompilerGuid">
+            <summary>
+            Gets the decompiler GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDecompilerGuids"/> or one of the decompiler GUIDs (<see cref="T:dnSpy.Contracts.Decompiler.DecompilerConstants"/>)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.ExportDbgDotNetExpressionCompilerAttribute.Order">
+            <summary>
+            Order
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDbgDotNetExpressionCompilerOrders">
+            <summary>
+            Order of known expression compilers
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDbgDotNetExpressionCompilerOrders.CSharp">
+            <summary>
+            Order of C# expression compiler
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDbgDotNetExpressionCompilerOrders.VisualBasic">
+            <summary>
+            Order of Visual Basic expression compiler
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetParsedAlias">
+            <summary>
+            Alias info
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetParsedAlias.Kind">
+            <summary>
+            Alias kind
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetParsedAlias.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetParsedAlias.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgDotNetAliasKind,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="kind">Alias kind</param>
+            <param name="id">Id</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference">
+            <summary>
+            A reference to module metadata used by .NET expression compilers
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference.MetadataAddress">
+            <summary>
+            Gets the address of the .NET metadata (BSJB header)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference.MetadataSize">
+            <summary>
+            Gets the size of the metadata
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference.ModuleVersionId">
+            <summary>
+            Gets the module version id
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.DbgModuleReference.GenerationId">
+            <summary>
+            Gets the module generation id
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDecompilerGuids">
+            <summary>
+            Predefined decompiler guids
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDecompilerGuids.CSharp">
+            <summary>
+            C# decompiler
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.ExpressionCompiler.PredefinedDecompilerGuids.VisualBasic">
+            <summary>
+            Visual Basic decompiler
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter">
+            <summary>
+            Formats values, types, names. Use <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute"/>
+            to export an instance.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatExceptionName(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,System.UInt32)">
+            <summary>
+            Formats an exception name
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="id">Exception id</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatStowedExceptionName(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,System.UInt32)">
+            <summary>
+            Formats a stowed exception name
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="id">Stowed exception id</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatReturnValueName(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,System.UInt32)">
+            <summary>
+            Formats a return value name
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="id">Return value id</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatObjectIdName(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,System.UInt32)">
+            <summary>
+            Formats an object ID name
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="id">Object id</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueFormatterOptions,System.Globalization.CultureInfo,System.Threading.CancellationToken)">
+            <summary>
+            Formats a value
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="frame">Stack frame</param>
+            <param name="value">Value to format</param>
+            <param name="options">Options</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+            <param name="cancellationToken">Cancellation token</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.FormatType(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Text.ITextColorWriter,dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueFormatterTypeOptions,System.Globalization.CultureInfo)">
+            <summary>
+            Formats a type
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="output">Output</param>
+            <param name="type">Type to format</param>
+            <param name="value">Value or null</param>
+            <param name="options">Options</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter.Format(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Text.ITextColorWriter,dnSpy.Contracts.Debugger.Evaluation.DbgStackFrameFormatterOptions,dnSpy.Contracts.Debugger.Evaluation.DbgValueFormatterOptions,System.Globalization.CultureInfo,System.Threading.CancellationToken)">
+            <summary>
+            Formats a stack frame
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Stack frame</param>
+            <param name="output">Output</param>
+            <param name="options">Stack frame options</param>
+            <param name="valueOptions">Value option</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+            <param name="cancellationToken">Cancellation token</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.IDbgDotNetFormatterMetadata">
+            <summary>Metadata</summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.IDbgDotNetFormatterMetadata.LanguageGuid">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute.LanguageGuid"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.IDbgDotNetFormatterMetadata.Order">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute.Order"/></summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute">
+            <summary>
+            Exports a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.DbgDotNetFormatter"/> instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute.#ctor(System.String,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="languageGuid">Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/></param>
+            <param name="order">Order</param>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute.LanguageGuid">
+            <summary>
+            Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.Formatters.ExportDbgDotNetFormatterAttribute.Order">
+            <summary>
+            Order
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime">
+            <summary>
+            Implemented by a .NET engine, see <see cref="P:dnSpy.Contracts.Debugger.DbgRuntime.InternalRuntime"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Dispatcher">
+            <summary>
+            Gets the dispatcher
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Features">
+            <summary>
+            Gets the feature flags
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetModuleId(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets the module id
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetRawModuleBytes(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets the module data or <see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes.None"/>
+            </summary>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.TryGetMethodToken(dnSpy.Contracts.Debugger.DbgModule,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+            Translates a method token from the original dynamic module's metadata to the saved module metadata used by the expression compiler
+            </summary>
+            <param name="module">Module</param>
+            <param name="methodToken">Method token</param>
+            <param name="metadataMethodToken">New method token</param>
+            <param name="metadataLocalVarSigTok">New method body local variables signature token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetFrameMethod(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Gets the current method or null if it's not a normal IL frame
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.LoadFieldAddress(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo,System.Threading.CancellationToken)">
+            <summary>
+            Loads the address of an instance or a static field or returns null if it's not supported
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="obj">Instance object or null if it's a static field</param>
+            <param name="field">Field</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.LoadField(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo,System.Threading.CancellationToken)">
+            <summary>
+            Loads an instance or a static field
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="obj">Instance object or null if it's a static field</param>
+            <param name="field">Field</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.StoreField(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Debugger.DotNet.Metadata.DmdFieldInfo,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Stores a value in a field. Returns null or an error message
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="obj">Instance object or null if it's a static field</param>
+            <param name="field">Field</param>
+            <param name="value">Value to store: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Call(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,System.Object[],dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetInvokeOptions,System.Threading.CancellationToken)">
+            <summary>
+            Calls an instance or a static method
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="obj">Instance object or null if it's a static field</param>
+            <param name="method">Method</param>
+            <param name="arguments">Arguments: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="invokeOptions">Invoke options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateInstance(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Debugger.DotNet.Metadata.DmdConstructorInfo,System.Object[],dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetInvokeOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new instance of a type by calling its constructor
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="ctor">Constructor</param>
+            <param name="arguments">Arguments: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="invokeOptions">Invoke options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateInstanceNoConstructor(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new instance of a type. All fields are initialized to 0 or null. The constructor isn't called.
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="type">Type to create</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateSZArray(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Creates an SZ array
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="elementType">Element type</param>
+            <param name="length">Length of the array</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateArray(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetArrayDimensionInfo[],System.Threading.CancellationToken)">
+            <summary>
+            Creates a multi-dimensional array
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="elementType">Element type</param>
+            <param name="dimensionInfos">Dimension infos</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetAliases(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Gets aliases
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetExceptions(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Gets all exceptions
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetReturnValues(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Gets all return values
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetException(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Gets an exception or null
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="id">Exception id, eg. <see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.ExceptionId"/></param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetStowedException(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a stowed exception or null
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="id">Stowed exception id, eg. <see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.StowedExceptionId"/></param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetReturnValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a return value or null
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="id">Return value id, eg. <see cref="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.LastReturnValueId"/></param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetLocalValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a local value
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of local</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetParameterValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,System.Threading.CancellationToken)">
+            <summary>
+            Gets a parameter value
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of parameter</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.SetLocalValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Writes a new local value. Returns an error message or null.
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of parameter</param>
+            <param name="targetType">Type of the local</param>
+            <param name="value">New value: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.SetParameterValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Writes a new parameter value. Returns an error message or null.
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of parameter</param>
+            <param name="targetType">Type of the parameter</param>
+            <param name="value">New value: A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetLocalValueAddress(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Threading.CancellationToken)">
+            <summary>
+            Gets the address of a local value or null if it's not supported
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of local</param>
+            <param name="targetType">Type of the local</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetParameterValueAddress(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Threading.CancellationToken)">
+            <summary>
+            Gets the address of a parameter value or null if it's not supported
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="index">Metadata index of local</param>
+            <param name="targetType">Type of the parameter</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Creates a simple value (a primitive number or a string, or arrays of those types)
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="value">A <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue"/> or a primitive number or a string or arrays of primitive numbers / strings</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Box(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Object,System.Threading.CancellationToken)">
+            <summary>
+            Boxes the value type
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="value">Value to box</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.SupportsObjectIds">
+            <summary>
+            Returns true if object IDs are supported by this runtime
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CanCreateObjectId(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Returns true if it's possible to create an object id
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.CreateObjectId(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,System.UInt32)">
+            <summary>
+            Creates an object id or returns null
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <param name="id">Unique id</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Equals(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Checks if an object id and a value refer to the same data
+            </summary>
+            <param name="objectId">Object id created by this class</param>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetHashCode(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId)">
+            <summary>
+            Gets the hash code of an object id
+            </summary>
+            <param name="objectId">Object id created by this class</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetHashCode(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Gets the hash code of a value created by this runtime
+            </summary>
+            <param name="value">Value created by this runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.GetValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetObjectId,System.Threading.CancellationToken)">
+            <summary>
+            Gets an object ID's value
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Stack frame</param>
+            <param name="objectId">Object id created by this class</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime.Equals(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Checks if two values are equal. Returns null if it's unknown.
+            </summary>
+            <param name="a">Value #1</param>
+            <param name="b">Value #2</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetInvokeOptions">
+            <summary>
+            Invoke options
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetInvokeOptions.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetInvokeOptions.NonVirtual">
+            <summary>
+            Non-virtual call
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeFeatures">
+            <summary>
+            .NET runtime features
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeFeatures.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeFeatures.NoGenericMethods">
+            <summary>
+            Calling generic methods isn't supported
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants">
+            <summary>
+            Constants
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.ExceptionId">
+            <summary>
+            Exception ID
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.StowedExceptionId">
+            <summary>
+            Stowed exception ID
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRuntimeConstants.LastReturnValueId">
+            <summary>
+            ID of last return value
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCreateValueResult">
+            <summary>
+            Contains the created value or an error message
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCreateValueResult.Value">
+            <summary>
+            Gets the value or null if there was an error
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCreateValueResult.Error">
+            <summary>
+            Gets the error message or null
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCreateValueResult.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="errorMessage">Error message</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetCreateValueResult.#ctor(dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="value">Value</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes">
+            <summary>
+            Contains .NET module data information
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes.None">
+            <summary>
+            No .NET module data is available
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes.IsFileLayout">
+            <summary>
+            true if it's file layout, false if it's memory layout
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes.RawBytes">
+            <summary>
+            Raw bytes of the .NET module
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetRawModuleBytes.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="rawBytes">Raw bytes of the .NET module</param>
+            <param name="isFileLayout">true if it's file layout, false if it's memory layout</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDmdEvaluatorContext">
+            <summary>
+            Context that can be passed into reflection methods that need an evaluator context
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDmdEvaluatorContext.EvaluationContext">
+            <summary>
+            Evaluation context
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDmdEvaluatorContext.Frame">
+            <summary>
+            Stack frame
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDmdEvaluatorContext.CancellationToken">
+            <summary>
+            Cancellation token
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext">
+            <summary>
+            Context that can be passed into reflection methods that need an evaluator context
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext.EvaluationContext">
+            <summary>
+            Evaluation context
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext.Frame">
+            <summary>
+            Stack frame
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext.CancellationToken">
+            <summary>
+            Cancellation token
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.DmdEvaluatorContext.#ctor(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Stack frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode">
+            <summary>
+            A .NET value node
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.ExpectedType">
+            <summary>
+            Gets the expected type or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.ActualType">
+            <summary>
+            Gets the actual type or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.ErrorMessage">
+            <summary>
+            Gets the error message or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.Value">
+            <summary>
+            Gets the value or null
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.Name">
+            <summary>
+            Gets the name
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.Expression">
+            <summary>
+            Gets the expression
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.ImageName">
+            <summary>
+            Image name, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgValueNodeImageNames"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.IsReadOnly">
+            <summary>
+            true if this is a read-only value
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.CausesSideEffects">
+            <summary>
+            true if the expression causes side effects
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.HasChildren">
+            <summary>
+            Returns true if it has children, false if it has no children and null if it's unknown (eg. it's too expensive to calculate it now).
+            UI code can use this property to decide if it shows the treeview node expander ("|>").
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.GetChildCount(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.Threading.CancellationToken)">
+            <summary>
+            Number of children. This property is called as late as possible and can be lazily initialized.
+            It's assumed to be 0 if <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.HasChildren"/> is false.
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.GetChildren(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt64,System.Int32,dnSpy.Contracts.Debugger.Evaluation.DbgValueNodeEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates new children
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="index">Index of first child</param>
+            <param name="count">Max number of children to return</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.FormatValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Text.ITextColorWriter,System.Globalization.CultureInfo,System.Threading.CancellationToken)">
+            <summary>
+            Formats the value column. Returns false if nothing was written to <paramref name="output"/>
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="output">Output</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.FormatExpectedType(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Text.ITextColorWriter,System.Globalization.CultureInfo,System.Threading.CancellationToken)">
+            <summary>
+            Formats the expected type. Returns false if nothing was written to <paramref name="output"/>
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="output">Output</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNode.FormatActualType(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Text.ITextColorWriter,System.Globalization.CultureInfo,System.Threading.CancellationToken)">
+            <summary>
+            Formats the actual type. Returns false if nothing was written to <paramref name="output"/>
+            </summary>
+            <param name="context">Evaluation context</param>
+            <param name="frame">Frame</param>
+            <param name="output">Output</param>
+            <param name="cultureInfo">Culture or null to use invariant culture</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory">
+            <summary>
+            Creates value nodes. Use <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute"/>
+            to export an instance.
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.Create(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueNodeEvaluationOptions,System.String,System.String,System.Boolean,System.Boolean,dnSpy.Debugger.DotNet.Metadata.DmdType,System.Threading.CancellationToken)">
+            <summary>
+            Creates a value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="name">Name</param>
+            <param name="value">Value</param>
+            <param name="options">Options</param>
+            <param name="expression">Expression</param>
+            <param name="imageName">Image name, see <see cref="T:dnSpy.Contracts.Debugger.Evaluation.PredefinedDbgValueNodeImageNames"/></param>
+            <param name="isReadOnly">true if it's a read-only value</param>
+            <param name="causesSideEffects">true if the expression causes side effects</param>
+            <param name="expectedType">Expected type</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.CreateException(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueNodeEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates an exception value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="id">Exception id</param>
+            <param name="value">Value</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.CreateStowedException(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueNodeEvaluationOptions,System.Threading.CancellationToken)">
+            <summary>
+            Creates an exception value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="id">Stowed exception id</param>
+            <param name="value">Value</param>
+            <param name="options">Options</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.CreateReturnValue(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,System.UInt32,dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetValue,dnSpy.Contracts.Debugger.Evaluation.DbgValueNodeEvaluationOptions,dnSpy.Debugger.DotNet.Metadata.DmdMethodBase,System.Threading.CancellationToken)">
+            <summary>
+            Creates a return value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="id">Return value id</param>
+            <param name="value">Value</param>
+            <param name="options">Options</param>
+            <param name="method">Method</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.CreateError(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText,System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Creates an error value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="name">Name</param>
+            <param name="errorMessage">Error message</param>
+            <param name="expression">Expression</param>
+            <param name="causesSideEffects">true if the expression causes side effects</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory.CreateTypeVariables(dnSpy.Contracts.Debugger.Evaluation.DbgEvaluationContext,dnSpy.Contracts.Debugger.CallStack.DbgStackFrame,dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetTypeVariableInfo[],System.Threading.CancellationToken)">
+            <summary>
+            Creates type variables value node
+            </summary>
+            <param name="context">Context</param>
+            <param name="frame">Frame</param>
+            <param name="typeVariableInfos">Type variables</param>
+            <param name="cancellationToken">Cancellation token</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.IDbgDotNetValueNodeFactoryMetadata">
+            <summary>Metadata</summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.IDbgDotNetValueNodeFactoryMetadata.LanguageGuid">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute.LanguageGuid"/></summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.IDbgDotNetValueNodeFactoryMetadata.Order">
+            <summary>See <see cref="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute.Order"/></summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute">
+            <summary>
+            Exports a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetValueNodeFactory"/> instance
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute.#ctor(System.String,System.Double)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="languageGuid">Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/></param>
+            <param name="order">Order</param>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute.LanguageGuid">
+            <summary>
+            Language GUID, see <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.DbgDotNetLanguageGuids"/>
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.ExportDbgDotNetValueNodeFactoryAttribute.Order">
+            <summary>
+            Order
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetTypeVariableInfo">
+            <summary>
+            Contains the generic parameter and type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetTypeVariableInfo.GenericParameterType">
+            <summary>
+            Gets the generic parameter type
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetTypeVariableInfo.GenericArgumentType">
+            <summary>
+            Gets the generic argument type
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Evaluation.ValueNodes.DbgDotNetTypeVariableInfo.#ctor(dnSpy.Debugger.DotNet.Metadata.DmdType,dnSpy.Debugger.DotNet.Metadata.DmdType)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="genericParameterType">Generic parameter type</param>
+            <param name="genericArgumentType">Generic argument type</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProvider">
+            <summary>
+            Assembly info provider
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProvider.GetManifestModule(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Returns the manifest module (first module) or null if it's not part of an assembly
+            </summary>
+            <param name="module">A module in some assembly</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProvider.GetAssemblyModules(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets all modules in an assembly or an empty array if it's not part of an assembly.
+            The manifest module is always the first module.
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProviderFactory">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProvider"/> instances
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProviderFactory.Create(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgAssemblyInfoProvider"/> or returns null
+            </summary>
+            <param name="runtime">Runtime</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider">
+            <summary>
+            Loads and creates dynamic modules (they can get extra classses and members at runtime)
+            </summary>
+        </member>
+        <member name="E:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.ClassLoaded">
+            <summary>
+            Raised when a new class has been loaded in a dynamic assembly
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.BeginInvoke(System.Action)">
+            <summary>
+            Executes <paramref name="action"/> asynchronously on the thread required to load dynamic modules.
+            </summary>
+            <param name="action">Code to execute</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.GetDynamicMetadata(dnSpy.Contracts.Debugger.DbgModule,dnSpy.Contracts.Metadata.ModuleId@)">
+            <summary>
+            Gets the dynamic module's metadata or null if none is available
+            </summary>
+            <param name="module">Module</param>
+            <param name="moduleId">Module id</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.GetModifiedTypes(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets all modified types. This method is called on the engine thread (see <see cref="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.BeginInvoke(System.Action)"/>)
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.InitializeNonLoadedClasses(dnSpy.Contracts.Debugger.DbgModule,System.UInt32[])">
+            <summary>
+            Initializes new classes that haven't gotten a load-class event yet. This method is called on the engine thread (see <see cref="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.BeginInvoke(System.Action)"/>)
+            </summary>
+            <param name="module">Module</param>
+            <param name="nonLoadedTokens">Sorted tokens of classes that haven't been loaded but are still present in the metadata</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider.LoadEverything(dnSpy.Contracts.Debugger.DbgModule[],System.Boolean)">
+            <summary>
+            Called on the engine thread just before and just after all types and members are force loaded
+            </summary>
+            <param name="modules">Modules that will be loaded</param>
+            <param name="started">true if we're about to load all modules, false if we're done</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.ClassLoadedEventArgs">
+            <summary>
+            Class loaded event args
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.ClassLoadedEventArgs.Module">
+            <summary>
+            Module
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.ClassLoadedEventArgs.LoadedClassToken">
+            <summary>
+            Token of loaded class
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.ClassLoadedEventArgs.#ctor(dnSpy.Contracts.Debugger.DbgModule,System.UInt32)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="module">Module</param>
+            <param name="loadedClassToken">Token of loaded class</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProviderFactory">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider"/>s
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProviderFactory.Create(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgDynamicModuleProvider"/> or returns null
+            </summary>
+            <param name="runtime">Runtime</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgMetadataService">
+            <summary>
+            Provides .NET metadata
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgMetadataService.TryGetMetadata(dnSpy.Contracts.Debugger.DbgModule,dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions)">
+            <summary>
+            Returns a <see cref="T:dnlib.DotNet.ModuleDef"/> or null if none could be loaded
+            </summary>
+            <param name="module">Module</param>
+            <param name="options">Load options</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgMetadataService.TryGetMetadata(dnSpy.Contracts.Metadata.ModuleId,dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions)">
+            <summary>
+            Returns a <see cref="T:dnlib.DotNet.ModuleDef"/> or null if none could be loaded
+            </summary>
+            <param name="moduleId">Module id</param>
+            <param name="options">Load options</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions">
+            <summary>
+            Options used when loading modules
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions.None">
+            <summary>
+            No bit is set
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions.AutoLoaded">
+            <summary>
+            The module load was caused by a non-user action
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgLoadModuleOptions.ForceMemory">
+            <summary>
+            Always load the module from the process' address space instead of from the module's file on disk
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgModuleIdProvider">
+            <summary>
+            Provides <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/>s
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.DbgModuleIdProvider.GetModuleId(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets the <see cref="T:dnSpy.Contracts.Metadata.ModuleId"/> or null
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata">
+            <summary>
+            Raw .NET metadata stored in some memory location
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.IsFileLayout">
+            <summary>
+            true if it's file layout, false if it's memory layout
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.IsMemoryLayout">
+            <summary>
+            true if it's memory layout, false if it's file layout
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.Address">
+            <summary>
+            Gets the address of the data (first byte of the PE file)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.Size">
+            <summary>
+            Gets the size of the data (size of the PE file in memory)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.MetadataAddress">
+            <summary>
+            Gets the address of the .NET metadata (BSJB header)
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.MetadataSize">
+            <summary>
+            Gets the size of the metadata
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.AddRef">
+            <summary>
+            Increments the reference count and returns the same instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.Release">
+            <summary>
+            Decrements the reference count
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata.UpdateMemory">
+            <summary>
+            Re-reads the memory if possible
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadataService">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata"/> instances
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadataService.Create(dnSpy.Contracts.Debugger.DbgRuntime,System.Boolean,System.UInt64,System.Int32)">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata"/>
+            </summary>
+            <param name="runtime">Runtime</param>
+            <param name="isFileLayout">true if it's file layout, false if it's memory layout</param>
+            <param name="moduleAddress">Address of .NET module in the process' address space</param>
+            <param name="moduleSize">Size of module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadataService.Create(dnSpy.Contracts.Debugger.DbgRuntime,System.Boolean,System.Byte[])">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Metadata.Internal.DbgRawMetadata"/>
+            </summary>
+            <param name="runtime">Runtime</param>
+            <param name="isFileLayout">true if it's file layout, false if it's memory layout</param>
+            <param name="moduleBytes">Raw module bytes</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags">
+            <summary>
+            Predefined <see cref="T:dnSpy.Contracts.Debugger.DbgRuntime"/> tags (<see cref="P:dnSpy.Contracts.Debugger.DbgRuntime.Tags"/>)
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags.DotNet">
+            <summary>
+            .NET runtime
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags.DotNetFramework">
+            <summary>
+            .NET Framework runtime
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags.DotNetCore">
+            <summary>
+            .NET Core runtime
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags.DotNetMono">
+            <summary>
+            .NET Mono runtime
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.PredefinedDotNetDbgRuntimeTags.DotNetUnity">
+            <summary>
+            .NET Unity runtime
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText">
+            <summary>
+            Contains text and color
+            </summary>
+        </member>
+        <member name="F:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.Empty">
+            <summary>
+            Gets the empty instance
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.Parts">
+            <summary>
+            Gets all colors and text parts
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.#ctor(dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.#ctor(dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart[])">
+            <summary>
+            Constructor
+            </summary>
+            <param name="parts">Color and text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.WriteTo(dnSpy.Contracts.Text.ITextColorWriter)">
+            <summary>
+            Writes all text and colors to <paramref name="output"/>
+            </summary>
+            <param name="output">Output</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText.ToString">
+            <summary>
+            Gets all text
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart">
+            <summary>
+            Color and text
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart.Color">
+            <summary>
+            Gets the color
+            </summary>
+        </member>
+        <member name="P:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart.Text">
+            <summary>
+            Gets the text
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextPart.#ctor(System.Object,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="color">Color</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput">
+            <summary>
+            Creates <see cref="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText"/>
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.Write(System.Object,System.String)">
+            <summary>
+            Writes text
+            </summary>
+            <param name="color">Color</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.Write(dnSpy.Contracts.Text.TextColor,System.String)">
+            <summary>
+            Writes text
+            </summary>
+            <param name="color">Color</param>
+            <param name="text">Text</param>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.Create">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText"/>
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.CreateAndReset">
+            <summary>
+            Creates a <see cref="T:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetText"/> and clears this instance so it can be reused
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DotNet.Text.DbgDotNetTextOutput.Clear">
+            <summary>
+            Clears this instance
+            </summary>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgDotNetRuntimeExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgDotNetRuntimeExtensions.GetDotNetRuntime(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Gets the <see cref="T:dnSpy.Contracts.Debugger.DotNet.Evaluation.IDbgDotNetRuntime"/> instance or throws if it's not a .NET runtime
+            </summary>
+            <param name="runtime">Runtime</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgAppDomainExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgAppDomainExtensions.GetReflectionAppDomain(dnSpy.Contracts.Debugger.DbgAppDomain)">
+            <summary>
+            Gets the reflection app domain or null if this isn't a managed app domain
+            </summary>
+            <param name="appDomain">Debugger app domain</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgAppDomainExtensions.GetDotNetInternalAppDomain(dnSpy.Contracts.Debugger.DbgAppDomain)">
+            <summary>
+            Gets the internal .NET app domain or null if it's not a managed app domain
+            </summary>
+            <param name="appDomain"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgModuleExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgModuleExtensions.GetReflectionModule(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets the reflection module or null if this isn't a managed module
+            </summary>
+            <param name="module">Debugger module</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgModuleExtensions.GetDotNetInternalModule(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Gets the internal .NET module or null if it's not a managed module
+            </summary>
+            <param name="module"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgRuntimeExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgRuntimeExtensions.GetReflectionRuntime(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Gets the reflection runtime or null if this isn't a managed runtime
+            </summary>
+            <param name="runtime">Debugger runtime</param>
+            <returns></returns>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgRuntimeExtensions.GetDotNetInternalRuntime(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Gets the internal .NET runtime or null if it's not a managed runtime
+            </summary>
+            <param name="runtime"></param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.Evaluation.DbgValueExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.Evaluation.DbgValueExtensions.GetDotNetValue(dnSpy.Contracts.Debugger.Evaluation.DbgValue)">
+            <summary>
+            Gets the .NET engine value
+            </summary>
+            <param name="value">Value</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgModuleDotNetExtensions">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Debugger.DbgModule"/> extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgModuleDotNetExtensions.IsDotNetModule(dnSpy.Contracts.Debugger.DbgModule)">
+            <summary>
+            Returns true if <paramref name="module"/> is a .NET module
+            </summary>
+            <param name="module">Module</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Contracts.Debugger.DbgRuntimeDotNetExtensions">
+            <summary>
+            <see cref="T:dnSpy.Contracts.Debugger.DbgRuntime"/> extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Contracts.Debugger.DbgRuntimeDotNetExtensions.IsDotNetRuntime(dnSpy.Contracts.Debugger.DbgRuntime)">
+            <summary>
+            Returns true if <paramref name="runtime"/> is a .NET runtime
+            </summary>
+            <param name="runtime">Runtime</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Metadata.DmdAppDomainExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Metadata.DmdAppDomainExtensions.GetDebuggerAppDomain(dnSpy.Debugger.DotNet.Metadata.DmdAppDomain)">
+            <summary>
+            Gets the debugger AppDomain object
+            </summary>
+            <param name="appDomain">Debugger metadata AppDomain object</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Metadata.DmdModuleExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Metadata.DmdModuleExtensions.GetDebuggerModule(dnSpy.Debugger.DotNet.Metadata.DmdModule)">
+            <summary>
+            Gets the debugger module object or returns null if there is none (eg. it's a synthetic module)
+            </summary>
+            <param name="module">Debugger metadata module object</param>
+            <returns></returns>
+        </member>
+        <member name="T:dnSpy.Debugger.DotNet.Metadata.DmdRuntimeExtensions">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:dnSpy.Debugger.DotNet.Metadata.DmdRuntimeExtensions.GetDebuggerRuntime(dnSpy.Debugger.DotNet.Metadata.DmdRuntime)">
+            <summary>
+            Gets the debugger runtime object
+            </summary>
+            <param name="runtime">Debugger metadata runtime object</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

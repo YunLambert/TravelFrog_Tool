@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>dnSpy.Decompiler.ILSpy.x</name>
+    </assembly>
+    <members>
+        <member name="T:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.CSharpDecompilerSettingsTabName">
+            <summary>
+              Looks up a localized string similar to C# / VB.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.DecompilationOrder_Events">
+            <summary>
+              Looks up a localized string similar to Events.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.DecompilationOrder_Fields">
+            <summary>
+              Looks up a localized string similar to Fields.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.DecompilationOrder_Methods">
+            <summary>
+              Looks up a localized string similar to Methods.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.DecompilationOrder_NestedTypes">
+            <summary>
+              Looks up a localized string similar to Nested Types.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.DecompilationOrder_Properties">
+            <summary>
+              Looks up a localized string similar to Properties.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.ILDecompilerSettingsTabName">
+            <summary>
+              Looks up a localized string similar to IL.
+            </summary>
+        </member>
+        <member name="P:dnSpy.Decompiler.ILSpy.Properties.dnSpy_Decompiler_ILSpy_Resources.Plugin_ShortDescription">
+            <summary>
+              Looks up a localized string similar to ILSpy decompiler.
+            </summary>
+        </member>
+        <member name="F:dnSpy.Decompiler.ILSpy.Settings.SettingsConstants.REDISASSEMBLE_IL_ILSPY_CODE">
+            <summary>
+            Redisassemble IL (ILSpy) code
+            </summary>
+        </member>
+        <member name="F:dnSpy.Decompiler.ILSpy.Settings.SettingsConstants.REDECOMPILE_ILAST_ILSPY_CODE">
+            <summary>
+            Redecompile ILAst (ILSpy) code
+            </summary>
+        </member>
+        <member name="F:dnSpy.Decompiler.ILSpy.Settings.SettingsConstants.REDECOMPILE_CSHARP_ILSPY_CODE">
+            <summary>
+            Redecompile C# (ILSpy) code
+            </summary>
+        </member>
+        <member name="F:dnSpy.Decompiler.ILSpy.Settings.SettingsConstants.REDECOMPILE_VB_ILSPY_CODE">
+            <summary>
+            Redecompile VB (ILSpy) code
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

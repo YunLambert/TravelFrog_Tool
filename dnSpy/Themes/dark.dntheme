@@ -1,0 +1,735 @@
+<theme guid="64EFBB2C-0ACA-467C-8389-9FA350376F3F" name="dark" menu-name="_Dark" order="200" is-dark="true" is-high-contrast="false">
+	<colors>
+		<color name="defaulttext" fg="#DCDCDC" bg="#1E1E1E" />
+		<color name="operator" fg="#B4B4B4" />
+		<color name="punctuation" fg="#DCDCDC" />
+		<color name="number" fg="#B5CEA8" />
+		<color name="comment" fg="#57A64A" />
+		<color name="keyword" fg="#569CD6" />
+		<color name="string" fg="#D69D85" />
+		<color name="verbatimstring" fg="#D69D85" />
+		<color name="char" fg="#D69D85" />
+		<color name="namespace" fg="#FFD700" />
+		<color name="type" fg="#4EC9B0" />
+		<color name="sealedtype" fg="#4EC9B0" />
+		<color name="statictype" fg="#378D7B" />
+		<color name="delegate" fg="#33CCFF" />
+		<color name="enum" fg="#B8D7A3" />
+		<color name="interface" fg="#9B9B82" />
+		<color name="valuetype" fg="#009933" />
+		<color name="module" fg="#378D7B" />
+		<color name="typegenericparameter" fg="#4B8595" />
+		<color name="methodgenericparameter" fg="#4B8595" />
+		<color name="instancemethod" fg="#FF8000" />
+		<color name="staticmethod" fg="#E67300" />
+		<color name="extensionmethod" fg="#CC6600" italics="true" />
+		<color name="instancefield" fg="#AA70FF" />
+		<color name="enumfield" fg="#BD63C5" />
+		<color name="literalfield" fg="#C266FF" />
+		<color name="staticfield" fg="#8D8DC6" />
+		<color name="instanceevent" fg="#CC6699" />
+		<color name="staticevent" fg="#DB94B8" />
+		<color name="instanceproperty" fg="#248F8F" />
+		<color name="staticproperty" fg="#1F8E8E" />
+		<color name="local" fg="#DCDCDC" />
+		<color name="parameter" fg="#DCDCDC" bold="true" />
+		<color name="preprocessorkeyword" fg="#FF9B9B9B" />
+		<color name="preprocessortext" fg="#FFDCDCDC" />
+		<color name="label" fg="#806F4D" />
+		<color name="opcode" fg="#AD5C85" />
+		<color name="ildirective" fg="#9999FF" />
+		<color name="ilmodule" fg="#666699" />
+		<color name="excludedcode" fg="#9B9B9B" />
+		<color name="xmldoccommentattributename" fg="#FFC8C8C8" />
+		<color name="xmldoccommentattributequotes" fg="#FFC8C8C8" />
+		<color name="xmldoccommentattributevalue" fg="#FFC8C8C8" />
+		<color name="xmldoccommentcdatasection" fg="#FFE9D585" />
+		<color name="xmldoccommentcomment" fg="#FF608B4E" />
+		<color name="xmldoccommentdelimiter" fg="#FF608B4E" />
+		<color name="xmldoccommententityreference" fg="#FF608B4E" />
+		<color name="xmldoccommentname" fg="#FF608B4E" />
+		<color name="xmldoccommentprocessinginstruction" fg="#FF608B4E" />
+		<color name="xmldoccommenttext" fg="#FF608B4E" />
+		<color name="xmlliteralattributename" fg="#FFC8C8C8" />
+		<color name="xmlliteralattributequotes" fg="#FF92CAF4" />
+		<color name="xmlliteralattributevalue" fg="#FFC8C8C8" />
+		<color name="xmlliteralcdatasection" fg="#FFE9D585" />
+		<color name="xmlliteralcomment" fg="#FF608B4E" />
+		<color name="xmlliteraldelimiter" fg="#FF89BB82" />
+		<color name="xmlliteralembeddedexpression" fg="#FF717171" />
+		<color name="xmlliteralentityreference" fg="#FF92CAF4" />
+		<color name="xmlliteralname" fg="#FF569CD6" />
+		<color name="xmlliteralprocessinginstruction" fg="#FFAEAEAE" />
+		<color name="xmlliteraltext" fg="#FFC8C8C8" />
+		<color name="xmlattribute" fg="#FF92CAF4" />
+		<color name="xmlattributequotes" fg="#FF808080" />
+		<color name="xmlattributevalue" fg="#FFC8C8C8" />
+		<color name="xmlcdatasection" fg="#FFE9D585" />
+		<color name="xmlcomment" fg="#FF57A64A" />
+		<color name="xmldelimiter" fg="#FF808080" />
+		<color name="xmlkeyword" fg="#FF569CD6" />
+		<color name="xmlname" fg="#FF569CD6" />
+		<color name="xmlprocessinginstruction" fg="#FFC8C8C8" />
+		<color name="xmltext" fg="#FFC8C8C8" />
+		<color name="xamlattribute" fg="#FF92CAF4" />
+		<color name="xamlattributequotes" fg="#FF808080" />
+		<color name="xamlattributevalue" fg="#FF569CD6" />
+		<color name="xamlcdatasection" fg="#FFC0D088" />
+		<color name="xamlcomment" fg="#FF57A64A" />
+		<color name="xamldelimiter" fg="#FF808080" />
+		<color name="xamlkeyword" fg="#FF569CD6" />
+		<color name="xamlmarkupextensionclass" fg="#FFBBA08C" />
+		<color name="xamlmarkupextensionparametername" fg="#FFD7BA7D" />
+		<color name="xamlmarkupextensionparametervalue" fg="#FFB1B1B1" />
+		<color name="xamlname" fg="#FFE6E6E6" />
+		<color name="xamlprocessinginstruction" fg="#FFBBA08C" />
+		<color name="xamltext" fg="#FFABABAB" />
+		<color name="xmldoctooltipheader" italics="true" bold="true" />
+		<color name="assembly" fg="#C4C4C4" />
+		<color name="assemblyexe" fg="#F0CA93" />
+		<color name="assemblymodule" fg="#B17FD7" />
+		<color name="directorypart" fg="#FFD700" />
+		<color name="filenamenoextension" fg="#569CD6" />
+		<color name="fileextension" fg="#9B9B82" />
+		<color name="error" fg="Red" />
+		<color name="tostringeval" fg="#6BF0FF" />
+		<color name="linenumber" fg="#2B91AF" />
+		<color name="repllinenumberinput1" fg="#D69D85" />
+		<color name="repllinenumberinput2" fg="#497F49" />
+		<color name="repllinenumberoutput" fg="#2B91AF" />
+		<color name="visiblewhitespace" fg="#FF144852" />
+		<color name="selectedtext" bg="#FF3399FF" />
+		<color name="inactiveselectedtext" bg="#FF565656" />
+		<color name="highlightedreference" bg="#FF0E4583" fg="#FFADC0D3" />
+		<color name="highlightedwrittenreference" bg="#FF0E4583" fg="#FFADC0D3" />
+		<color name="highlighteddefinition" bg="#FF48830E" fg="#FFC0D3AD" />
+		<color name="currentstatement" fg="#FF000000" />
+		<color name="currentstatementmarker" bg="#FFEFF284" />
+		<color name="callreturn" fg="#FF000000" />
+		<color name="callreturnmarker" bg="#FF7CA5A0" />
+		<color name="activestatementmarker" bg="#FF5A5A5A" />
+		<color name="breakpointstatement" fg="#FFFFFFFF" />
+		<color name="breakpointstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedbreakpointstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="disabledbreakpointstatementmarker" fg="#FFAEAEAE" />
+		<color name="advancedbreakpointstatement" fg="#FFFFFFFF" />
+		<color name="advancedbreakpointstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedadvancedbreakpointstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="disabledadvancedbreakpointstatement" fg="#FF800000" />
+		<color name="disabledadvancedbreakpointstatementmarker" bg="#FFFFFFFF" />
+		<color name="selecteddisabledadvancedbreakpointstatementmarker" bg="#FFFFFFFF" fg="#FF888888" />
+		<color name="breakpointwarningstatement" fg="#FFFFFFFF" />
+		<color name="breakpointwarningstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedbreakpointwarningstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="breakpointerrorstatement" fg="#FFFFDBA3" />
+		<color name="breakpointerrorstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedbreakpointerrorstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="advancedbreakpointwarningstatement" fg="#FFFFFFFF" />
+		<color name="advancedbreakpointwarningstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedadvancedbreakpointwarningstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="advancedbreakpointerrorstatement" fg="#FFFFDBA3" />
+		<color name="advancedbreakpointerrorstatementmarker" bg="#FF8C2F2F" />
+		<color name="selectedadvancedbreakpointerrorstatementmarker" bg="#FF8C2F2F" fg="#FF888888" />
+		<color name="tracepointstatement" fg="#FFD7BA7D" />
+		<color name="tracepointstatementmarker" bg="#FF000000" />
+		<color name="selectedtracepointstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="disabledtracepointstatement" fg="#FFEA7E85" />
+		<color name="disabledtracepointstatementmarker" bg="#FF000000" />
+		<color name="selecteddisabledtracepointstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="advancedtracepointstatement" fg="#FFEFF284" />
+		<color name="advancedtracepointstatementmarker" bg="#FF000000" />
+		<color name="selectedadvancedtracepointstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="disabledadvancedtracepointstatement" fg="#FFD85050" />
+		<color name="disabledadvancedtracepointstatementmarker" bg="#FF000000" />
+		<color name="selecteddisabledadvancedtracepointstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="tracepointwarningstatement" fg="#FF95DB7D" />
+		<color name="tracepointwarningstatementmarker" bg="#FF000000" />
+		<color name="selectedtracepointwarningstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="tracepointerrorstatement" fg="#FFD85050" />
+		<color name="tracepointerrorstatementmarker" bg="#FF000000" />
+		<color name="selectedtracepointerrorstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="advancedtracepointwarningstatement" fg="#FF95DB7D" />
+		<color name="advancedtracepointwarningstatementmarker" bg="#FF000000" />
+		<color name="selectedadvancedtracepointwarningstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="advancedtracepointerrorstatement" fg="#FF95DB7D" />
+		<color name="advancedtracepointerrorstatementmarker" bg="#FF000000" />
+		<color name="selectedadvancedtracepointerrorstatementmarker" bg="#FF000000" fg="#FF888888" />
+		<color name="bookmarkname" fg="#D69D85" />
+		<color name="activebookmarkname" fg="#D69D85" bold="true" />
+		<color name="currentline" fg="#464646" />
+		<color name="currentlinenofocus" fg="#464646" />
+		<color name="hextext" fg="#DCDCDC" bg="#1E1E1E" />
+		<color name="hexoffset" fg="#FF497F49" />
+		<color name="hexbyte0" fg="#FF396339" />
+		<color name="hexbyte1" fg="#FF497F49" />
+		<color name="hexbyteerror" fg="#FFFF0066" />
+		<color name="hexascii" fg="#FF87E587" />
+		<color name="hexcaret" bg="#6691F291" />
+		<color name="hexinactivecaret" bg="#FF007ACC" />
+		<color name="hexselection" bg="#FF405935" />
+		<color name="replprompt1" fg="#DCDCDC" />
+		<color name="replprompt2" fg="#DCDCDC" />
+		<color name="reploutputtext" fg="#DCDCDC" />
+		<color name="replscriptoutputtext" fg="#DCDCDC" />
+		<color name="black" fg="#FFDCDCDC" />
+		<color name="blue" fg="#FF8CA4FF" />
+		<color name="cyan" fg="#FF00C0C0" />
+		<color name="darkblue" fg="#FF5C80FF" />
+		<color name="darkcyan" fg="#FF00C0C0" />
+		<color name="darkgray" fg="#FF7F7F7F" />
+		<color name="darkgreen" fg="#FF00C000" />
+		<color name="darkmagenta" fg="#FFC000C0" />
+		<color name="darkred" fg="#FFC00000" />
+		<color name="darkyellow" fg="#FF00C0C0" />
+		<color name="gray" fg="#FFC0C0C0" />
+		<color name="green" fg="#FF00C000" />
+		<color name="magenta" fg="#FFFF00FF" />
+		<color name="red" fg="#FFFF0000" />
+		<color name="white" fg="#FF7F7F7F" />
+		<color name="yellow" fg="#FFC0C020" />
+		<color name="invblack" fg="#1E1E1E" bg="#FFDCDCDC" />
+		<color name="invblue" fg="#1E1E1E" bg="#FF8CA4FF" />
+		<color name="invcyan" fg="#1E1E1E" bg="#FF00C0C0" />
+		<color name="invdarkblue" fg="#C0C0C0" bg="#FF5C80FF" />
+		<color name="invdarkcyan" fg="#1E1E1E" bg="#FF00C0C0" />
+		<color name="invdarkgray" fg="#1E1E1E" bg="#FF7F7F7F" />
+		<color name="invdarkgreen" fg="#1E1E1E" bg="#FF00C000" />
+		<color name="invdarkmagenta" fg="#1E1E1E" bg="#FFC000C0" />
+		<color name="invdarkred" fg="#1E1E1E" bg="#FFC00000" />
+		<color name="invdarkyellow" fg="#1E1E1E" bg="#FF00C0C0" />
+		<color name="invgray" fg="#1E1E1E" bg="#FFC0C0C0" />
+		<color name="invgreen" fg="#1E1E1E" bg="#FF00C000" />
+		<color name="invmagenta" fg="#1E1E1E" bg="#FFFF00FF" />
+		<color name="invred" fg="#1E1E1E" bg="#FFFF0000" />
+		<color name="invwhite" fg="#1E1E1E" bg="#FF7F7F7F" />
+		<color name="invyellow" fg="#1E1E1E" bg="#FFC0C020" />
+		<color name="debuglogexceptionhandled" fg="#FFFF0000" />
+		<color name="debuglogexceptionunhandled" fg="#FFFF0000" />
+		<color name="debuglogstepfiltering" fg="#FFFF00FF" />
+		<color name="debuglogloadmodule" fg="#FF009999" />
+		<color name="debuglogunloadmodule" fg="#FFFFFF99" />
+		<color name="debuglogexitprocess" fg="#FFDCDCDC" />
+		<color name="debuglogexitthread" fg="#FF996633" />
+		<color name="debuglogprogramoutput" fg="#FF00FFFF" />
+		<color name="debuglogmda" fg="#FFFF0000" />
+		<color name="debuglogtimestamp" fg="#FFCC99FF" />
+		<color name="glyphmargin" bg="#FF333333" />
+		<color name="bracematching" bg="#FF0E4583" />
+		<color name="lineseparator" fg="#FFA5A5A5" />
+		<color name="findmatchhighlightmarker" bg="#FF773800" />
+		<color name="blockstructurenamespace" fg="#FF4C4C4C" />
+		<color name="blockstructuretype" fg="#FF135647" />
+		<color name="blockstructuremodule" fg="#FF135647" />
+		<color name="blockstructurevaluetype" fg="#FF135647" />
+		<color name="blockstructureinterface" fg="#FF135647" />
+		<color name="blockstructuremethod" fg="#FF133856" />
+		<color name="blockstructureaccessor" fg="#FF133856" />
+		<color name="blockstructureanonymousmethod" fg="#FF133856" />
+		<color name="blockstructureconstructor" fg="#FF133856" />
+		<color name="blockstructuredestructor" fg="#FF133856" />
+		<color name="blockstructureoperator" fg="#FF133856" />
+		<color name="blockstructureconditional" fg="#FF163F1B" />
+		<color name="blockstructureloop" fg="#FF7938A5" />
+		<color name="blockstructureproperty" fg="#FF133856" />
+		<color name="blockstructureevent" fg="#FF133856" />
+		<color name="blockstructuretry" fg="#FFA54D47" />
+		<color name="blockstructurecatch" fg="#FFA54D47" />
+		<color name="blockstructurefilter" fg="#FFA54D47" />
+		<color name="blockstructurefinally" fg="#FFA54D47" />
+		<color name="blockstructurefault" fg="#FFA54D47" />
+		<color name="blockstructurelock" fg="#FF4C4C4C" />
+		<color name="blockstructureusing" fg="#FF4C4C4C" />
+		<color name="blockstructurefixed" fg="#FF4C4C4C" />
+		<color name="blockstructureswitch" fg="#FF163F1B" />
+		<color name="blockstructurecase" fg="#FF163F1B" />
+		<color name="blockstructurelocalfunction" fg="#FF133856" />
+		<color name="blockstructureother" fg="#FF4C4C4C" />
+		<color name="blockstructurexml" fg="#FF4C4C4C" />
+		<color name="blockstructurexaml" fg="#FF4C4C4C" />
+		<color name="completionmatchhighlight" bg="#FF773800" />
+		<color name="completionsuffix" fg="#DCDCDC" />
+		<color name="signaturehelpdocumentation" bold="true" />
+		<color name="signaturehelpcurrentparameter" bold="true" bg="#FF773800" />
+		<color name="signaturehelpparameter" bold="true" italic="true" />
+		<color name="signaturehelpparameterdocumentation" italic="true" />
+		<color name="url" fg="#FF569CD6" />
+		<color name="hexpedosheader" fg="#7FC9FF" />
+		<color name="hexpefileheader" fg="#7FC9FF" />
+		<color name="hexpeoptionalheader32" fg="#7FC9FF" />
+		<color name="hexpeoptionalheader64" fg="#7FC9FF" />
+		<color name="hexpesection" fg="#7FC9FF" />
+		<color name="hexpesectionname" fg="#D69D85" />
+		<color name="hexcor20header" fg="#7F92FF" />
+		<color name="hexstoragesignature" fg="#7F92FF" />
+		<color name="hexstorageheader" fg="#7F92FF" />
+		<color name="hexstoragestream" fg="#7F92FF" />
+		<color name="hexstoragestreamname" fg="#D69D85" />
+		<color name="hexstoragestreamnameinvalid" fg="#FF0000" />
+		<color name="hextablesstream" fg="#7F92FF" />
+		<color name="hextablename" fg="#D69D85" />
+		<color name="documentlistmatchhighlight" bg="#FF773800" />
+		<color name="gacmatchhighlight" bg="#FF773800" />
+		<color name="appsettingstreeviewnodematchhighlight" bg="#FF773800" />
+		<color name="appsettingstextmatchhighlight" bg="#FF773800" />
+		<color name="hexcurrentline" fg="#606060" />
+		<color name="hexcurrentlinenofocus" fg="#606060" />
+		<color name="hexinactiveselectedtext" bg="#FF565656" />
+		<color name="hexcolumnline0" fg="#FFA0A0A0" />
+		<color name="hexcolumnline1" fg="#FFA0A0A0" />
+		<color name="hexcolumnlinegroup0" fg="#FFA8C462" />
+		<color name="hexcolumnlinegroup1" fg="#FFA8C462" />
+		<color name="hexhighlightedvaluescolumn" bg="#FF262626" />
+		<color name="hexhighlightedasciicolumn" bg="#FF262626" />
+		<color name="hexglyphmargin" bg="#FF333333" />
+		<color name="hexcurrentvaluecell" bg="#FF404040" />
+		<color name="hexcurrentasciicell" bg="#FF505050" />
+		<color name="outputwindowtext" fg="#DCDCDC" bg="#1E1E1E" />
+		<color name="hexfindmatchhighlightmarker" bg="#FF751500" />
+		<color name="hextooltipservicefield0" bg="#FF4C1D4C" fg="#FFCE4CCE" />
+		<color name="hextooltipservicefield1" bg="#FF491C1C" fg="#FFEA5B5B" />
+		<color name="hextooltipservicecurrentfield" bg="#FF082949" fg="#FFADC0D3" />
+		<color name="listfindmatchhighlight" bg="#FF773800" />
+		<color name="debuglogtrace" fg="#FF62CC00" />
+		<color name="debuglogextensionmessage" fg="#FFFFADC4" />
+		<color name="debuggervaluechangedhighlight" bg="#FF773800" />
+		<color name="debugexceptionname" fg="#DCDCDC" />
+		<color name="debugstowedexceptionname" fg="#DCDCDC" />
+		<color name="debugreturnvaluename" fg="#DCDCDC" />
+		<color name="debugvariablename" fg="#DCDCDC" />
+		<color name="debugobjectidname" fg="#DCDCDC" />
+		<color name="debuggerdisplayattributeeval" fg="#6BF0FF" />
+		<color name="debuggernostringquoteseval" fg="#6BF0FF" />
+
+		<color name="systemcolorscontrol" bg="#303030" />
+		<color name="systemcolorscontroldark" bg="#606060" />
+		<color name="systemcolorscontroldarkdark" bg="#808080" />
+		<color name="systemcolorscontrollight" bg="#404040" />
+		<color name="systemcolorscontrollightlight" bg="#303030" />
+		<color name="systemcolorscontroltext" fg="#F1F1F1" />
+		<color name="systemcolorsgraytext" fg="#505050" />
+		<color name="systemcolorshighlight" bg="#FF297ACC" />
+		<color name="systemcolorshighlighttext" fg="#FFFFFFFF" />
+		<color name="systemcolorsinactivecaption" bg="#606060" />
+		<color name="systemcolorsinactivecaptiontext" fg="#A0A0A0" />
+		<color name="systemcolorsinactiveselectionhighlight" bg="#666666" />
+		<color name="systemcolorsinactiveselectionhighlighttext" fg="#CCCCCC" />
+		<color name="systemcolorsmenutext" fg="#F1F1F1" />
+		<color name="systemcolorswindow" bg="#252525" />
+		<color name="systemcolorswindowtext" fg="#F1F1F1" />
+		<color name="pehex" fg="#F1F1F1" bg="#252526" />
+		<color name="pehexborder" bg="#252526" />
+		<color name="dialogwindow" fg="#F1F1F1" bg="#252526" />
+		<color name="dialogwindowactivecaption" fg="#FF999999" bg="#FF2D2D30" />
+		<color name="dialogwindowactivedebuggingborder" bg="#FFCA5100" />
+		<color name="dialogwindowactivedefaultborder" bg="#FF007ACC" />
+		<color name="dialogwindowbuttonhoverinactive" bg="#72555555" />
+		<color name="dialogwindowbuttonhoverinactiveborder" bg="#72555555" />
+		<color name="dialogwindowbuttonhoverinactiveglyph" bg="#FFFFFFFF" />
+		<color name="dialogwindowbuttoninactiveborder" bg="#00000000" />
+		<color name="dialogwindowbuttoninactiveglyph" bg="#FFF1F1F1" />
+		<color name="dialogwindowinactiveborder" bg="#FF434346" />
+		<color name="dialogwindowinactivecaption" fg="#99999999" bg="#FF2D2D30" />
+		<color name="environmentbackgroundbrush" bg="#FF2D2D30" />
+		<color name="environmentbackground" fg="#FF2D2D30" bg="#FF2D2D30" color3="#FF2D2D30" color4="#FF2D2D30" />
+		<color name="environmentforeground" fg="#F1F1F1" />
+		<color name="environmentmainwindowactivecaption" fg="#FF999999" bg="#FF2D2D30" />
+		<color name="environmentmainwindowactivedebuggingborder" bg="#FFCA5100" />
+		<color name="environmentmainwindowactivedefaultborder" bg="#FF007ACC" />
+		<color name="environmentmainwindowbuttonactiveborder" bg="#00000000" />
+		<color name="environmentmainwindowbuttonactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmentmainwindowbuttondown" bg="#FF007ACC" />
+		<color name="environmentmainwindowbuttondownborder" bg="#FF007ACC" />
+		<color name="environmentmainwindowbuttondownglyph" bg="#FFFFFFFF" />
+		<color name="environmentmainwindowbuttonhoveractive" bg="#72555555" />
+		<color name="environmentmainwindowbuttonhoveractiveborder" bg="#72555555" />
+		<color name="environmentmainwindowbuttonhoveractiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentmainwindowbuttonhoverinactive" bg="#72555555" />
+		<color name="environmentmainwindowbuttonhoverinactiveborder" bg="#72555555" />
+		<color name="environmentmainwindowbuttonhoverinactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentmainwindowbuttoninactiveborder" bg="#00000000" />
+		<color name="environmentmainwindowbuttoninactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmentmainwindowinactiveborder" bg="#FF434346" />
+		<color name="environmentmainwindowinactivecaption" fg="#99999999" bg="#FF2D2D30" />
+		<color name="controlshadow" bg="#71000000" />
+		<color name="gridsplitterpreviewfill" bg="#80000000" />
+		<color name="groupboxborderbrush" bg="#FF808080" />
+		<color name="toplevelmenuheaderhoverborder" bg="Transparent" />
+		<color name="toplevelmenuheaderhover" bg="#FF3E3E40" />
+		<color name="menuitemseparatorfilltop" bg="#333337" />
+		<color name="menuitemseparatorfillbottom" bg="Transparent" />
+		<color name="menuitemglyphpanelborderbrush" bg="#3E3E40" />
+		<color name="menuitemhighlightedinnerborder" bg="#333334" />
+		<color name="menuitemdisabledforeground" fg="#505050" />
+		<color name="menuitemdisabledglyphpanelbackground" bg="#FF656565" />
+		<color name="menuitemdisabledglyphfill" bg="#C0C0C0" />
+		<color name="toolbarbuttonpressed" bg="#505050" />
+		<color name="toolbarseparatorfill" bg="#333337" />
+		<color name="toolbarbuttonhover" bg="#333334" />
+		<color name="toolbarbuttonhoverborder" bg="#3E3E40" />
+		<color name="toolbarbuttonpressedborder" bg="#808080" />
+		<color name="toolbarmenuborder" bg="#333337" />
+		<color name="toolbarsubmenubackground" bg="#1B1B1C" />
+		<color name="toolbarbuttonchecked" fg="#FFF1F1F1" bg="#FF1E1E1E" />
+		<color name="toolbaropenheaderbackground" fg="#1B1B1C" bg="#1B1B1C" color3="#1B1B1C" />
+		<color name="toolbariconverticalbackground" bg="#1B1B1C" />
+		<color name="toolbarverticalbackground" fg="#1B1B1C" bg="#1B1B1C" color3="#1B1B1C" />
+		<color name="toolbariconbackground" bg="#2D2D30" />
+		<color name="toolbarhorizontalbackground" fg="#2D2D30" bg="#2D2D30" color3="#2D2D30" />
+		<color name="toolbardisabledfill" bg="#383838" />
+		<color name="toolbardisabledborder" bg="#484848" />
+		<color name="environmentcommandbar" fg="#FF2D2D30" bg="#FF2D2D30" color3="#FF2D2D30" />
+		<color name="environmentcommandbaricon" bg="#FF2D2D30" />
+		<color name="environmentcommandbarmenumouseoversubmenuglyph" bg="#FF007ACC" />
+		<color name="environmentcommandbarmenuseparator" bg="#FF000000" />
+		<color name="environmentcommandbarcheckbox" bg="#FF999999" />
+		<color name="environmentcommandbarselectedicon" bg="#FF2D2D30" />
+		<color name="environmentcommandbarcheckboxmouseover" bg="#FFF1F1F1" />
+		<color name="environmentcommandbarhoveroverselectedicon" bg="#FF3E3E40" />
+		<color name="environmentcommandbarmenuitemmouseover" fg="#FFF1F1F1" bg="#FF333334" />
+		<color name="commoncontrolsbuttoniconbackground" bg="#FF3F3F46" />
+		<color name="commoncontrolsbutton" fg="#FFF1F1F1" bg="#FF3F3F46" />
+		<color name="commoncontrolsbuttonborder" bg="#FF555555" />
+		<color name="commoncontrolsbuttonborderdefault" bg="#FF007ACC" />
+		<color name="commoncontrolsbuttonborderdisabled" bg="#FF3F3F46" />
+		<color name="commoncontrolsbuttonborderfocused" bg="#FF0097FB" />
+		<color name="commoncontrolsbuttonborderhover" bg="#FF0097FB" />
+		<color name="commoncontrolsbuttonborderpressed" bg="#FF007ACC" />
+		<color name="commoncontrolsbuttondefault" fg="#FFF1F1F1" bg="#FF3F3F46" />
+		<color name="commoncontrolsbuttondisabled" fg="#FF656565" bg="#FF2D2D30" />
+		<color name="commoncontrolsbuttonfocused" fg="#FFF1F1F1" bg="#FF3F3F46" />
+		<color name="commoncontrolsbuttonhover" fg="#FFF1F1F1" bg="#FF3F3F46" />
+		<color name="commoncontrolsbuttonpressed" fg="#FFF1F1F1" bg="#FF007ACC" />
+		<color name="commoncontrolscheckboxbackground" bg="#FF252526" />
+		<color name="commoncontrolscheckboxbackgrounddisabled" bg="#FF2D2D30" />
+		<color name="commoncontrolscheckboxbackgroundfocused" bg="#FF1F1F20" />
+		<color name="commoncontrolscheckboxbackgroundhover" bg="#FF1F1F20" />
+		<color name="commoncontrolscheckboxbackgroundpressed" bg="#FF007ACC" />
+		<color name="commoncontrolscheckboxborder" bg="#FF999999" />
+		<color name="commoncontrolscheckboxborderdisabled" bg="#FF434346" />
+		<color name="commoncontrolscheckboxborderfocused" bg="#FF007ACC" />
+		<color name="commoncontrolscheckboxborderhover" bg="#FF007ACC" />
+		<color name="commoncontrolscheckboxborderpressed" bg="#FF007ACC" />
+		<color name="commoncontrolscheckboxglyph" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxglyphdisabled" bg="#FF656565" />
+		<color name="commoncontrolscheckboxglyphfocused" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxglyphhover" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxglyphpressed" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxtext" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxtextdisabled" bg="#FF656565" />
+		<color name="commoncontrolscheckboxtextfocused" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxtexthover" bg="#FFF1F1F1" />
+		<color name="commoncontrolscheckboxtextpressed" bg="#FFF1F1F1" />
+		<color name="commoncontrolscomboboxbackground" bg="#FF252526" />
+		<color name="commoncontrolscomboboxbackgrounddisabled" bg="#FF333337" />
+		<color name="commoncontrolscomboboxbackgroundfocused" bg="#FF252526" />
+		<color name="commoncontrolscomboboxbackgroundhover" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxbackgroundpressed" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxborder" bg="#FF434346" />
+		<color name="commoncontrolscomboboxborderdisabled" bg="#FF434346" />
+		<color name="commoncontrolscomboboxborderfocused" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxborderhover" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxborderpressed" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxglyph" bg="#FF999999" />
+		<color name="commoncontrolscomboboxglyphbackground" bg="#FF333337" />
+		<color name="commoncontrolscomboboxglyphbackgrounddisabled" bg="#FF2D2D30" />
+		<color name="commoncontrolscomboboxglyphbackgroundfocused" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxglyphbackgroundhover" bg="#FF1F1F20" />
+		<color name="commoncontrolscomboboxglyphbackgroundpressed" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxglyphdisabled" bg="#FF656565" />
+		<color name="commoncontrolscomboboxglyphfocused" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxglyphhover" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxglyphpressed" bg="#FFFFFFFF" />
+		<color name="commoncontrolscomboboxlistbackground" bg="#FF1F1F1C" />
+		<color name="commoncontrolscomboboxlistborder" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxlistitembackgroundhover" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxlistitemborderhover" bg="#FF3F3F46" />
+		<color name="commoncontrolscomboboxlistitemtext" bg="#FFFFFFFF" />
+		<color name="commoncontrolscomboboxlistitemtexthover" bg="#FFFFFFFF" />
+		<color name="commoncontrolscomboboxseparator" bg="#FF434346" />
+		<color name="commoncontrolscomboboxseparatorfocused" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxseparatorhover" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxseparatorpressed" bg="#FF007ACC" />
+		<color name="commoncontrolscomboboxtext" bg="#FFF1F1F1" />
+		<color name="commoncontrolscomboboxtextdisabled" bg="#FF656565" />
+		<color name="commoncontrolscomboboxtextfocused" bg="#FFFFFFFF" />
+		<color name="commoncontrolscomboboxtexthover" bg="#FFFFFFFF" />
+		<color name="commoncontrolscomboboxtextinputselection" bg="#66007ACC" />
+		<color name="commoncontrolscomboboxtextpressed" bg="#FFFFFFFF" />
+		<color name="commoncontrolsradiobuttonbackground" bg="#FF252526" />
+		<color name="commoncontrolsradiobuttonbackgrounddisabled" bg="#FF2D2D30" />
+		<color name="commoncontrolsradiobuttonbackgroundfocused" bg="#FF1F1F20" />
+		<color name="commoncontrolsradiobuttonbackgroundhover" bg="#FF1F1F20" />
+		<color name="commoncontrolsradiobuttonbackgroundpressed" bg="#FF007ACC" />
+		<color name="commoncontrolsradiobuttonborder" bg="#FF999999" />
+		<color name="commoncontrolsradiobuttonborderdisabled" bg="#FF434346" />
+		<color name="commoncontrolsradiobuttonborderfocused" bg="#FF007ACC" />
+		<color name="commoncontrolsradiobuttonborderhover" bg="#FF007ACC" />
+		<color name="commoncontrolsradiobuttonborderpressed" bg="#FF007ACC" />
+		<color name="commoncontrolsradiobuttonglyph" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttonglyphdisabled" bg="#FF656565" />
+		<color name="commoncontrolsradiobuttonglyphfocused" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttonglyphhover" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttonglyphpressed" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttontext" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttontextdisabled" bg="#FF656565" />
+		<color name="commoncontrolsradiobuttontextfocused" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttontexthover" bg="#FFF1F1F1" />
+		<color name="commoncontrolsradiobuttontextpressed" bg="#FFF1F1F1" />
+		<color name="commoncontrolstextbox" fg="#FFF1F1F1" bg="#FF333337" />
+		<color name="commoncontrolstextboxborder" bg="#FF434346" />
+		<color name="commoncontrolstextboxborderdisabled" bg="#FF434346" />
+		<color name="commoncontrolstextboxbordererror" bg="#FFB20000" />
+		<color name="commoncontrolstextboxborderfocused" bg="#FF007ACC" />
+		<color name="commoncontrolstextboxdisabled" fg="#FF656565" bg="#FF2D2D30" />
+		<color name="commoncontrolstextboxerror" fg="#FFF1F1F1" bg="#FF660000" />
+		<color name="commoncontrolstextboxfocused" fg="#FFFFFFFF" bg="#FF3F3F46" />
+		<color name="commoncontrolstextboxmouseoverborder" bg="#FF3399FF" />
+		<color name="commoncontrolstextboxselection" bg="#FF3399FF" />
+		<color name="commoncontrolsfocusvisual" fg="#FFF1F1F1" bg="#FF252526" />
+		<color name="tabitemforeground" bg="#FFF1F1F1" />
+		<color name="tabitemstaticbackground" bg="#FF424245" />
+		<color name="tabitemstaticborder" bg="#FF575759" />
+		<color name="tabitemmouseoverbackground" bg="#FF575759" />
+		<color name="tabitemmouseoverborder" bg="#FF6C6C6E" />
+		<color name="tabitemselectedbackground" bg="#FF2D2D30" />
+		<color name="tabitemselectedborder" bg="#FF424245" />
+		<color name="tabitemdisabledbackground" bg="#FF575759" />
+		<color name="tabitemdisabledborder" bg="#FF6C6C6E" />
+		<color name="listboxbackground" bg="#252526" />
+		<color name="listboxborder" bg="#3F3F46" />
+		<color name="listboxitemmouseoverbackground" bg="#FF3E3E42" />
+		<color name="listboxitemmouseoverborder" bg="#FF505050" />
+		<color name="listboxitemselectedinactivebackground" bg="#FF3E3E42" />
+		<color name="listboxitemselectedinactiveborder" bg="#FF505050" />
+		<color name="listboxitemselectedactivebackground" bg="#FF3E3E42" />
+		<color name="listboxitemselectedactiveborder" bg="#FF505050" />
+		<color name="contextmenubackground" bg="#1B1B1C" />
+		<color name="contextmenuborderbrush" bg="#333337" />
+		<color name="contextmenurectanglefill" bg="#FF1B1B1C" />
+		<color name="expanderstaticcirclestroke" bg="#FFF1F1F1" />
+		<color name="expanderstaticcirclefill" bg="#FF252526" />
+		<color name="expanderstaticarrowstroke" bg="#FFF1F1F1" />
+		<color name="expandermouseovercirclestroke" bg="#FF007ACC" />
+		<color name="expandermouseovercirclefill" bg="#FF1F1F20" />
+		<color name="expandermouseoverarrowstroke" bg="#FFF1F1F1" />
+		<color name="expanderpressedcirclestroke" bg="#FF007ACC" />
+		<color name="expanderpressedcirclefill" bg="#FF007ACC" />
+		<color name="expanderpressedarrowstroke" bg="#FFF1F1F1" />
+		<color name="expanderdisabledcirclestroke" bg="#FF434346" />
+		<color name="expanderdisabledcirclefill" bg="#FF2D2D30" />
+		<color name="expanderdisabledarrowstroke" bg="#FF656565" />
+		<color name="progressbarprogress" bg="#FF007ACC" />
+		<color name="progressbarbackground" bg="#FF252526" />
+		<color name="progressbarborder" bg="#FF007ACC" />
+		<color name="resizegripperforeground" fg="#E0E0E0" bg="#D0D0D0" color3="#C0C0C0" />
+		<color name="environmentscrollbararrowbackground" bg="#FF3E3E42" />
+		<color name="environmentscrollbararrowdisabledbackground" bg="#FF3E3E42" />
+		<color name="environmentscrollbararrowglyph" bg="#FF999999" />
+		<color name="environmentscrollbararrowglyphdisabled" bg="#FF555558" />
+		<color name="environmentscrollbararrowglyphmouseover" bg="#FF1C97EA" />
+		<color name="environmentscrollbararrowglyphpressed" bg="#FF007ACC" />
+		<color name="environmentscrollbararrowmouseoverbackground" bg="#FF3E3E42" />
+		<color name="environmentscrollbararrowpressedbackground" bg="#FF3E3E42" />
+		<color name="environmentscrollbarbackground" bg="#FF3E3E42" />
+		<color name="environmentscrollbarborder" bg="#FF1C1C1C" />
+		<color name="environmentscrollbarthumbbackground" bg="#FF686868" />
+		<color name="environmentscrollbarthumbdisabled" bg="#FF3E3E42" />
+		<color name="environmentscrollbarthumbmouseoverbackground" bg="#FF9E9E9E" />
+		<color name="environmentscrollbarthumbpressedbackground" bg="#FFEFEBEF" />
+		<color name="statusbardebugging" fg="White" bg="#CA5100" />
+		<color name="tooltipbackground" fg="#1E1E1E" bg="#1E1E1E" />
+		<color name="tooltipborderbrush" bg="#505050" />
+		<color name="tooltipforeground" fg="#DCDCDC" />
+		<color name="screentip" fg="#FF252526" bg="#FFFEFCC8" />
+		<color name="screentipborder" bg="#FFFEFCC8" />
+		<color name="completiontooltip" fg="#FFDCDCDC" bg="#FF1E1E1E" />
+		<color name="completiontooltipborder" bg="#FF4D4D50" />
+		<color name="quickinfo" fg="#FFDCDCDC" bg="#FF1E1E1E" />
+		<color name="quickinfoborder" bg="#FF4D4D50" />
+		<color name="signaturehelp" fg="#FFDCDCDC" bg="#FF1E1E1E" />
+		<color name="signaturehelpborder" bg="#FF4D4D50" />
+		<color name="cilbutton" fg="#FFF1F1F1" bg="Transparent" />
+		<color name="cilbuttonborder" bg="Transparent" />
+		<color name="cilbuttonborderfocused" bg="#FF007ACC" />
+		<color name="cilbuttonborderhover" bg="#FF007ACC" />
+		<color name="cilbuttonborderpressed" bg="#FF007ACC" />
+		<color name="cilbuttonerror" bg="#FF660000" />
+		<color name="cilbuttonerrorborder" bg="#FFB20000" />
+		<color name="cilbuttonfocused" fg="#FFF1F1F1" bg="#FF3E3E42" />
+		<color name="cilbuttonhover" fg="#FFF1F1F1" bg="#FF3E3E42" />
+		<color name="cilbuttonpressed" fg="#FFF1F1F1" bg="#FF505050" />
+		<color name="cilcheckboxbackground" bg="#FF252526" />
+		<color name="cilcheckboxbackgrounddisabled" bg="#FF2D2D30" />
+		<color name="cilcheckboxbackgroundfocused" bg="#FF1F1F20" />
+		<color name="cilcheckboxbackgroundhover" bg="#FF1F1F20" />
+		<color name="cilcheckboxbackgroundpressed" bg="#FF007ACC" />
+		<color name="cilcheckboxborder" bg="#FF999999" />
+		<color name="cilcheckboxborderdisabled" bg="#FF434346" />
+		<color name="cilcheckboxborderfocused" bg="#FF007ACC" />
+		<color name="cilcheckboxborderhover" bg="#FF007ACC" />
+		<color name="cilcheckboxborderpressed" bg="#FF007ACC" />
+		<color name="cilcheckboxglyph" bg="#FFF1F1F1" />
+		<color name="cilcheckboxglyphdisabled" bg="#FF656565" />
+		<color name="cilcheckboxglyphfocused" bg="#FFF1F1F1" />
+		<color name="cilcheckboxglyphhover" bg="#FFF1F1F1" />
+		<color name="cilcheckboxglyphpressed" bg="#FFF1F1F1" />
+		<color name="cilcheckboxtext" bg="#FFF1F1F1" />
+		<color name="cilcheckboxtextdisabled" bg="#FF656565" />
+		<color name="cilcheckboxtextfocused" bg="#FF007ACC" />
+		<color name="cilcheckboxtexthover" bg="#FF007ACC" />
+		<color name="cilcheckboxtextpressed" bg="#FF007ACC" />
+		<color name="cilcomboboxborderfocused" bg="#FF007ACC" />
+		<color name="cilcomboboxborderhover" bg="#FF007ACC" />
+		<color name="cilcomboboxborderpressed" bg="#FF007ACC" />
+		<color name="cilcomboboxerror" bg="#FF660000" />
+		<color name="cilcomboboxerrorborder" bg="#FFB20000" />
+		<color name="cilcomboboxlistbackground" bg="#FF1E1E1E" />
+		<color name="cilcomboboxlistborder" bg="#FF3F3F46" />
+		<color name="cilcomboboxlistitembackgroundhover" bg="#FF2D2D30" />
+		<color name="cilcomboboxlistitemborderhover" bg="#FF3E3E42" />
+		<color name="cilcomboboxlistitemtexthover" bg="#DCDCDC" />
+		<color name="cilgridviewborder" bg="#3F3F46" />
+		<color name="cilgridviewitemcontainermouseoverhoverborder" bg="#FF3E3E42" />
+		<color name="cilgridviewitemcontainerselectedborder" bg="#FF3E3E42" />
+		<color name="cilgridviewitemcontainerselectedinactiveborder" bg="#FF3E3E42" />
+		<color name="cilgridviewitemcontainerselectedmouseoverborder" bg="#FF3E3E42" />
+		<color name="cilgridviewlistitemhoverfill" bg="#FF2D2D30" />
+		<color name="cilgridviewlistitemselectedfill" bg="#FF2D2D30" />
+		<color name="cilgridviewlistitemselectedhoverfill" bg="#FF353539" />
+		<color name="cilgridviewlistitemselectedinactivefill" bg="#FF2D2D30" />
+		<color name="cilgridviewlistviewitemfocusvisualstroke" bg="#FF3F3F46" />
+		<color name="cillistboxborder" bg="#3F3F46" />
+		<color name="cillistboxitemmouseoverbackground" bg="#FF2D2D30" />
+		<color name="cillistboxitemmouseoverborder" bg="#FF3E3E42" />
+		<color name="cillistboxitemselectedactivebackground" bg="#FF2D2D30" />
+		<color name="cillistboxitemselectedactiveborder" bg="#FF3E3E42" />
+		<color name="cillistboxitemselectedinactivebackground" bg="#FF2D2D30" />
+		<color name="cillistboxitemselectedinactiveborder" bg="#FF3E3E42" />
+		<color name="cillistviewitem0" bg="#FF1E1E1E" />
+		<color name="cillistviewitem1" bg="#FF1E1E1E" />
+		<color name="ciltextboxdisabled" fg="#FF656565" bg="#FF2D2D30" />
+		<color name="ciltextboxdisabledborder" bg="#FF434346" />
+		<color name="ciltextboxerror" fg="#FFF1F1F1" bg="#FF660000" />
+		<color name="ciltextboxerrorborder" bg="#FFB20000" />
+		<color name="ciltextboxfocusedborder" bg="#FF3399FF" />
+		<color name="ciltextboxmouseoverborder" bg="#FF3399FF" />
+		<color name="ciltextboxselection" bg="#FF3399FF" />
+		<color name="gridviewbackground" bg="#252526" />
+		<color name="gridviewborder" bg="#3F3F46" />
+		<color name="headerdefault" fg="#FFF1F1F1" bg="#FF252526" />
+		<color name="headerglyph" bg="#FFF1F1F1" />
+		<color name="headermousedown" fg="#FFFFFFFF" bg="#FF007ACC" />
+		<color name="headermouseover" fg="#FFF1F1F1" bg="#FF3E3E40" />
+		<color name="headermouseoverglyph" bg="#FFFFFFFF" />
+		<color name="headerseparatorline" bg="#FF3F3F46" />
+		<color name="gridviewlistviewforeground" bg="#F1F1F1" />
+		<color name="gridviewitemcontainermouseoverhoverborder" bg="#FF505050" />
+		<color name="gridviewitemcontainerselectedborder" bg="#FF505050" />
+		<color name="gridviewitemcontainerselectedinactiveborder" bg="#FF505050" />
+		<color name="gridviewitemcontainerselectedmouseoverborder" bg="#FF505050" />
+		<color name="gridviewlistitemhoverfill" bg="#FF3E3E42" />
+		<color name="gridviewlistitemselectedfill" bg="#FF3E3E42" />
+		<color name="gridviewlistitemselectedhoverfill" bg="#FF3E3E42" />
+		<color name="gridviewlistitemselectedinactivefill" bg="#FF3E3E42" />
+		<color name="gridviewlistviewitemfocusvisualstroke" bg="#FF505050" />
+		<color name="decompilertextviewwaitadorner" fg="#F1F1F1" bg="#A0404040" />
+		<color name="listarrowbackground" bg="#F1F1F1" />
+		<color name="treeviewitemmouseover" fg="#FFF1F1F1" bg="#505050" />
+		<color name="treeviewitemselected" fg="#FFF1F1F1" bg="#FF404040" />
+		<color name="treeview" fg="#FFF1F1F1" bg="#FF252526" />
+		<color name="treeviewborder" bg="#3F3F46" />
+		<color name="treeviewglyph" bg="#FFF1F1F1" />
+		<color name="treeviewglyphmouseover" bg="#FF007ACC" />
+		<color name="tvitemalternationbackground" bg="#3E81AD" />
+		<color name="appsettingstreeview" fg="#FFF1F1F1" bg="#FF1E1E1E" />
+		<color name="appsettingstreeviewborder" bg="#3F3F46" />
+		<color name="environmentfiletabbackground" bg="#FF2D2D30" />
+		<color name="environmentfiletabborder" bg="#FF2D2D30" />
+		<color name="environmentfiletabbuttondowninactiveborder" bg="#FF0E6198" />
+		<color name="environmentfiletabbuttondowninactive" bg="#FF0E6198" />
+		<color name="environmentfiletabbuttondowninactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentfiletabbuttondownselectedactiveborder" bg="#FF0E6198" />
+		<color name="environmentfiletabbuttondownselectedactive" bg="#FF0E6198" />
+		<color name="environmentfiletabbuttondownselectedactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentfiletabbuttondownselectedinactiveborder" bg="#FF1B1B1C" />
+		<color name="environmentfiletabbuttondownselectedinactive" bg="#FF1B1B1C" />
+		<color name="environmentfiletabbuttondownselectedinactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmentfiletabbuttonhoverinactiveborder" bg="#FF52B0EF" />
+		<color name="environmentfiletabbuttonhoverinactive" bg="#FF52B0EF" />
+		<color name="environmentfiletabbuttonhoverinactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentfiletabbuttonhoverselectedactiveborder" bg="#FF1C97EA" />
+		<color name="environmentfiletabbuttonhoverselectedactive" bg="#FF1C97EA" />
+		<color name="environmentfiletabbuttonhoverselectedactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmentfiletabbuttonhoverselectedinactiveborder" bg="#FF555555" />
+		<color name="environmentfiletabbuttonhoverselectedinactive" bg="#FF555555" />
+		<color name="environmentfiletabbuttonhoverselectedinactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmentfiletabbuttonselectedactiveglyph" bg="#FFD0E6F5" />
+		<color name="environmentfiletabbuttonselectedinactiveglyph" bg="#FF6D6D70" />
+		<color name="environmentfiletabinactiveborder" bg="#FF3F3F46" />
+		<color name="environmentfiletabinactivegradient" fg="#FF3F3F46" bg="#FF3F3F46" />
+		<color name="environmentfiletabinactivetext" bg="#FFF1F1F1" />
+		<color name="environmentfiletabselectedborder" bg="#FF007ACC" />
+		<color name="environmentfiletabselectedgradient" fg="#FF007ACC" bg="#FF007ACC" color3="#FF007ACC" color4="#FF007ACC" />
+		<color name="environmentfiletabselectedtext" bg="#FFFFFFFF" />
+		<color name="environmentfiletabtext" bg="#FFF1F1F1" />
+		<color name="environmentfiletabhotgradient" fg="#FF1C97EA" bg="#FF1C97EA" />
+		<color name="environmentfiletabhotborder" bg="#FF1C97EA" />
+		<color name="environmentfiletabhottext" bg="#FFFFFFFF" />
+		<color name="environmentfiletabhotglyph" bg="#FFD0E6F5" />
+		<color name="environmenttitlebaractive" fg="#FFFFFFFF" bg="#FF007ACC" />
+		<color name="environmenttitlebaractiveborder" bg="#FF007ACC" />
+		<color name="environmenttitlebaractivegradient" fg="#FF007ACC" bg="#FF007ACC" color3="#FF007ACC" color4="#FF007ACC" />
+		<color name="environmenttitlebardraghandle" bg="#FF46464A" />
+		<color name="environmenttitlebardraghandleactive" bg="#FF59A8DE" />
+		<color name="environmenttitlebarinactive" fg="#FFD0D0D0" bg="#FF2D2D30" />
+		<color name="environmenttitlebarinactiveborder" bg="#FF2D2D30" />
+		<color name="environmenttitlebarinactivegradient" fg="#FF2D2D30" bg="#FF2D2D30" />
+		<color name="environmenttoolwindow" bg="#FF252526" />
+		<color name="environmenttoolwindowborder" bg="#FF3F3F46" />
+		<color name="environmenttoolwindowbuttonactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmenttoolwindowbuttondown" bg="#FF0E6198" />
+		<color name="environmenttoolwindowbuttondownactiveglyph" bg="#FFFFFFFF" />
+		<color name="environmenttoolwindowbuttondownborder" bg="#FF0E6198" />
+		<color name="environmenttoolwindowbuttonhoveractive" bg="#FF52B0EF" />
+		<color name="environmenttoolwindowbuttonhoveractiveborder" bg="#FF52B0EF" />
+		<color name="environmenttoolwindowbuttonhoveractiveglyph" bg="#FFFFFFFF" />
+		<color name="environmenttoolwindowbuttonhoverinactive" bg="#FF393939" />
+		<color name="environmenttoolwindowbuttonhoverinactiveborder" bg="#FF393939" />
+		<color name="environmenttoolwindowbuttonhoverinactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmenttoolwindowbuttoninactiveglyph" bg="#FFF1F1F1" />
+		<color name="environmenttoolwindowtabborder" bg="#FF2D2D30" />
+		<color name="environmenttoolwindowtabgradient" fg="#FF2D2D30" bg="#FF2D2D30" />
+		<color name="environmenttoolwindowtabmouseoverbackgroundgradient" fg="#FF3E3E40" bg="#FF3E3E40" />
+		<color name="environmenttoolwindowtabmouseoverborder" bg="#FF3E3E40" />
+		<color name="environmenttoolwindowtabmouseovertext" fg="#FF55AAFF" />
+		<color name="environmenttoolwindowtabselectedactivetext" fg="#FF0097FB" />
+		<color name="environmenttoolwindowtabselectedborder" bg="#FF252526" />
+		<color name="environmenttoolwindowtabselectedtab" bg="#FF252526" />
+		<color name="environmenttoolwindowtabselectedtext" fg="#FF0097FB" />
+		<color name="environmenttoolwindowtabtext" fg="#FFD0D0D0" />
+		<color name="searchboxwatermark" fg="#FFA0A0A0" />
+		<color name="memorywindowdisabled" bg="#40FFFFFF" />
+		<color name="treeviewnode" fg="#F1F1F1" />
+		<color name="environmentdropdownglyph" bg="#FF999999" />
+		<color name="environmentdropdownmouseoverglyph" bg="#FF007ACC" />
+		<color name="environmentdropdownmousedownglyph" bg="#FFFFFFFF" />
+		<color name="environmentcommandbarmouseoverbackground" fg="#FF3E3E40" bg="#FF3E3E40" color3="#FF3E3E40" color4="#FF3E3E40" />
+		<color name="environmentcommandbarmousedownbackground" fg="#FF007ACC" bg="#FF007ACC" color3="#FF007ACC" />
+		<color name="environmentcomboboxdisabledbackground" bg="#FF2D2D30" />
+		<color name="environmenticongeneralstroke" bg="#00000000" />
+		<color name="environmenticongeneralfill" bg="#FFC8C8C8" />
+		<color name="environmenticonactionfill" bg="#FF7AC1FF" />
+		<color name="searchcontrolmouseoverdropdownbuttonglyph" bg="#FF007ACC" />
+		<color name="hexsearchcontrolmouseoverdropdownbuttonglyph" bg="#FF007ACC" />
+		<color name="hexsearchingtextbox" fg="#FFC1C1C1" bg="#FF000000" />
+		<color name="hexsearchingtextboxborder" bg="#FFC1C1C1" />
+		<color name="environmentcommandbartoolbarseparator" bg="#FF46464A" />
+		<color name="environmentcommandbartoolbarseparatorhighlight" bg="#FF222222" />
+		<color name="debuggerbreakpointglyphmargincontrolborder" bg="#FF2D2D30" />
+		<color name="debuggerbreakpointglyphmargincontrolbackground" bg="#FF3F3F46" />
+		<color name="debuggerbreakpointglyphmargincontrolhoverbackground" bg="#FF52B0EF" />
+		<color name="hyperlinknormal" bg="#FF59B1CC" />
+		<color name="hyperlinkmouseover" bg="#FFB0CC80" />
+		<color name="hyperlinkdisabled" bg="#FF6D6D6D" />
+	</colors>
+</theme>

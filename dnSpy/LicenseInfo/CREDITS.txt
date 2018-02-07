@@ -1,0 +1,57 @@
+﻿dnSpy credits:
+
+	0xd4d
+	Ki
+
+
+ILSpy decompiler and analyzer credits:
+
+	Daniel Grunwald
+	David Srbecky
+	Ed Harvey
+	Siegfried Pammer
+	Artur Zgodzinski
+	Eusebiu Marcu
+	Pent Ploompuu
+	Ki
+	0xd4d
+
+
+Translators:
+
+Chinese Simplified:
+
+	Ulysses Wu
+	YanJun Sun
+	iFish
+	SquallATF
+	linkinshi
+	YuXiaoChou
+
+Russian:
+
+	Igor Besedin
+	Konctantin
+	Daniil Yarancev
+	Kibnet Philosoff
+
+Portuguese:
+
+	Raphael Aquiles
+	jp2masa
+
+German:
+
+	patricksadowski
+	li0nsar3c00l
+
+Spanish:
+
+	Isidro Padilla
+	Phid
+	lemalc
+
+Hungarian:
+
+	Gábor Mizda
+	Krisztián Szilágyi
