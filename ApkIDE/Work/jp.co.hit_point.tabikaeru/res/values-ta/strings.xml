@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">Google Play சேவைகளில் சிக்கல் ஏற்பட்டதால், %1$s பயன்பாட்டை அணுக முடியவில்லை. மீண்டும் முயலவும்.</string>
+    <string name="s1">படத்தைச் சேமி</string>
+    <string name="s2">பட கேலரியில் படத்தைச் சேமிக்க, விளம்பரத்தை அனுமதிக்கவா?</string>
+    <string name="s3">அனுமதி</string>
+    <string name="s4">நிராகரி</string>
+    <string name="s5">கேலெண்டர் நிகழ்வை உருவாக்கு</string>
+    <string name="s6">கேலெண்டர் நிகழ்வை உருவாக்க, விளம்பரத்தை அனுமதிக்கவா?</string>
+    <string name="s7">சோதனை விளம்பரம்</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s-ს Google Play Services-თან პრობლემა შეექმნა. გთხოვთ, ცადოთ ხელახლა.</string>
+    <string name="s1">სურათის შენახვა</string>
+    <string name="s2">აძლევთ ნებას რეკლამას, შეინახოს სურათი გალერეაში?</string>
+    <string name="s3">მიღება</string>
+    <string name="s4">უარყოფა</string>
+    <string name="s5">კალენდარში მოვლენის შექმნა</string>
+    <string name="s6">აძლევთ ნებას რეკლამას, შექმნას მოვლენა კალენდარში?</string>
+    <string name="s7">სატესტო რეკლამა</string>
+</resources>

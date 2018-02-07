@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s aplikazioak arazoak ditu Google Play zerbitzuekin. Saiatu berriro.</string>
+    <string name="s1">Gorde irudia</string>
+    <string name="s2">Irudia irudien galerian gordetzea baimendu nahi diozu iragarkiari?</string>
+    <string name="s3">Onartu</string>
+    <string name="s4">Baztertu</string>
+    <string name="s5">Sortu egutegiko gertaera bat</string>
+    <string name="s6">Egutegiko gertaera bat sortzea baimendu nahi diozu iragarkiari?</string>
+    <string name="s7">Probako iragarkia</string>
+</resources>

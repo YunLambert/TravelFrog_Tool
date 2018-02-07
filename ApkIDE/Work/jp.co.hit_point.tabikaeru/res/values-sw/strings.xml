@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s inakumbwa na hitilafu ya huduma za Google Play. Tafadhali jaribu tena.</string>
+    <string name="s1">Hifadhi picha</string>
+    <string name="s2">Ungependa kuruhusu tangazo lihifadhi picha katika matunzio ya Picha?</string>
+    <string name="s3">Kubali</string>
+    <string name="s4">Kataa</string>
+    <string name="s5">Unda tukio la kalenda</string>
+    <string name="s6">Ungependa kuruhusu tangazo liunde tukio la kalenda?</string>
+    <string name="s7">Tangazo la Jaribio</string>
+</resources>

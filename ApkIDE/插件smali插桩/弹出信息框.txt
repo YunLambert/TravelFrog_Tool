@@ -1,0 +1,21 @@
+new-instance v1,Landroid/app/AlertDialog$Builder;
+
+invoke-direct {v1,p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+.line 29
+.local v1,builder:Landroid/app/AlertDialog$Builder;
+const-string v2,"\u666e\u901a\u5bf9\u8bdd\u6846"
+
+invoke-virtual {v1,v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+.line 31
+const-string v2,"\u4f60\u597d\uff0cAndroid!"
+
+invoke-virtual {v1,v2},Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+.line 52
+invoke-virtual {v1},Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+move-result-object v2
+
+invoke-virtual {v2},Landroid/app/AlertDialog;->show()V

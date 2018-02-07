@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s သည် Google Play ဝန်ဆောင်မှုများနှင့် ပြဿနာအနည်းငယ် ရှိနေပါသည်။ ထပ်လုပ်ကြည့်ပါ။</string>
+    <string name="s1">ဓာတ်ပုံကို သိမ်းရန်</string>
+    <string name="s2">ကြော်ငြာအား ဓာတ်ပုံပြခန်းတွင် ပုံကိုသိမ်းဆည်းခွင့် ပြုလိုပါသလား။</string>
+    <string name="s3">လက်ခံရန်</string>
+    <string name="s4">ငြင်းပယ်ရန်</string>
+    <string name="s5">ပြက္ခဒိန်တွင် အစီအစဉ်ထည့်သွင်းရန်</string>
+    <string name="s6">ကြော်ငြာအား ပြက္ခဒိန်တွင် အစီအစဉ်ထည့်သွင်းခွင့် ပြုပါသလား။</string>
+    <string name="s7">စမ်းသပ်ကြော်ငြာ</string>
+</resources>

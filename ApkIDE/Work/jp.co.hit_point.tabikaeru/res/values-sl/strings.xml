@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">Aplikacija %1$s ima težave s storitvami Google Play. Poskusite znova.</string>
+    <string name="s1">Shranjevanje slike</string>
+    <string name="s2">Ali dovolite, da oglas shrani sliko v galerijo slik?</string>
+    <string name="s3">Sprejmi</string>
+    <string name="s4">Zavrni</string>
+    <string name="s5">Ustvarjanje koledarskega dogodka</string>
+    <string name="s6">Ali dovolite, da oglas ustvari koledarski dogodek?</string>
+    <string name="s7">Preizkusni oglas</string>
+</resources>

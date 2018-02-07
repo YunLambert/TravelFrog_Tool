@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s Google Play సేవలతో సమస్య కలిగి ఉంది. దయచేసి మళ్లీ ప్రయత్నించండి.</string>
+    <string name="s1">చిత్రాన్ని సేవ్ చేయి</string>
+    <string name="s2">చిత్ర గ్యాలరీలో చిత్రాన్ని నిల్వ చేయడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s3">అనుమతించు</string>
+    <string name="s4">తిరస్కరించు</string>
+    <string name="s5">క్యాలెండర్ ఈవెంట్‌ను సృష్టించు</string>
+    <string name="s6">క్యాలెండర్ ఈవెంట్‌ను సృష్టించడానికి ప్రకటనను అనుమతించాలా?</string>
+    <string name="s7">ప్రకటనను పరీక్షించండి</string>
+</resources>

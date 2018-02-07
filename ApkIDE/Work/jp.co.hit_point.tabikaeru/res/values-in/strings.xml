@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s mengalami masalah dengan layanan Google Play. Coba lagi.</string>
+    <string name="s1">Simpan gambar</string>
+    <string name="s2">Izinkan Iklan menyimpan gambar di Galeri foto?</string>
+    <string name="s3">Terima</string>
+    <string name="s4">Tolak</string>
+    <string name="s5">Buat acara kalender</string>
+    <string name="s6">Izinkan Iklan membuat acara kalender?</string>
+    <string name="s7">Tes Iklan</string>
+</resources>

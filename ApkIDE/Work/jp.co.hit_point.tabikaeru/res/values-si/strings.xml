@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s හට Google Play සේවා සමගින් ගැටලු ඇත. කරුණාකර නැවත උත්සාහ කරන්න.</string>
+    <string name="s1">රූපය සුරකින්න</string>
+    <string name="s2">වෙළඳ දැන්වීමට පින්තූර ගැලරිය තුළ රූපය ගබඩා කිරීමට ඉඩ දෙන්නද?</string>
+    <string name="s3">පිළිගන්න</string>
+    <string name="s4">ප්‍රතික්ෂේප කරන්න</string>
+    <string name="s5">දින දර්ශන සිදුවීම සාදන්න</string>
+    <string name="s6">වෙළඳ දැන්වීමට දින දර්ශන සිදුවීමක් සෑදීමට ඉඩ දෙන්නද?</string>
+    <string name="s7">පරීක්ෂණ වෙළඳ දැන්වීම</string>
+</resources>

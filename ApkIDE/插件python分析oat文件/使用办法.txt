@@ -1,0 +1,3 @@
+命令行打开目录，然后输入 ： python main.py -f 1.oat ，然后会生成dex文件在out目录
+
+python环境：2.7

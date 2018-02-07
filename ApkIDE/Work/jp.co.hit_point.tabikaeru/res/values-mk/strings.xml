@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s има проблеми со услугите на Google Play. Обидете се повторно.</string>
+    <string name="s1">Зачувај ја сликата</string>
+    <string name="s2">Дали дозволувате рекламата да ја зачува сликата во „Галеријата со слики“?</string>
+    <string name="s3">Прифати</string>
+    <string name="s4">Одбиј</string>
+    <string name="s5">Создај настан во календарот</string>
+    <string name="s6">Дали дозволувате рекламата да создаде настан во календарот?</string>
+    <string name="s7">Тестирај ја рекламата</string>
+</resources>

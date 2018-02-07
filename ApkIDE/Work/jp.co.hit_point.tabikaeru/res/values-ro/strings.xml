@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s întâmpină probleme privind serviciile Google Play. Încercați din nou.</string>
+    <string name="s1">Salvați imaginea</string>
+    <string name="s2">Permiteți ca anunțul să stocheze imaginea în Galeria de fotografii?</string>
+    <string name="s3">Acceptați</string>
+    <string name="s4">Refuzați</string>
+    <string name="s5">Creați un eveniment în calendar</string>
+    <string name="s6">Permiteți ca anunțul să creeze un eveniment în calendar?</string>
+    <string name="s7">Anunț de probă</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s колдонмосунун Google Play кызматтары менен иштөөдө көйгөй чыкты. Кайра аракет кылыңыз.</string>
+    <string name="s1">Сүрөттү сактоо</string>
+    <string name="s2">Жарнамадан Сүрөт галереясына сүрөт сакталсынбы?</string>
+    <string name="s3">Кабыл алуу</string>
+    <string name="s4">Баш тартуу</string>
+    <string name="s5">Жылнаама окуясын түзүү</string>
+    <string name="s6">Жарнамада жылнаама окуясы түзүлсүнбү?</string>
+    <string name="s7">Жарнаманы сынап көрүңүз</string>
+</resources>

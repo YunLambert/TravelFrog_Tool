@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">「%1$s」無法存取 Google Play 服務，請再試一次。</string>
+    <string name="s1">儲存圖片</string>
+    <string name="s2">要允許廣告將圖片儲存在相片庫中嗎？</string>
+    <string name="s3">接受</string>
+    <string name="s4">拒絕</string>
+    <string name="s5">建立日曆活動</string>
+    <string name="s6">要允許廣告建立日曆活動嗎？</string>
+    <string name="s7">測試廣告</string>
+</resources>

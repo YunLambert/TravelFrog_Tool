@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">У праграмы %1$s узніклі праблемы са службамі Google Play. Паўтарыце спробу.</string>
+    <string name="s1">Захаваць відарыс</string>
+    <string name="s2">Дазволіць рэкламе захоўваць відарыс у Галерэі відарысаў?</string>
+    <string name="s3">Прыняць</string>
+    <string name="s4">Адхіліць</string>
+    <string name="s5">Стварыць падзею календара</string>
+    <string name="s6">Дазволіць рэкламе стварыць падзею календара?</string>
+    <string name="s7">Тэставая рэклама</string>
+</resources>

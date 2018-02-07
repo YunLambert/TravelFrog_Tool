@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">Lietotnē %1$s ir radusies problēma ar Google Play pakalpojumu darbību. Lūdzu, mēģiniet vēlreiz.</string>
+    <string name="s1">Attēla saglabāšana</string>
+    <string name="s2">Vai atļaut reklāmai saglabāt attēlu galerijā?</string>
+    <string name="s3">Piekrist</string>
+    <string name="s4">Noraidīt</string>
+    <string name="s5">Kalendāra pasākuma izveide</string>
+    <string name="s6">Vai atļaut reklāmai izveidot kalendāra pasākumu?</string>
+    <string name="s7">Testa reklāma</string>
+</resources>

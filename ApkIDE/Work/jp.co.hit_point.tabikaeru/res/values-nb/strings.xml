@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s har problemer med Google Play-tjenester. Prøv på nytt.</string>
+    <string name="s1">Lagre bilde</string>
+    <string name="s2">Vil du la annonsen lagre bildet i bildegalleriet?</string>
+    <string name="s3">Godta</string>
+    <string name="s4">Avslå</string>
+    <string name="s5">Opprett kalenderaktivitet</string>
+    <string name="s6">Vil du la annonsen opprette en kalenderaktivitet?</string>
+    <string name="s7">Testannonse</string>
+</resources>

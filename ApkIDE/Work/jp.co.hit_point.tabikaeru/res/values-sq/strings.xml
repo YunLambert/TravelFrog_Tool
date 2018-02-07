@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s ka probleme me shërbimet e Google Play. Provo sërish.</string>
+    <string name="s1">Ruaje imazhin</string>
+    <string name="s2">Të lejohet që reklama të ruajë imazhin në \"Galerinë e fotografive\"?</string>
+    <string name="s3">Prano</string>
+    <string name="s4">Refuzo</string>
+    <string name="s5">Krijo një ngjarje në kalendar</string>
+    <string name="s6">Të lejohet që reklama të krijojë një ngjarje në kalendar?</string>
+    <string name="s7">Reklamë test</string>
+</resources>

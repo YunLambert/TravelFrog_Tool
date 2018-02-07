@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Config>
+  <Options>
+    <ExtsForSearch />
+    <SelExtsForSearch value=".smali|.xml|.html|.htm|.txt" />
+    <SkinName />
+    <SkinAreo value="False" />
+    <SkinEnabled value="False" />
+    <Language value="简体中文.xml" />
+  </Options>
+  <SDK>
+    <JavaSDK value="C:\Program Files (x86)\Java\jdk1.8.0_131" />
+    <JVMOptions />
+    <AndroidSDK />
+  </SDK>
+  <ApkSignTool>
+    <UseJarsigner value="False" />
+    <KeystoreFile value="C:\Users\欣\Desktop\ApkIDE最新3.3.2少月版\Appres\test.keystore" />
+    <KeystorePassword value="QsZy5UIkyHku6mzcrmFNHQ==" />
+    <KeyAlias value="apkide" />
+    <KeyPassword value="QsZy5UIkyHku6mzcrmFNHQ==" />
+  </ApkSignTool>
+  <RecentApks>
+    <RecentApk0 value="C:\Users\Administrator\Desktop\1.apk" />
+    <RecentApk1 value="C:\Users\Administrator\Desktop\2.apk" />
+    <RecentApk2 value="C:\Users\Administrator\Desktop\Dhxyzygbh_360.apk" />
+    <RecentApk3 value="C:\Users\Administrator\Desktop\nvyou10.apk" />
+    <RecentApk4 value="F:\nvyou10.apk" />
+    <RecentApk5 value="C:\Users\Administrator\Desktop\TheGuardsAndroid21.0.0.apk" />
+    <RecentApk6 value="C:\Users\Administrator\Desktop\kaixxle.apk" />
+    <RecentApk7 value="C:\Users\Administrator\Desktop\MyTalkingTommod.apk" />
+    <RecentApk8 value="C:\Users\欣\Desktop\1.apk" />
+    <RecentApk9 value="C:\Users\欣\Desktop\2.apk" />
+    <RecentApk10 value="C:\Users\欣\Desktop\3.apk" />
+  </RecentApks>
+  <OnlineTranslation>
+    <Enabled value="False" />
+    <RealTimeEnabled value="False" />
+    <TranslateFrom value="en" />
+    <TranslateTo value="zh-CH" />
+  </OnlineTranslation>
+  <SearchAndReplaceLog>
+    <SearchLog>
+      <Search0 value="onresult" />
+      <Search1 value="sms" />
+      <Search2 value="\u53d1\u9001\u5931\u8d25" />
+      <Search3 value="\u53d1\u9001\u6210\u529f" />
+      <Search4 value="\u8fde\u53475\u7ea7" />
+      <Search5 value="金币" />
+      <Search6 value="对不起金币不足" />
+      <Search7 value="\u4e03\u5c11\u6708" />
+      <Search8 value="\u652f\u4ed8\u5931\u8d25\uff0c\u9519\u8bef" />
+      <Search9 value="b()" />
+      <Search10 value="b()v" />
+      <Search11 value="\u5e78\u8fd0\u661f\u4e0d\u8db3" />
+      <Search12 value="\u5f53\u524d\u60a8\u7684\u5e78\u8fd0\u661f\u4e3a0\u4e2a" />
+      <Search13 value="\u5f53\u524d\u60a8\u7684\u5e78\u8fd0\u661f\u6570\u91cf\u4e3a0\u4e2a" />
+      <Search14 value="\u62e5\u6709\u5e78\u8fd0\u661f\u65f6\u624d\u80fd\u8fdb\u573a" />
+      <Search15 value="\u5e78\u8fd0\u661f\u6570\u91cf" />
+      <Search16 value="\u5e78\u8fd0\u661f\u6570\u91cf\u4e0d\u8db3" />
+      <Search17 value="\u5bf9\u4e0d\u8d77,\u60a8\u5f53\u524d\u62e5\u6709\u7684\u5e78\u8fd0\u661f" />
+      <Search18 value="7723" />
+      <Search19 value="xml" />
+      <Search20 value="登录" />
+    </SearchLog>
+    <ReplaceLog />
+  </SearchAndReplaceLog>
+  <RegularExpression>
+    <Item0>
+      <Desc value="All strings" />
+      <Content value="&quot;((\&quot;)|[^\r\n\&quot;])+&quot;" />
+    </Item0>
+    <Item1>
+      <Desc value="All strings With Unicode" />
+      <Content value="\\u[0-9a-fA-F].+\w" />
+    </Item1>
+    <Item2>
+      <Desc value="All strings Without Unicode" />
+      <Content value="&quot;((\&quot;)|[^\r\n&quot;\\\&quot;])+&quot;" />
+    </Item2>
+    <Item3>
+      <Desc value="Chinese Characters" />
+      <Content value="[\u4e00-\u9fff]+" />
+    </Item3>
+    <Item4>
+      <Desc value="Double-byte Characters" />
+      <Content value="[^\x00-\xff]+" />
+    </Item4>
+    <Item5>
+      <Desc value="Web Address" />
+      <Content value="(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;amp;:/~\+#]*[\w\-\@?^=%&amp;amp;/~\+#])?" />
+    </Item5>
+    <Item6>
+      <Desc value="EMail Address" />
+      <Content value="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+    </Item6>
+    <Item7>
+      <Desc value="IP Address" />
+      <Content value="^(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9])\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[1-9]|0)\.(25[0-5]|2[0-4][0-9]|[0-1]{1}[0-9]{2}|[1-9]{1}[0-9]{1}|[0-9])$" />
+    </Item7>
+  </RegularExpression>
+  <OtherOptions>
+    <JavaDecompilerUseJad value="False" />
+    <ApkToolVersion value="2" />
+  </OtherOptions>
+</Config>

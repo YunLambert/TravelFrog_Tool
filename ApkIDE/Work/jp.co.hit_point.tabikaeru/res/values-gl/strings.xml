@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s ten problemas cos servizos de Google Play. Téntao de novo.</string>
+    <string name="s1">Gardar imaxe</string>
+    <string name="s2">Queres permitir que o anuncio almacene imaxes na galería de imaxes?</string>
+    <string name="s3">Aceptar</string>
+    <string name="s4">Rexeitar</string>
+    <string name="s5">Crear evento do calendario</string>
+    <string name="s6">Queres permitir que o anuncio cree un evento do calendario?</string>
+    <string name="s7">Probar anuncio</string>
+</resources>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lang author="鳗驼螺" email="mandarava@yeah.net">
+  <FormApkIDE>APK改之理</FormApkIDE>
+  <AboutDialog>关于</AboutDialog>
+  <lblAppInfo>版　本：
+程　序：
+邮　箱：
+微　博：
+小米人：</lblAppInfo>
+  <pnlInAndOut>输出</pnlInAndOut>
+  <tpOutput>输出</tpOutput>
+  <tpSearchResult>搜索结果</tpSearchResult>  
+  <tpCommand>命令</tpCommand>
+  <pnlSearchReplace>搜索和替换</pnlSearchReplace>
+  <sbtnReplacementTerm>替换内容</sbtnReplacementTerm>
+  <sbtnSearchTerm>搜索内容</sbtnSearchTerm>
+  <btnReplaceAll>替换全部</btnReplaceAll>
+  <btnSearchAll>搜索全部</btnSearchAll>  
+  <chxIncludeSubFolders>包括子文件夹</chxIncludeSubFolders>
+  <chxUseRegularExp>使用正则表达式</chxUseRegularExp>
+  <chxMatchWholeWord>全字匹配</chxMatchWholeWord>
+  <chxMatchCase>匹配大小写</chxMatchCase>
+  <cbxFileTypesForSearch>.smali|.xml|.txt|.htm|.html</cbxFileTypesForSearch>
+  <lblSupportedFileTypes>支持搜索的文件类型</lblSupportedFileTypes>
+  <lblSearchIn>搜索范围</lblSearchIn>
+  <pnlProject>项目</pnlProject>
+  <btnReplaceImage>替换...</btnReplaceImage>
+  <tmiCloseSelEditor>关闭(&amp;C)</tmiCloseSelEditor>
+  <tmiCloseAllEditors>全部关闭(&amp;A)</tmiCloseAllEditors>
+  <tmiClearAll>清空(&amp;R)</tmiClearAll>
+  <tmiCut>剪切(&amp;T)</tmiCut>
+  <tmiCopy>复制(&amp;C)</tmiCopy>
+  <tmiPaste>粘贴(&amp;P)</tmiPaste>
+  <tmiUndo>撤消(&amp;U)</tmiUndo>
+  <tmiRedo>重做(&amp;R)</tmiRedo>
+  <tbtnClearOutput.Tooltip>清空</tbtnClearOutput.Tooltip>
+  <tbtnClearOutput>清空</tbtnClearOutput>
+  <tbtnCopy.Tooltip>复制</tbtnCopy.Tooltip>
+  <tbtnCopy>复制</tbtnCopy>
+  <tbtnSyscmd.Tooltip>打开系统cmd</tbtnSyscmd.Tooltip>
+  <tbtnSyscmd>打开系统cmd</tbtnSyscmd>
+  <tbtnReboot.Tooltip>重新启动cmd</tbtnReboot.Tooltip>
+  <tbtnReboot>重新启动cmd</tbtnReboot>
+  <tbtnRunAdbShell.Tooltip>运行ADB Shell</tbtnRunAdbShell.Tooltip>
+  <tbtnRunAdbShell>运行ADB Shell</tbtnRunAdbShell>
+  <tbtnRunAdbLog.Tooltip>运行ADB Logcat</tbtnRunAdbLog.Tooltip>
+  <tbtnRunAdbLog>运行ADB Log</tbtnRunAdbLog>
+  <tmiRepConverToUnicode>转换为&amp;Unicode</tmiRepConverToUnicode>
+  <tmiRepConvertToAscII>转换为&amp;ASCII</tmiRepConvertToAscII>
+  <tmiRepWordWrap>自动换行(&amp;W)</tmiRepWordWrap>
+  <tmiSchConvertToUnicode>转换为&amp;Unicode</tmiSchConvertToUnicode>
+  <tmiSchConvertToAscII>转换为ASCII</tmiSchConvertToAscII>
+  <tmiSchWordWrap>自动换行(&amp;W)</tmiSchWordWrap>
+  <tmiEdit>编辑(&amp;E)</tmiEdit>
+  <tmiOpenFolder>打开文件夹(&amp;F)</tmiOpenFolder>
+  <tmiRefresh>刷新(&amp;R)</tmiRefresh>
+  <tmiShowSysMenus>系统右键菜单(&amp;S)</tmiShowSysMenus>
+  <tmiDelete>删除(&amp;D)</tmiDelete>
+  <tbtnRefresh.Tooltip>刷新</tbtnRefresh.Tooltip>
+  <tbtnRefresh>刷新</tbtnRefresh>
+  <tbtnEdit.Tooltip>编辑</tbtnEdit.Tooltip>
+  <tbtnEdit>编辑</tbtnEdit>
+  <tbtnOpenFolder.Tooltip>打开文件夹</tbtnOpenFolder.Tooltip>
+  <tbtnOpenFolder>打开文件夹</tbtnOpenFolder>
+  <tbtnDelete.Tooltip>删除</tbtnDelete.Tooltip>
+  <tbtnDelete>删除</tbtnDelete>
+  <tbtnBackwardMFile.Tooltip>上一个</tbtnBackwardMFile.Tooltip>
+  <tbtnBackwardMFile>上一个</tbtnBackwardMFile>
+  <tbtnForwardMFile.Tooltip>下一个</tbtnForwardMFile.Tooltip>
+  <tbtnForwardMFile>下一个</tbtnForwardMFile>
+  <tbtnQuickOpen.Tooltip>快捷打开</tbtnQuickOpen.Tooltip>
+  <tbtnQuickOpen>快捷打开</tbtnQuickOpen>
+  <tbtnHelp.Tooltip>帮助</tbtnHelp.Tooltip>
+  <tbtnHelp>帮助</tbtnHelp>
+  <tbtnWeibo.Tooltip>鳗驼螺新浪微博</tbtnWeibo.Tooltip>
+  <tbtnReportBug.Tooltip>反馈错误</tbtnReportBug.Tooltip>
+  <tbtnReportBug>反馈错误</tbtnReportBug>
+  <tbtnHomeSite.Tooltip>小米人官方网站</tbtnHomeSite.Tooltip>
+  <tbtnHomeSite>小米人官方网站</tbtnHomeSite>
+  <tbtnSave.Tooltip>保存</tbtnSave.Tooltip>
+  <tbtnSave>保存</tbtnSave>
+  <tbtnSaveAll.Tooltip>保存全部</tbtnSaveAll.Tooltip>
+  <tbtnSaveAll>保存全部</tbtnSaveAll>
+  <tbtnReload.Tooltip>重新载入</tbtnReload.Tooltip>
+  <tbtnReload>重新载入</tbtnReload>
+  <tbtnCut.Tooltip>剪切</tbtnCut.Tooltip>
+  <tbtnCut>剪切</tbtnCut>
+  <tbtnPaste.Tooltip>粘贴</tbtnPaste.Tooltip>
+  <tbtnPaste>粘贴</tbtnPaste>
+  <tbtnUndo.Tooltip>撤消</tbtnUndo.Tooltip>
+  <tbtnUndo>撤消</tbtnUndo>
+  <tbtnRedo.Tooltip>重做</tbtnRedo.Tooltip>
+  <tbtnRedo>重做</tbtnRedo>
+  <tbtnFind.Tooltip>查找与替换</tbtnFind.Tooltip>
+  <tbtnFind>查找与替换</tbtnFind>
+  <tbtnOpenJavaSrc.Tooltip>打开Java源码</tbtnOpenJavaSrc.Tooltip>
+  <tbtnOpenJavaSrc>打开Java源码</tbtnOpenJavaSrc>
+  <tbtnOpenInSysEditor.Tooltip>在系统编辑器中打开</tbtnOpenInSysEditor.Tooltip>
+  <tbtnOpenInSysEditor>在系统编辑器中打开</tbtnOpenInSysEditor>
+  <tcbxEncoding.Tooltip>文件编码</tcbxEncoding.Tooltip>
+  <tbtnOpenProject.Tooltip>打开项目</tbtnOpenProject.Tooltip>
+  <tbtnOpenProject>打开项目</tbtnOpenProject>
+  <tbtnCompile.Tooltip>编译</tbtnCompile.Tooltip>
+  <tbtnCompile>编译</tbtnCompile>
+  <tbtnGetCompiledApk.Tooltip>获取生成的APK</tbtnGetCompiledApk.Tooltip>
+  <tbtnGetCompiledApk>获取生成的APK</tbtnGetCompiledApk>
+  <meuProject>项目(&amp;P)</meuProject>
+  <miOpenProject>打开Apk(&amp;O)</miOpenProject>
+  <miFrameworks>&amp;Frameworks</miFrameworks>
+  <miAddFramework>添加Fr&amp;amework ...</miAddFramework>
+  <miOpenProjectsDirectory>打开工作目录(&amp;P)</miOpenProjectsDirectory>
+  <miProjectsCleanup>旧项目清理(&amp;C)...</miProjectsCleanup>
+  <EditMenu>编辑(&amp;E)</EditMenu>
+  <miSave>保存(&amp;S)</miSave>
+  <miReload>重新加载(&amp;L)</miReload>
+  <miUndo>撤消(&amp;U)</miUndo>
+  <miRedo>重做(&amp;R)</miRedo>
+  <miCopy>复制(&amp;C)</miCopy>
+  <miCut>剪切(&amp;T)</miCut>
+  <miPaste>粘贴(&amp;P)</miPaste>
+  <miFind>查找替换(&amp;F)</miFind>
+  <miOpenFolder>打开文件夹(&amp;O)</miOpenFolder>
+  <miOpenJavaSrc>打开&amp;Java源码</miOpenJavaSrc>
+  <miOpenInSysEditor>在系统编辑器中打开(&amp;E)</miOpenInSysEditor>
+  <meuBuild>编译(&amp;B)</meuBuild>
+  <miCompile>编译生成&amp;Apk</miCompile>
+  <miCancelCompile>取消编译(&amp;C)</miCancelCompile>
+  <miGetCompiledApk>获取生成的&amp;APK</miGetCompiledApk>
+  <meuADB>&amp;ADB</meuADB>
+  <miInstallApk>安装生成的&amp;Apk</miInstallApk>
+  <miUninstallApk>卸载生成的A&amp;pk</miUninstallApk>
+  <miAdbLogcat>ADB &amp;Logcat</miAdbLogcat>
+  <miAdbLogcatApp>ADB &amp;Logcat(项目App)</miAdbLogcatApp>
+  <miAdbShell>ADB &amp;Shell</miAdbShell>
+  <miRestartAdb>重启ADB &amp;Server</miRestartAdb>
+  <meuView>视图(&amp;V)</meuView>
+  <miViewToolbar>工具栏(&amp;T)</miViewToolbar>
+  <miViewProjectPane>项目面板(&amp;P)</miViewProjectPane>
+  <miViewInAndOutputPane>输入输出面板(&amp;O)</miViewInAndOutputPane>
+  <miSearchReplacePane>搜索替换面板(&amp;S)</miSearchReplacePane>
+  <meuTools>工具(&amp;T)</meuTools>
+  <miSDKConfig>配置与选项(&amp;S)</miSDKConfig>
+  <miStartAVDManager>启动Android Emulator Manager</miStartAVDManager>
+  <miStartSDKManager>启动Android SDK Manager</miStartSDKManager>
+  <miAndroidDdms>Dalvik Debug Monitor Service</miAndroidDdms>
+  <miLanguages>界面语言(&amp;L)</miLanguages>
+  <meuSkin>皮肤(&amp;S)</meuSkin>
+  <miEnableAreoSkin>启用Areo效果</miEnableAreoSkin>
+  <meuReferences>参考(&amp;R)</meuReferences>
+  <meuHelp>帮助(&amp;H)</meuHelp>
+  <miHelp>查看帮助(&amp;H)</miHelp>
+  <miStart>开始(&amp;S)</miStart>
+  <miReportBug>报告错误(&amp;B)</miReportBug>
+  <miUpdate>更新(&amp;U)</miUpdate>
+  <miUpdateApkIDE>&amp;APK改之理</miUpdateApkIDE>
+  <miUpdateApkTool>Apk &amp;Tool</miUpdateApkTool>
+  <miUpdateDex2jar>&amp;Dex2jar</miUpdateDex2jar>
+  <miUpdateJdGui>JD-&amp;GUI</miUpdateJdGui>
+  <miHomeSite>官方网站(&amp;S)</miHomeSite>
+  <miAbout>关于(&amp;A)</miAbout>
+  <ApkInfoDialog>APK应用信息</ApkInfoDialog>
+  <btnOK>确定(&amp;O)</btnOK>
+  <FileTypesSelectDialog>文件搜索类型管理</FileTypesSelectDialog>
+  <btnAddNewExt>增加(&amp;A)</btnAddNewExt>
+  <btnCancel>取消(&amp;C)</btnCancel>
+  <tmiRemoveSelExt>删除(&amp;R)</tmiRemoveSelExt>
+  <SDKSettingDialog>配置SDK</SDKSettingDialog>
+  <tpSDKConfig>配置SDK</tpSDKConfig>
+  <grpJavaSdk>Java SDK(JDK) *</grpJavaSdk>
+  <btnJavaSDKExplorer>浏览</btnJavaSDKExplorer>
+  <lblJavaSdk>安装路径：</lblJavaSdk>
+  <grpAndroidSdk>Android SDK</grpAndroidSdk>
+  <btnAndroidSDKExplorer>浏览</btnAndroidSDKExplorer>
+  <lblAndroidSdk>安装路径：</lblAndroidSdk>
+  <tpOptions>选项</tpOptions>
+  <lblForNextVersion>&lt; 下一个版本使用 &gt;</lblForNextVersion>
+  <lblOtherCopyRight>本软件中使用的部份工具、控件归原版权人所有，包括：</lblOtherCopyRight>
+  <btnOk>确定(&amp;O)</btnOk>
+  <DialogAbout>关于</DialogAbout>
+  <lblCopyRight>版权所有 © 2011-2013 Mandarava，保留部份权利。</lblCopyRight>
+  <FindReplaceDialog>查找与替换</FindReplaceDialog>
+  <lblFind>查找：</lblFind>
+  <lblReplace>替换：</lblReplace>
+  <grpFindOptions>查找选项</grpFindOptions>
+  <btnFindPrevious>上一个(&amp;P)</btnFindPrevious>
+  <btnFindNext>下一个(&amp;N)</btnFindNext>
+  <btnReplace>替换(&amp;R)</btnReplace>
+  <sTmiEditAndNext>编辑下一处</sTmiEditAndNext>
+  <sTmiShowSysMenus>系统右键菜单(&amp;S)</sTmiShowSysMenus>
+  <sCancelCompiling>取消编译。</sCancelCompiling>
+  <sTipConfigSDKFirst>请先配置Java SDK安装路径。</sTipConfigSDKFirst>
+  <sTipWorkdirExists>工作目录已经存在</sTipWorkdirExists>
+  <sAskWorkdirExists>同名工作目录“{0}”已经存在。
+您想要删除它吗？【请注意】：
+您可以选择【否】直接使用它以便继续上次的修改工作；
+也可以选择【是】删除该目录并重新反编译APK。 </sAskWorkdirExists>
+  <sTipUpdateTool>提示：下载解压得到相关程序文件，复制到APK改之理安装目录下覆盖同名文件即可。</sTipUpdateTool>
+  <sAskDeleteFramework>您确定想要删除该Framework吗？
+文件位于：</sAskDeleteFramework>
+  <sTipDeleteFramework>删除Framework</sTipDeleteFramework>
+  <sAskDeleteProject>您确定想要删除该工作目录吗？
+目录位于：</sAskDeleteProject>
+  <sTipDeleteProject>删除工作目录</sTipDeleteProject>
+  <sTipApkCompiling>正在编译Apk...</sTipApkCompiling>
+  <sTipApkDecompiling>正在反编译Apk...</sTipApkDecompiling>
+  <sTipDex2jaring>正在将dex转成jar...</sTipDex2jaring>
+  <sTipSuccessfully>成功！</sTipSuccessfully>
+  <sTipFailedCompiling>失败！请检查您的代码然后重试。</sTipFailedCompiling>
+  <sTipFailedUnknowError>失败！未知错误。</sTipFailedUnknowError>
+  <sTipFailedInfo>失败：</sTipFailedInfo>
+  <sTipFailed>失败</sTipFailed>
+  <sTipApkSigning>正在签名Apk...</sTipApkSigning>
+  <sTipErrorInfo>错误：</sTipErrorInfo>
+  <sTipError>错误</sTipError>
+  <sTipCreatedApkInfo>生成的Apk：</sTipCreatedApkInfo>
+  <sTipSmaliOutputInfo>.smali输出目录：</sTipSmaliOutputInfo>
+  <sTipClassOutputInfo>.class输出目录：</sTipClassOutputInfo>
+  <sTipReplaceResultStatistics>找到 {0} 个文件，修改 {1} 个文件，失败 {2} 个文件</sTipReplaceResultStatistics>
+  <sTipSearchResultStatistics>找到 {0} 个文件</sTipSearchResultStatistics>
+  <sTipInvalidJDKHome>无效的JDK安装路径。</sTipInvalidJDKHome>
+  <sTipInvalidAndroidSDKHome>无效的Android SDK安装路径。</sTipInvalidAndroidSDKHome>
+  <sTipFileNotExists>文件不存在。</sTipFileNotExists>
+  <sAskSaveFile>文件“{0}”尚未保存，您想要保存它吗？</sAskSaveFile>
+  <sTipSaveFile>保存文件</sTipSaveFile>
+  <sTipCanUpdate>Apk改之理新版已发布</sTipCanUpdate>
+  <sTipHomeSite>小米人官方网站</sTipHomeSite>
+  <sTipInvalidApkFileName>文件名中含有非法字符！
+文件名只允许由字母、数字、空格、点号及下划线组成，不能包含中文或其它亚洲字符，请修改后重试。</sTipInvalidApkFileName>
+  <sAskReplaceAllFiles>确定进行替换操作吗？
+注：本操作不可撤消！</sAskReplaceAllFiles>
+  <sTipReplaceAllFiles>全部替换</sTipReplaceAllFiles>
+  <sTipFileSearching>正在搜索...</sTipFileSearching>
+  <sTipFileReplacing>正在修改...</sTipFileReplacing>
+  <sTipReplaceTheFileInfo>正在修改文件：</sTipReplaceTheFileInfo>
+  <sTipSearchResultDesc>搜索词：{0}
+包含子文件夹：{1}
+匹配大小写：{2}
+全字匹配：{3}
+使用正则表达式：{4}
+搜索的文件夹：{5}
+搜索的文件类型：{6}</sTipSearchResultDesc>
+<!--以下为2.1版新增部份-->
+<sTipConfirm>确认</sTipConfirm>
+<sAskDelFileOrFolder>真的要删除该文件（夹）吗？</sAskDelFileOrFolder>
+<sAskReloadTheFile>真的要重新载入当前文档吗？</sAskReloadTheFile>
+<sTipNoFavouriteFile>该应用中未使用该文件。</sTipNoFavouriteFile>
+<sTipProjectsCleanup>正在清理旧工作目录 ...</sTipProjectsCleanup>
+<sTipProjectsCleanupSuccess>成功！旧工作目录被清理到系统回收站内。</sTipProjectsCleanupSuccess>
+<tmiMaximizeEditor>最大化/恢复(&amp;M)</tmiMaximizeEditor>
+<chxSelectAll>全选</chxSelectAll>
+<sTipSelOneExtAtLeast>至少选择一种文件类型</sTipSelOneExtAtLeast>
+<lnkLangInfo>当前界面语言由「{0}」翻译，点击联系TA</lnkLangInfo>
+<tmiSchHistory>历史搜索记录(&amp;S)</tmiSchHistory>
+<tmiRepHistory>历史替换记录(&amp;R)</tmiRepHistory>
+<miRecentApks>最近修改的Apk</miRecentApks>
+<!--以下为2.2版新增部份-->
+<tmiTranslateFrom>翻译自语言(&amp;F)</tmiTranslateFrom>
+<tmiTranslateTo>翻译到语言(&amp;T)</tmiTranslateTo>
+<chxEnableOnlineTranslation>启用在线翻译(需重启)</chxEnableOnlineTranslation>
+<tmiTranslate>翻译(&amp;T)</tmiTranslate>
+<tmiRealtimeTranslation>启用实时翻译(&amp;R)</tmiRealtimeTranslation>
+<tbtnSendToSearch>在项目中搜索(&amp;S)</tbtnSendToSearch>
+<tbtnSendToSearch.Tooltip>在项目中搜索</tbtnSendToSearch.Tooltip>
+<tmiSendToSearch>在项目中搜索(&amp;S)</tmiSendToSearch>
+<miSendToSearch>在项目中搜索(&amp;S)</miSendToSearch>
+<tmiSelectAll>全选(&amp;A)</tmiSelectAll>
+<miSelectAll>全选(&amp;A)</miSelectAll>
+<!--以下为2.3版新增部份-->
+<cbxSearchinFolder.0>整个项目</cbxSearchinFolder.0>
+<cbxSearchinFolder.1>选中的文件或文件夹</cbxSearchinFolder.1>
+<sTipExternalFileEdited>文件在外部被修改，是否重新加载</sTipExternalFileEdited>
+<sTipCleaningOldProject>正在清理，请稍候...</sTipCleaningOldProject>
+<!--以下为2.4版新增部份-->
+<sTipInvalidKeystoreFile>无效的.keystore文件</sTipInvalidKeystoreFile>
+<sTipInvalidKeystorePwdOrAlias>Keystore密码或别名不能为空。</sTipInvalidKeystorePwdOrAlias>
+<tpSignApk>Apk签名</tpSignApk>
+<grpApkSignSelectTool>签名工具</grpApkSignSelectTool>
+<grpKeystoreSettings>keystore设置</grpKeystoreSettings>
+<rbtnApkSignTool_signapk>SignApk</rbtnApkSignTool_signapk>
+<rbtnApkSignTool_jarsigner>JarSigner</rbtnApkSignTool_jarsigner>
+<lblKeystoreLocation>保存位置：</lblKeystoreLocation>
+<lblKeystorePassword>密　　码：</lblKeystorePassword>
+<lblKeystoreAlias>Key别名：</lblKeystoreAlias>
+<lblKeystoreAliasPassword>Key密码：</lblKeystoreAliasPassword>
+<btnSelKeystoreLocation>浏览</btnSelKeystoreLocation>
+<btnCheckKeystore>验证</btnCheckKeystore>
+<miViewStatusBar>状态栏(&amp;U)</miViewStatusBar>
+<!--以下为2.4.2版新增部份-->
+<sAskSaveExtEditorText>是否保存编辑的内容？</sAskSaveExtEditorText>
+<!--以下为2.5.0版新增部份-->
+<sNotApkFile>这是一个无效的apk文件。</sNotApkFile>
+<!--以下为2.6.0版新增部份-->
+<grpJavaDecompiler>Java反编译工具</grpJavaDecompiler>
+<grpOtherOptions>其它选项</grpOtherOptions>
+<sTipClass2javaing>正在生成Java源码...</sTipClass2javaing>
+<sTipJavaOutputInfo>.java输出目录：</sTipJavaOutputInfo>
+<tmiSchHexDecimalConvert>十进制/十六进制互转</tmiSchHexDecimalConvert>
+<miIngoreCompileError>防卡死(不推荐)</miIngoreCompileError>
+<sTipUncheckIngoreErrorForGetErrinf>（请在「编译」菜单中取消勾选「防卡死」选项以获取编译中的错误信息）</sTipUncheckIngoreErrorForGetErrinf>
+<!--以下为3.0版新增部份-->
+	<sTipExpandAllNodes>展开所有节点(&amp;E)</sTipExpandAllNodes>
+	<sTipCloseAllNodes>折叠所有节点(&amp;C)</sTipCloseAllNodes>
+	<tmiSchRegularExpression>常用正则表达式(&amp;E)</tmiSchRegularExpression>
+	<tpgFind>查找</tpgFind>
+	<tpgReplace>替换</tpgReplace>
+	<lblFindR>查找</lblFindR>
+	<lblSearchTypeR>查找方式</lblSearchTypeR>
+	<rdoStandardR>一般查找</rdoStandardR>
+	<rdoRegexR>使用正则表达式</rdoRegexR>
+	<chkWrapR>循环查找</chkWrapR>
+	<chkSearchSelectionR>在所选文字中查找</chkSearchSelectionR>
+	<chkMatchCaseR>匹配大小写</chkMatchCaseR>
+	<chkWholeWordR>全字匹配</chkWholeWordR>
+	<chkWordStartR>匹配开头</chkWordStartR>
+	<btnReplacePrevious>替换上一个</btnReplacePrevious>
+	<btnReplaceNext>替换下一个</btnReplaceNext>
+	<grdOptionsR>选项</grdOptionsR>
+	<lblFindF>查找</lblFindF>
+	<lblSearchTypeF>查找方式</lblSearchTypeF>
+	<rdoStandardF>一般查找</rdoStandardF>
+	<rdoRegexF>使用正则表达式</rdoRegexF>
+	<chkWrapF>循环查找</chkWrapF>
+	<chkSearchSelectionF>在所选文字中查找</chkSearchSelectionF>
+	<chkMatchCaseF>匹配大小写</chkMatchCaseF>
+	<chkWholeWordF>全字匹配</chkWholeWordF>
+	<chkWordStartF>匹配开头</chkWordStartF>
+	<grpFindAll>查找全部</grpFindAll>
+	<chkMarkLine>标记所在行</chkMarkLine>
+	<chkHighlightMatches>高亮所有结果</chkHighlightMatches>
+	<btnFindAll>查找全部</btnFindAll>
+	<btnClear>清除标记</btnClear>
+	<grpOptionsF>选项</grpOptionsF>
+	<miGotoLine>转到指定行(&amp;G)</miGotoLine>
+	<tmiAddFiles>增加文件(&amp;A)</tmiAddFiles>
+	<tbtnAddFiles>增加文件</tbtnAddFiles>
+	<tmiRename>重命名(&amp;R)</tmiRename>
+	<tbtnRename>重命名</tbtnRename>
+	<sTipInvalidFileName>文件名中包含非法字符</sTipInvalidFileName>
+	<sTipFailedRenameFile>文件重命名失败，错误信息：</sTipFailedRenameFile>
+	<sTipFailedCopyFile>文件复制失败，错误信息：</sTipFailedCopyFile>
+	<sTipQRCodeHasTooMuchInfo>文本信息包含太多内容，建议精简部份后重试</sTipQRCodeHasTooMuchInfo>
+	<QRCodeBuilderDialog>二维码生成器</QRCodeBuilderDialog>
+	<lblImageIcon>选择图标：</lblImageIcon>
+	<lblTextMsg>文本信息：</lblTextMsg>
+	<btnSelect>选择</btnSelect>
+	<lblScale>缩放：</lblScale>
+	<btnCreate>生成</btnCreate>
+	<btnSaveQRCodeImage>保存图片</btnSaveQRCodeImage>
+	<btnVerify>验证</btnVerify>
+	<miQRCodeBuilder>二维码生成器</miQRCodeBuilder>
+	<miCreateAppQRCode>创建应用二维码</miCreateAppQRCode>
+	<sTipQRCodeDataCantEmpty>文本信息是必填项，比如可填写你的应用的下载地址</sTipQRCodeDataCantEmpty>
+	<sTipAppIconInfo>应用图标：</sTipAppIconInfo>
+	<sTipAppDownlinkInfo>下载地址：</sTipAppDownlinkInfo>
+	<tbtnInstallApk.Tooltip>安装生成的Apk</tbtnInstallApk.Tooltip>
+	<tbtnInstallApk>安装生成的Apk</tbtnInstallApk>
+	<!--以下为3.1新增部份-->
+	<grpApkToolVersion>ApkTool版本切换</grpApkToolVersion>
+	<miConvertToAscII>转换为Asc&amp;II</miConvertToAscII>
+	<miConvertToUnicode>转换为&amp;Unicode</miConvertToUnicode>
+	<miSendToSearchBox>发送到搜索框(&amp;B)</miSendToSearchBox>
+	<tmiSendToSearchBox>发送到搜索框(&amp;B)</tmiSendToSearchBox>
+	<sTipInstallPathContainsSpaces>Apk改之理当前所在的安装路径中包含空格，这会影响JD-GUI查看Java源码，请将本软件安装到不含空格的路径中。</sTipInstallPathContainsSpaces>
+	<sTipApktoolV2NeedJDK7>警告：您当前使用的ApkTool与JDK版本不匹配，请使用更高版本的JDK（菜单「工具-配置与选项-配置SDK-Java SDK」）；如果您选择使用2.x版本的ApkTool，必须使用1.7或以上版本的JDK，否则编译中将出现错误；要降级ApkTool请点击菜单「工具-配置与选项-选项-ApkTool版本切换」。</sTipApktoolV2NeedJDK7>
+</Lang>

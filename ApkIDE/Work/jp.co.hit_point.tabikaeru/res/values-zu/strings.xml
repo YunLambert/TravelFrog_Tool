@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s inenkinga ngamasevisi e-Google Play. Sicela uzame futhi.</string>
+    <string name="s1">Londoloza isithombe</string>
+    <string name="s2">Vumela isikhangiso ukugcina isithombe kwigalari yesithombe?</string>
+    <string name="s3">Yamukela</string>
+    <string name="s4">Yenqaba</string>
+    <string name="s5">Dala umcimbi wekhalenda</string>
+    <string name="s6">Vumela Isikhangiso ukudala umcimbi wekhalenda?</string>
+    <string name="s7">Hlola isikhangiso</string>
+</resources>

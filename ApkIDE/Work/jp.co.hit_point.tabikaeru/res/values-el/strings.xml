@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">Η εφαρμογή %1$s αντιμετωπίζει κάποιο πρόβλημα με τις υπηρεσίες Google Play. Προσπαθήστε ξανά.</string>
+    <string name="s1">Αποθήκευση εικόνας</string>
+    <string name="s2">Να επιτραπεί στη διαφήμιση να αποθηκεύσει την εικόνα στο gallery φωτογραφιών;</string>
+    <string name="s3">Αποδοχή</string>
+    <string name="s4">Απόρριψη</string>
+    <string name="s5">Δημιουργία συμβάντος ημερολογίου</string>
+    <string name="s6">Να επιτραπεί στη διαφήμιση να δημιουργήσει ένα συμβάν ημερολογίου;</string>
+    <string name="s7">Δοκιμαστική διαφήμιση</string>
+</resources>

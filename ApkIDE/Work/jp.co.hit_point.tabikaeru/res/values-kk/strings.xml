@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s қолданбасында Google Play қызметіне байланысты белгісіз қате шықты. Әрекетті қайталаңыз.</string>
+    <string name="s1">Кескінді сақтау</string>
+    <string name="s2">Жарнамаға кескінді сурет галереясында сақтауға рұқсат берілсін бе?</string>
+    <string name="s3">Қабылдау</string>
+    <string name="s4">Қабылдамау</string>
+    <string name="s5">Күнтізбе оқиғасын жасау</string>
+    <string name="s6">Жарнамаға күнтізбе оқиғасын жасауға рұқсат берілсін бе?</string>
+    <string name="s7">Сынақ жарнама</string>
+</resources>

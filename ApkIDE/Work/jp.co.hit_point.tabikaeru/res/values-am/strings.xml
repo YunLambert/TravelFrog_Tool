@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s በGoogle Play አገልግሎቶች ላይ ችግሮች እያጋጠሙት ነው። እባክዎ እንደገና ይሞክሩ።</string>
+    <string name="s1">ምስል አስቀምጥ</string>
+    <string name="s2">ማስታወቂያ ምስሉን በስዕል ማእከለ-ሥዕላት ውስጥ እንዲያከማች ይፈቀድለት?</string>
+    <string name="s3">ተቀበል</string>
+    <string name="s4">ውድቅ አድርግ</string>
+    <string name="s5">የቀን መቁጠሪያ ክስተት ፍጠር</string>
+    <string name="s6">ማስታወቂያ የቀን መቁጠሪያ ክስተት እንዲፈጥር ይፈቀድለት?</string>
+    <string name="s7">የሙከራ ማስታወቂያ</string>
+</resources>

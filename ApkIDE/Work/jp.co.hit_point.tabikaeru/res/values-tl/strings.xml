@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">Nagkakaproblema ang %1$s sa mga serbisyo ng Google Play. Pakisubukang muli.</string>
+    <string name="s1">I-save ang larawan</string>
+    <string name="s2">Pahintulutan ang Ad na iimbak ang larawan sa Gallery ng larawan?</string>
+    <string name="s3">Tanggapin</string>
+    <string name="s4">Tanggihan</string>
+    <string name="s5">Gumawa ng event sa kalendaryo</string>
+    <string name="s6">Pahintulutan ang Ad na gumawa ng event sa kalendaryo?</string>
+    <string name="s7">Pansubok na Ad</string>
+</resources>

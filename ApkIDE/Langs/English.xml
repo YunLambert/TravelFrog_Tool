@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Lang author="Mandarava" email="mandarava@yeah.net" homepage="http://www.xiaomiren.net">
+  <FormApkIDE>APK IDE</FormApkIDE>
+  <AboutDialog>About</AboutDialog>
+  <lblAppInfo>Version:
+Program:
+E-mail:
+Weibo:
+Xiaomiren:</lblAppInfo>
+  <pnlInAndOut>Output</pnlInAndOut>
+  <tpOutput>Output</tpOutput>
+  <tpSearchResult>Search Result</tpSearchResult>
+  <tpCommand>Command</tpCommand>
+  <pnlSearchReplace>Search &amp; Replace</pnlSearchReplace>
+  <sbtnReplacementTerm>Replacement Term</sbtnReplacementTerm>
+  <sbtnSearchTerm>Search Result</sbtnSearchTerm>
+  <btnReplaceAll>Replace All</btnReplaceAll>
+  <btnSearchAll>Search All</btnSearchAll>
+  <chxIncludeSubFolders>Include Sub-Folders</chxIncludeSubFolders>
+  <chxUseRegularExp>Use Regular Expressions</chxUseRegularExp>
+  <chxMatchWholeWord>Match Whole Word</chxMatchWholeWord>
+  <chxMatchCase>Match Case</chxMatchCase>
+  <cbxFileTypesForSearch>.smali|.xml|.txt|.htm|.html</cbxFileTypesForSearch>
+  <lblSupportedFileTypes>Supported File Types</lblSupportedFileTypes>
+  <lblSearchIn>Search In</lblSearchIn>
+  <pnlProject>Project</pnlProject>
+  <btnReplaceImage>Replace...</btnReplaceImage>
+  <tmiCloseSelEditor>&amp;Close</tmiCloseSelEditor>
+  <tmiCloseAllEditors>Close &amp;All</tmiCloseAllEditors>
+  <tmiClearAll>Clear&amp;r All</tmiClearAll>
+  <tmiCut>Cu&amp;t</tmiCut>
+  <tmiCopy>&amp;Copy</tmiCopy>
+  <tmiPaste>&amp;Paste</tmiPaste>
+  <tmiUndo>&amp;Undo</tmiUndo>
+  <tmiRedo>&amp;Redo</tmiRedo>
+  <tbtnClearOutput.Tooltip>Clear All</tbtnClearOutput.Tooltip>
+  <tbtnClearOutput>Clear All</tbtnClearOutput>
+  <tbtnCopy.Tooltip>Copy</tbtnCopy.Tooltip>
+  <tbtnCopy>Copy</tbtnCopy>
+  <tbtnSyscmd.Tooltip>Open System cmd</tbtnSyscmd.Tooltip>
+  <tbtnSyscmd>Open System cmd</tbtnSyscmd>
+  <tbtnReboot.Tooltip>Reboot</tbtnReboot.Tooltip>
+  <tbtnReboot>Reboot</tbtnReboot>
+  <tbtnRunAdbShell.Tooltip>Run ADB Shell</tbtnRunAdbShell.Tooltip>
+  <tbtnRunAdbShell>Run ADB Shell</tbtnRunAdbShell>
+  <tbtnRunAdbLog.Tooltip>Run ADB Logcat</tbtnRunAdbLog.Tooltip>
+  <tbtnRunAdbLog>Run ADB Log</tbtnRunAdbLog>
+  <tmiRepConverToUnicode>Convert to &amp;Unicode</tmiRepConverToUnicode>
+  <tmiRepConvertToAscII>Convert to &amp;ASCII</tmiRepConvertToAscII>
+  <tmiRepWordWrap>Word &amp;Wrap</tmiRepWordWrap>
+  <tmiSchConvertToUnicode>Convert to &amp;Unicode</tmiSchConvertToUnicode>
+  <tmiSchConvertToAscII>Convert to &amp;ASCII</tmiSchConvertToAscII>
+  <tmiSchWordWrap>Word &amp;Wrap</tmiSchWordWrap>
+  <tmiEdit>&amp;Edit</tmiEdit>
+  <tmiOpenFolder>Open &amp;Folder</tmiOpenFolder>
+  <tmiRefresh>&amp;Refresh</tmiRefresh>
+  <tmiShowSysMenus>Show &amp;System Menus</tmiShowSysMenus>
+  <tmiDelete>&amp;Delete</tmiDelete>
+  <tbtnRefresh.Tooltip>Refresh</tbtnRefresh.Tooltip>
+  <tbtnRefresh>Refresh</tbtnRefresh>
+  <tbtnEdit.Tooltip>Edit</tbtnEdit.Tooltip>
+  <tbtnEdit>Edit</tbtnEdit>
+  <tbtnOpenFolder.Tooltip>Open Folder</tbtnOpenFolder.Tooltip>
+  <tbtnOpenFolder>Open Folder</tbtnOpenFolder>
+  <tbtnDelete.Tooltip>Delete</tbtnDelete.Tooltip>
+  <tbtnDelete>Delete</tbtnDelete>
+  <tbtnBackwardMFile.Tooltip>Backward</tbtnBackwardMFile.Tooltip>
+  <tbtnBackwardMFile>Backward</tbtnBackwardMFile>
+  <tbtnForwardMFile.Tooltip>Forward</tbtnForwardMFile.Tooltip>
+  <tbtnForwardMFile>Forward</tbtnForwardMFile>
+  <tbtnQuickOpen.Tooltip>Quick Open</tbtnQuickOpen.Tooltip>
+  <tbtnQuickOpen>Quick Open</tbtnQuickOpen>
+  <tbtnHelp.Tooltip>Help</tbtnHelp.Tooltip>
+  <tbtnHelp>Help</tbtnHelp>
+  <tbtnWeibo.Tooltip>Weibo</tbtnWeibo.Tooltip>
+  <tbtnReportBug.Tooltip>Report a Bug</tbtnReportBug.Tooltip>
+  <tbtnReportBug>Report a Bug</tbtnReportBug>
+  <tbtnHomeSite.Tooltip>Home Site</tbtnHomeSite.Tooltip>
+  <tbtnHomeSite>Home Site</tbtnHomeSite>
+  <tbtnSave.Tooltip>Save</tbtnSave.Tooltip>
+  <tbtnSave>Save</tbtnSave>
+  <tbtnSaveAll.Tooltip>Save All</tbtnSaveAll.Tooltip>
+  <tbtnSaveAll>Save All</tbtnSaveAll>
+  <tbtnReload.Tooltip>Reload</tbtnReload.Tooltip>
+  <tbtnReload>Reload</tbtnReload>
+  <tbtnCut.Tooltip>Cut</tbtnCut.Tooltip>
+  <tbtnCut>Cut</tbtnCut>
+  <tbtnPaste.Tooltip>Paste</tbtnPaste.Tooltip>
+  <tbtnPaste>Paste</tbtnPaste>
+  <tbtnUndo.Tooltip>Undo</tbtnUndo.Tooltip>
+  <tbtnUndo>Undo</tbtnUndo>
+  <tbtnRedo.Tooltip>Redo</tbtnRedo.Tooltip>
+  <tbtnRedo>Redo</tbtnRedo>
+  <tbtnFind.Tooltip>Find and Replace</tbtnFind.Tooltip>
+  <tbtnFind>Find and Replace</tbtnFind>
+  <tbtnOpenJavaSrc.Tooltip>Open Java Source</tbtnOpenJavaSrc.Tooltip>
+  <tbtnOpenJavaSrc>Open Java Source</tbtnOpenJavaSrc>
+  <tbtnOpenInSysEditor.Tooltip>Open in the system's default editor</tbtnOpenInSysEditor.Tooltip>
+  <tbtnOpenInSysEditor>Open in the system's default editor</tbtnOpenInSysEditor>
+  <tcbxEncoding.Tooltip>File Encoding</tcbxEncoding.Tooltip>
+  <tbtnOpenProject.Tooltip>Open Project</tbtnOpenProject.Tooltip>
+  <tbtnOpenProject>Open Project</tbtnOpenProject>
+  <tbtnCompile.Tooltip>Compile</tbtnCompile.Tooltip>
+  <tbtnCompile>Compile</tbtnCompile>
+  <tbtnGetCompiledApk.Tooltip>Get Compiled APK</tbtnGetCompiledApk.Tooltip>
+  <tbtnGetCompiledApk>Get Compiled APK</tbtnGetCompiledApk>
+  <meuProject>&amp;Project</meuProject>
+  <miOpenProject>&amp;Open Apk</miOpenProject>
+  <miFrameworks>&amp;Frameworks</miFrameworks>
+  <miAddFramework>Add Fr&amp;amework ...</miAddFramework>
+  <miOpenProjectsDirectory>Open &amp;Projects Directory</miOpenProjectsDirectory>
+  <miProjectsCleanup>Projects &amp;cleanup...</miProjectsCleanup>
+  <EditMenu>&amp;Edit</EditMenu>
+  <miSave>&amp;Save</miSave>
+  <miReload>Re&amp;load</miReload>
+  <miUndo>&amp;Undo</miUndo>
+  <miRedo>&amp;Redo</miRedo>
+  <miCopy>&amp;Copy</miCopy>
+  <miCut>Cu&amp;t</miCut>
+  <miPaste>&amp;Paste</miPaste>
+  <miFind>&amp;Find and Replace</miFind>
+  <miOpenFolder>&amp;Open Folder</miOpenFolder>
+  <miOpenJavaSrc>Open &amp;Java Source</miOpenJavaSrc>
+  <miOpenInSysEditor>Open in the system's default &amp;editor</miOpenInSysEditor>
+  <meuBuild>&amp;Compile</meuBuild>
+  <miCompile>&amp;Compile Project</miCompile>
+  <miCancelCompile>Canc&amp;el</miCancelCompile>
+  <miGetCompiledApk>Get Compiled &amp;APK</miGetCompiledApk>
+  <meuADB>&amp;ADB</meuADB>
+  <miInstallApk>Install Compiled &amp;Apk</miInstallApk>
+  <miUninstallApk>Uninstall Compiled A&amp;pk</miUninstallApk>
+  <miAdbLogcat>ADB &amp;Logcat</miAdbLogcat>
+  <miAdbLogcatApp>ADB &amp;Logcat(Project App)</miAdbLogcatApp>
+  <miAdbShell>ADB &amp;Shell</miAdbShell>
+  <miRestartAdb>Reboot ADB &amp;Server</miRestartAdb>
+  <meuView>&amp;View</meuView>
+  <miViewToolbar>&amp;Toolbar</miViewToolbar>
+  <miViewProjectPane>&amp;Project Pane</miViewProjectPane>
+  <miViewInAndOutputPane>Input &amp;&amp; &amp;Output Pane</miViewInAndOutputPane>
+  <miSearchReplacePane>&amp;Search &amp;&amp; Replace Pane</miSearchReplacePane>
+  <meuTools>&amp;Tools</meuTools>
+  <miSDKConfig>&amp;Settings and Options</miSDKConfig>
+  <miStartAVDManager>Start Android Emulator Manager</miStartAVDManager>
+  <miStartSDKManager>Start Android SDK Manager</miStartSDKManager>
+  <miAndroidDdms>Dalvik Debug Monitor Service</miAndroidDdms>
+  <miLanguages>UI &amp;Language</miLanguages>
+  <meuSkin>&amp;Skin</meuSkin>
+  <miEnableAreoSkin>Enable Areo</miEnableAreoSkin>
+  <meuReferences>&amp;References</meuReferences>
+  <meuHelp>&amp;Help</meuHelp>
+  <miHelp>View &amp;Help</miHelp>
+  <miStart>&amp;Start</miStart>
+  <miReportBug>Report a &amp;Bug</miReportBug>
+  <miUpdate>&amp;Update</miUpdate>
+  <miUpdateApkIDE>&amp;APK IDE</miUpdateApkIDE>
+  <miUpdateApkTool>Apk &amp;Tool</miUpdateApkTool>
+  <miUpdateDex2jar>&amp;Dex2jar</miUpdateDex2jar>
+  <miUpdateJdGui>JD-&amp;GUI</miUpdateJdGui>
+  <miHomeSite>Home &amp;Site</miHomeSite>
+  <miAbout>&amp;About</miAbout>
+  <ApkInfoDialog>APK Info</ApkInfoDialog>
+  <btnOK>&amp;OK</btnOK>
+  <FileTypesSelectDialog>File Types Manager</FileTypesSelectDialog>
+  <btnAddNewExt>&amp;Add</btnAddNewExt>
+  <btnCancel>&amp;Cancel</btnCancel>
+  <tmiRemoveSelExt>&amp;Remove</tmiRemoveSelExt>
+  <SDKSettingDialog>SDK Config</SDKSettingDialog>
+  <tpSDKConfig>SDK Config</tpSDKConfig>
+  <grpJavaSdk>Java SDK(JDK) *</grpJavaSdk>
+  <btnJavaSDKExplorer>Explorer</btnJavaSDKExplorer>
+  <lblJavaSdk>Location:</lblJavaSdk>
+  <grpAndroidSdk>Android SDK</grpAndroidSdk>
+  <btnAndroidSDKExplorer>Explorer</btnAndroidSDKExplorer>
+  <lblAndroidSdk>Location:</lblAndroidSdk>
+  <tpOptions>Options</tpOptions>
+  <lblForNextVersion>&lt; For Next Version &gt;</lblForNextVersion>
+  <lblOtherCopyRight>All these are owned by the original copyright holders, including:</lblOtherCopyRight>
+  <btnOk>&amp;OK</btnOk>
+  <DialogAbout>About</DialogAbout>
+  <lblCopyRight>Copy Right © 2011-2012 Mandarava</lblCopyRight>
+  <FindReplaceDialog>Find and Replace</FindReplaceDialog>
+  <lblFind>Find:</lblFind>
+  <lblReplace>Replace:</lblReplace>
+  <grpFindOptions>Find Options</grpFindOptions>
+  <btnFindPrevious>Find &amp;Previous</btnFindPrevious>
+  <btnFindNext>Find &amp;Next</btnFindNext>
+  <btnReplace>&amp;Replace</btnReplace>
+  <sTmiEditAndNext>&amp;Edit Next</sTmiEditAndNext>
+  <sTmiShowSysMenus>Show &amp;System Menus</sTmiShowSysMenus>
+  <sCancelCompiling>Cancel the compiling.</sCancelCompiling>
+  <sTipConfigSDKFirst>Please set Java SDK Home first.</sTipConfigSDKFirst>
+  <sTipWorkdirExists>Working directory already exists.</sTipWorkdirExists>
+  <sAskWorkdirExists>Working directory of the same name, "{0}" already exists.
+Do you want to delete it? [Note]:
+You can select [No] directly use it to continue the work of the last modification;
+Can also select [Yes] to delete the directory and re decompile APK.</sAskWorkdirExists>
+  <sTipUpdateTool>Tip: Download and copy the unpacked file to the ApkIDE installation directory, replace the file of the same name.</sTipUpdateTool>
+  <sAskDeleteFramework>Are you sure you want to delete the Framework?
+File location:</sAskDeleteFramework>
+  <sTipDeleteFramework>Remove Framework</sTipDeleteFramework>
+  <sAskDeleteProject>Are you sure you want to delete the Directory?
+Directory location:</sAskDeleteProject>
+  <sTipDeleteProject>Remove Directory</sTipDeleteProject>
+  <sTipApkCompiling>Compiling Apk...</sTipApkCompiling>
+  <sTipApkDecompiling>Decompiling Apk...</sTipApkDecompiling>
+  <sTipDex2jaring>Dex2jaring...</sTipDex2jaring>
+  <sTipSuccessfully>OK!</sTipSuccessfully>
+  <sTipFailedCompiling>Failed!Please check your code and retry.</sTipFailedCompiling>
+  <sTipFailedUnknowError>Failed!Unknow Error.</sTipFailedUnknowError>
+  <sTipFailedInfo>Failed:</sTipFailedInfo>
+  <sTipFailed>Failed</sTipFailed>
+  <sTipApkSigning>Signing Apk...</sTipApkSigning>
+  <sTipErrorInfo>Error:</sTipErrorInfo>
+  <sTipError>Error</sTipError>
+  <sTipCreatedApkInfo>Compiled Apk:</sTipCreatedApkInfo>
+  <sTipSmaliOutputInfo>.smali Output:</sTipSmaliOutputInfo>
+  <sTipClassOutputInfo>.class Output:</sTipClassOutputInfo>
+  <sTipReplaceResultStatistics>Found {0} Files, Modified {1} Files, Failed {2} Files</sTipReplaceResultStatistics>
+  <sTipSearchResultStatistics>Found {0} Files</sTipSearchResultStatistics>
+  <sTipInvalidJDKHome>Invalid JDK Home</sTipInvalidJDKHome>
+  <sTipInvalidAndroidSDKHome>Invalid Android SDK Home</sTipInvalidAndroidSDKHome>
+  <sTipFileNotExists>The file does not exist.</sTipFileNotExists>
+  <sAskSaveFile>The file \"{0}\" is not saved.\r\nDo you want to save it?</sAskSaveFile>
+  <sTipSaveFile>Save File</sTipSaveFile>
+  <sTipCanUpdate>Upgrade to the latest version</sTipCanUpdate>
+  <sTipHomeSite>Home Site</sTipHomeSite>
+  <sTipInvalidApkFileName>The file name contains illegal characters!
+The file name allows only composed of letters, numbers, spaces, dots, and underscores, not Chinese or other Asian characters Please modify it and try again.</sTipInvalidApkFileName>
+  <sAskReplaceAllFiles>Are you Sure?
+Note: This operation cannot be canceled.</sAskReplaceAllFiles>
+  <sTipReplaceAllFiles>Replace All</sTipReplaceAllFiles>
+  <sTipFileSearching>File Searching...</sTipFileSearching>
+  <sTipFileReplacing>Replacing in Files...</sTipFileReplacing>
+  <sTipReplaceTheFileInfo>Replacing in File:</sTipReplaceTheFileInfo>
+  <sTipSearchResultDesc>Search Term:{0}
+Include Sub-Folders:{1}
+Match Case:{2}
+Match Whole Word:{3}
+Use Regualr Expressions:{4}
+Search In Folder:{5}
+Search in File Types:{6}</sTipSearchResultDesc>
+<!--v2.1 added-->
+<sTipConfirm>Confirm</sTipConfirm>
+<sAskDelFileOrFolder>Delete File or Folder?</sAskDelFileOrFolder>
+<sAskReloadTheFile>Reload the current file?</sAskReloadTheFile>
+<sTipNoFavouriteFile>This file is not used in this app.</sTipNoFavouriteFile>
+<sTipProjectsCleanup>Removing the old working directory ...</sTipProjectsCleanup>
+<sTipProjectsCleanupSuccess>OK! Old working directory is placed in the system Recycle Bin.</sTipProjectsCleanupSuccess>
+<tmiMaximizeEditor>&amp;Maximize/Restore</tmiMaximizeEditor>
+<chxSelectAll>Select All</chxSelectAll>
+<sTipSelOneExtAtLeast>Choose one file type at least.</sTipSelOneExtAtLeast>
+<lnkLangInfo>Current UI Language is translated by {0}, Click to contact</lnkLangInfo>
+<tmiSchHistory>Recent &amp;Searches</tmiSchHistory>
+<tmiRepHistory>Recent &amp;Replaces</tmiRepHistory>
+<miRecentApks>Recent Apks</miRecentApks>
+<!--v2.2 added-->
+<tmiTranslateFrom>Translate &amp;From</tmiTranslateFrom>
+<tmiTranslateTo>Translate &amp;To</tmiTranslateTo>
+<chxEnableOnlineTranslation>Enable Online Translation(Reboot needed)</chxEnableOnlineTranslation>
+<tmiTranslate>&amp;Translate</tmiTranslate>
+<tmiRealtimeTranslation>&amp;Real-time Translation</tmiRealtimeTranslation>
+<tbtnSendToSearch>&amp;Search in Project</tbtnSendToSearch>
+<tbtnSendToSearch.Tooltip>Search in Project</tbtnSendToSearch.Tooltip>
+<tmiSendToSearch>&amp;Search in Project</tmiSendToSearch>
+<miSendToSearch>&amp;Search in Project</miSendToSearch>
+<tmiSelectAll>Select &amp;All</tmiSelectAll>
+<miSelectAll>Select &amp;All</miSelectAll>
+<!--v2.3 added-->
+<cbxSearchinFolder.0>Current Project</cbxSearchinFolder.0>
+<cbxSearchinFolder.1>Selected Folder/File</cbxSearchinFolder.1>
+<sTipExternalFileEdited>This file is modified outside, reload it?</sTipExternalFileEdited>
+<sTipCleaningOldProject>Cleaning... Please wait...</sTipCleaningOldProject>
+<!--v2.4 added-->
+<sTipInvalidKeystoreFile>Invalid keystore file</sTipInvalidKeystoreFile>
+<sTipInvalidKeystorePwdOrAlias>Keystore password or alias can't be empty.</sTipInvalidKeystorePwdOrAlias>
+<tpSignApk>Sign Apk</tpSignApk>
+<grpApkSignSelectTool>Sign Tool</grpApkSignSelectTool>
+<grpKeystoreSettings>keystore settings</grpKeystoreSettings>
+<rbtnApkSignTool_signapk>SignApk</rbtnApkSignTool_signapk>
+<rbtnApkSignTool_jarsigner>JarSigner</rbtnApkSignTool_jarsigner>
+<lblKeystoreLocation>Location:</lblKeystoreLocation>
+<lblKeystorePassword>Password:</lblKeystorePassword>
+<lblKeystoreAlias>Key Alias:</lblKeystoreAlias>
+<lblKeystoreAliasPassword>Key Password:</lblKeystoreAliasPassword>
+<btnSelKeystoreLocation>Select</btnSelKeystoreLocation>
+<btnCheckKeystore>Verify</btnCheckKeystore>
+<miViewStatusBar>Status Bar</miViewStatusBar>
+<!--2.4.2 added-->
+<sAskSaveExtEditorText>Save Content?</sAskSaveExtEditorText>
+<!--2.5 added-->
+<sNotApkFile>Not a valid apk file.</sNotApkFile>
+<!--2.6.0 added-->
+<grpJavaDecompiler>Java Decompiler</grpJavaDecompiler>
+<grpOtherOptions>Other Options</grpOtherOptions>
+<sTipClass2javaing>Generate Java Files...</sTipClass2javaing>
+<sTipJavaOutputInfo>.java Output:</sTipJavaOutputInfo>
+<tmiSchHexDecimalConvert>Hex/Decimal Convert</tmiSchHexDecimalConvert>
+<miIngoreCompileError>Prevent deadlock (!recommended)</miIngoreCompileError>
+<sTipUncheckIngoreErrorForGetErrinf>(In the [Compile] menu, uncheck the [Prevent deadlock] option to get the compiler error message)</sTipUncheckIngoreErrorForGetErrinf>
+	<!--3.0.0 added-->
+	<sTipExpandAllNodes>&amp;Expand All</sTipExpandAllNodes>
+	<sTipCloseAllNodes>&amp;Collapse All</sTipCloseAllNodes>
+	<tmiSchRegularExpression>Common r&amp;egulars</tmiSchRegularExpression>
+	<tpgFind>Find</tpgFind>
+	<tpgReplace>Replace</tpgReplace>
+	<lblFindR>Find</lblFindR>
+	<lblSearchTypeR>Search Type</lblSearchTypeR>
+	<rdoStandardR>&amp;Standard</rdoStandardR>
+	<rdoRegexR>Regular &amp;Expression</rdoRegexR>
+	<chkWrapR>Wrap</chkWrapR>
+	<chkSearchSelectionR>Search Selection</chkSearchSelectionR>
+	<chkMatchCaseR>Match &amp;Case</chkMatchCaseR>
+	<chkWholeWordR>Whole Wor&amp;d</chkWholeWordR>
+	<chkWordStartR>W&amp;ord Start</chkWordStartR>
+	<btnReplacePrevious>Replace &amp;Previous</btnReplacePrevious>
+	<btnReplaceNext>Replace &amp;Next</btnReplaceNext>
+	<grdOptionsR>Options</grdOptionsR>
+	<lblFindF>Find</lblFindF>
+	<lblSearchTypeF>Search Type</lblSearchTypeF>
+	<rdoStandardF>&amp;Standard</rdoStandardF>
+	<rdoRegexF>Regular &amp;Expression</rdoRegexF>
+	<chkWrapF>Wrap</chkWrapF>
+	<chkSearchSelectionF>Search Selection</chkSearchSelectionF>
+	<chkMatchCaseF>Match &amp;Case</chkMatchCaseF>
+	<chkWholeWordF>Whole Wor&amp;d</chkWholeWordF>
+	<chkWordStartF>W&amp;ord Start</chkWordStartF>
+	<grpFindAll>Find &amp;All</grpFindAll>
+	<chkMarkLine>&amp;Mark Line</chkMarkLine>
+	<chkHighlightMatches>&amp;Highlight Matches</chkHighlightMatches>
+	<btnFindAll>Find &amp;All</btnFindAll>
+	<btnClear>C&amp;lear</btnClear>
+	<grpOptionsF>Options</grpOptionsF>
+	<miGotoLine>&amp;Go to Line</miGotoLine>
+	<tmiAddFiles>&amp;Add Files</tmiAddFiles>
+	<tbtnAddFiles>Add Files</tbtnAddFiles>
+	<tmiRename>&amp;Rename</tmiRename>
+	<tbtnRename>Rename</tbtnRename>
+	<sTipInvalidFileName>Invalid File name.</sTipInvalidFileName>
+	<sTipFailedRenameFile>Rename failed! Error info：</sTipFailedRenameFile>
+	<sTipFailedCopyFile>Copy File Failed! Error info:</sTipFailedCopyFile>
+	<sTipQRCodeHasTooMuchInfo>Message text is too long.</sTipQRCodeHasTooMuchInfo>
+	<QRCodeBuilderDialog>QR Code Builder</QRCodeBuilderDialog>
+	<lblImageIcon>Icon:</lblImageIcon>
+	<lblTextMsg>Text:</lblTextMsg>
+	<btnSelect>Select</btnSelect>
+	<lblScale>Scale:</lblScale>
+	<btnCreate>&amp;Create</btnCreate>
+	<btnSaveQRCodeImage>&amp;Save</btnSaveQRCodeImage>
+	<btnVerify>&amp;Verify</btnVerify>
+	<miQRCodeBuilder>QR Code Builder</miQRCodeBuilder>
+	<miCreateAppQRCode>Create QR Code</miCreateAppQRCode>
+	<sTipQRCodeDataCantEmpty>Message text is necessary.</sTipQRCodeDataCantEmpty>
+	<sTipAppIconInfo>App Icon:</sTipAppIconInfo>
+	<sTipAppDownlinkInfo>Download:</sTipAppDownlinkInfo>
+	<tbtnInstallApk.Tooltip>Install Apk</tbtnInstallApk.Tooltip>
+	<tbtnInstallApk>Install Apk</tbtnInstallApk>
+	<!--以下为3.1新增部份-->
+	<grpApkToolVersion>ApkTool Version Switcher</grpApkToolVersion>
+	<miConvertToAscII>Convert to Asc&amp;II</miConvertToAscII>
+	<miConvertToUnicode>Convert to &amp;Unicode</miConvertToUnicode>
+	<miSendToSearchBox>Send to Search &amp;Box</miSendToSearchBox>
+	<tmiSendToSearchBox>Send to Search &amp;Box</tmiSendToSearchBox>
+	<sTipInstallPathContainsSpaces>Due jd-gui, do not install the software on a path with spaces.</sTipInstallPathContainsSpaces>
+	<sTipApktoolV2NeedJDK7>Warning: Apktool 2.x requires jdk1.7.</sTipApktoolV2NeedJDK7>
+</Lang>

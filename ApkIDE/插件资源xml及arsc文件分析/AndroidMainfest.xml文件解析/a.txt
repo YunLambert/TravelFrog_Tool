@@ -1,0 +1,1883 @@
+open file:AndroidManifest.xml
+
+-------------------------File Header-----position:0
+magicNum:80003      fileSize:2fa8    
+
+-------------------------String chunk----position:8
+chunk type:1c0001     chunk size:12cc      string count:60      
+style count:0         unkonwn:0            sting pool offset:19c     
+style pool offset:0
+String offsets:
+0       1a      34      52      76      82      96      ae      ca      e8      100     11c     13a     15c     176     19e     1aa     1b8     1d6     1fe     212     23c     254     26a     278     28a     296     2b6     2c6     2de     2f2     2fe     310     368     36c     37e     3b2     3e6     3fa     426     432     43a     458     46c     488     4c4     4e8     538     55a     596     5ec     628     678     6ae     6c8     70c     720     766     784     794     7cc     7ec     838     84c     8a2     8f6     93a     992     9ec     a44     a94     aea     b3a     b8a     bce     c18     c2c     c78     cc2     d10     d60     d6c     dc2     e08     e5e     eaa     ee6     f3c     f90     fd8     102c    107c    1088    10b2    10c4    10d6    
+no style offset
+String pool<<<<<<<<position:420
+versionCode
+versionName
+minSdkVersion
+targetSdkVersion
+name
+required
+anyDensity
+largeScreens
+normalScreens
+resizeable
+smallScreens
+xlargeScreens
+protectionLevel
+allowBackup
+allowClearUserData
+icon
+label
+configChanges
+excludeFromRecents
+exported
+hardwareAccelerated
+launchMode
+noHistory
+theme
+enabled
+logo
+targetActivity
+scheme
+permission
+priority
+host
+android
+http://schemas.android.com/apk/res/android
+
+package
+platformBuildVersionCode
+platformBuildVersionName
+manifest
+eu.chainfire.supersu
+2.70
+21
+5.0.1-1624448
+uses-sdk
+uses-feature
+android.hardware.touchscreen
+supports-screens
+eu.chainfire.supersu.permission.NATIVE
+uses-permission
+android.permission.WAKE_LOCK
+android.permission.RECEIVE_BOOT_COMPLETED
+android.permission.GET_TASKS
+android.permission.SYSTEM_ALERT_WINDOW
+android.permission.REBOOT
+application
+eu.chainfire.supersu.Application
+activity
+eu.chainfire.supersu.MainActivity
+intent-filter
+action
+android.intent.action.MAIN
+activity-alias
+eu.chainfire.supersu.MainActivity-TV
+category
+android.intent.category.LEANBACK_LAUNCHER
+eu.chainfire.supersu.MainActivity-Emblem
+android.intent.category.LAUNCHER
+eu.chainfire.supersu.MainActivity-Material
+eu.chainfire.supersu.MainActivity-SuperAndy
+eu.chainfire.supersu.MainActivity-Original
+eu.chainfire.supersu.MainActivity-Chip
+eu.chainfire.supersu.MainActivity-SuperSU
+eu.chainfire.supersu.AppDetailActivity
+eu.chainfire.supersu.LogDetailActivity
+eu.chainfire.supersu.PINActivity
+eu.chainfire.supersu.PromptActivity
+receiver
+eu.chainfire.supersu.InstallReceiver
+android.intent.action.PACKAGE_ADDED
+android.intent.action.PACKAGE_REMOVED
+android.intent.action.PACKAGE_REPLACED
+data
+eu.chainfire.supersu.NativeAccessReceiver
+eu.chainfire.supersu.NativeAccess
+eu.chainfire.supersu.BootCompleteReceiver
+android.intent.action.BOOT_COMPLETED
+android.intent.category.HOME
+android.intent.action.MY_PACKAGE_REPLACED
+eu.chainfire.supersu.UserPresentReceiver
+android.intent.action.USER_PRESENT
+eu.chainfire.supersu.MainActivity$Launch
+android.provider.Telephony.SECRET_CODE
+1234
+android_secret_code
+7873778
+service
+eu.chainfire.supersu.SuperUserIntentService
+
+--------------------------ResouceID chunk----position:4820
+chunk type:80180     chunk size:84      
+id:16843291   hex:101021b 
+id:16843292   hex:101021c 
+id:16843276   hex:101020c 
+id:16843376   hex:1010270 
+id:16842755   hex:1010003 
+id:16843406   hex:101028e 
+id:16843372   hex:101026c 
+id:16843398   hex:1010286 
+id:16843397   hex:1010285 
+id:16843405   hex:101028d 
+id:16843396   hex:1010284 
+id:16843455   hex:10102bf 
+id:16842761   hex:1010009 
+id:16843392   hex:1010280 
+id:16842757   hex:1010005 
+id:16842754   hex:1010002 
+id:16842753   hex:1010001 
+id:16842783   hex:101001f 
+id:16842775   hex:1010017 
+id:16842768   hex:1010010 
+id:16843475   hex:10102d3 
+id:16842781   hex:101001d 
+id:16843309   hex:101022d 
+id:16842752   hex:1010000 
+id:16842766   hex:101000e 
+id:16843454   hex:10102be 
+id:16843266   hex:1010202 
+id:16842791   hex:1010027 
+id:16842758   hex:1010006 
+id:16842780   hex:101001c 
+id:16842792   hex:1010028 
+
+--------------------------StartNamespaceChunk----position:4952
+chunkType:100100   chunkSize:18       lineNum:2        unknown:ffffffff
+prefix:1f      android
+uri:20         http://schemas.android.com/apk/res/android
+
+--------------------------StartTagChunk----------position:4976
+chunkType:100102    chunkSize:88        lineNum:2        unknown:ffffffff
+spaceUri:ffffffff   name:25       <----> manifest
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:5012
+spaceUri:20       name:0        valueStr:ffffffff type:10000008 data:10e     
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->versionCode
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->270
+spaceUri:20       name:1        valueStr:27       type:3000008  data:27      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->versionName
+valueStr-->2.70
+type-->ATTR_STRING
+data-->2.70
+spaceUri:ffffffff name:22       valueStr:26       type:3000008  data:26      
+namespaceUri-->null
+name-->package
+valueStr-->eu.chainfire.supersu
+type-->ATTR_STRING
+data-->eu.chainfire.supersu
+spaceUri:ffffffff name:23       valueStr:28       type:10000008 data:15      
+namespaceUri-->null
+name-->platformBuildVersionCode
+valueStr-->21
+type-->ATTR_FIRSTINT
+data-->21
+spaceUri:ffffffff name:24       valueStr:29       type:3000008  data:29      
+namespaceUri-->null
+name-->platformBuildVersionName
+valueStr-->5.0.1-1624448
+type-->ATTR_STRING
+data-->5.0.1-1624448
+
+--------------------------StartTagChunk----------position:5112
+chunkType:100102    chunkSize:4c        lineNum:7        unknown:ffffffff
+spaceUri:ffffffff   name:2a       <----> uses-sdk
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:5148
+spaceUri:20       name:2        valueStr:ffffffff type:10000008 data:7       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->minSdkVersion
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->7
+spaceUri:20       name:3        valueStr:ffffffff type:10000008 data:15      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetSdkVersion
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->21
+
+-------------------------End Tag Chunk--------position:5188
+chunkType:100103   chunkSize:18          lineNum:9       
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2a       <----> uses-sdk
+
+--------------------------StartTagChunk----------position:5212
+chunkType:100102    chunkSize:4c        lineNum:b        unknown:ffffffff
+spaceUri:ffffffff   name:2b       <----> uses-feature
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:5248
+spaceUri:20       name:4        valueStr:2c       type:3000008  data:2c      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.hardware.touchscreen
+type-->ATTR_STRING
+data-->android.hardware.touchscreen
+spaceUri:20       name:5        valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->required
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+
+-------------------------End Tag Chunk--------position:5288
+chunkType:100103   chunkSize:18          lineNum:d       
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2b       <----> uses-feature
+
+--------------------------StartTagChunk----------position:5312
+chunkType:100102    chunkSize:9c        lineNum:f        unknown:ffffffff
+spaceUri:ffffffff   name:2d       <----> supports-screens
+flag:140014         attrCount:6          classAttr:0       
+Attributes<<<<<<<<position:5348
+spaceUri:20       name:6        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->anyDensity
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:a        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->smallScreens
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:8        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->normalScreens
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:7        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->largeScreens
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:9        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->resizeable
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:b        valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->xlargeScreens
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+-------------------------End Tag Chunk--------position:5468
+chunkType:100103   chunkSize:18          lineNum:15      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2d       <----> supports-screens
+
+--------------------------StartTagChunk----------position:5492
+chunkType:100102    chunkSize:4c        lineNum:17       unknown:ffffffff
+spaceUri:ffffffff   name:1c       <----> permission
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:5528
+spaceUri:20       name:4        valueStr:2e       type:3000008  data:2e      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.permission.NATIVE
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.permission.NATIVE
+spaceUri:20       name:c        valueStr:ffffffff type:11000008 data:3       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->protectionLevel
+valueStr-->null
+type-->ATTR_HEX
+data-->3
+
+-------------------------End Tag Chunk--------position:5568
+chunkType:100103   chunkSize:18          lineNum:19      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:1c       <----> permission
+
+--------------------------StartTagChunk----------position:5592
+chunkType:100102    chunkSize:38        lineNum:1b       unknown:ffffffff
+spaceUri:ffffffff   name:2f       <----> uses-permission
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:5628
+spaceUri:20       name:4        valueStr:30       type:3000008  data:30      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.permission.WAKE_LOCK
+type-->ATTR_STRING
+data-->android.permission.WAKE_LOCK
+
+-------------------------End Tag Chunk--------position:5648
+chunkType:100103   chunkSize:18          lineNum:1b      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2f       <----> uses-permission
+
+--------------------------StartTagChunk----------position:5672
+chunkType:100102    chunkSize:38        lineNum:1c       unknown:ffffffff
+spaceUri:ffffffff   name:2f       <----> uses-permission
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:5708
+spaceUri:20       name:4        valueStr:31       type:3000008  data:31      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.permission.RECEIVE_BOOT_COMPLETED
+type-->ATTR_STRING
+data-->android.permission.RECEIVE_BOOT_COMPLETED
+
+-------------------------End Tag Chunk--------position:5728
+chunkType:100103   chunkSize:18          lineNum:1c      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2f       <----> uses-permission
+
+--------------------------StartTagChunk----------position:5752
+chunkType:100102    chunkSize:38        lineNum:1d       unknown:ffffffff
+spaceUri:ffffffff   name:2f       <----> uses-permission
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:5788
+spaceUri:20       name:4        valueStr:32       type:3000008  data:32      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.permission.GET_TASKS
+type-->ATTR_STRING
+data-->android.permission.GET_TASKS
+
+-------------------------End Tag Chunk--------position:5808
+chunkType:100103   chunkSize:18          lineNum:1d      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2f       <----> uses-permission
+
+--------------------------StartTagChunk----------position:5832
+chunkType:100102    chunkSize:38        lineNum:1e       unknown:ffffffff
+spaceUri:ffffffff   name:2f       <----> uses-permission
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:5868
+spaceUri:20       name:4        valueStr:33       type:3000008  data:33      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.permission.SYSTEM_ALERT_WINDOW
+type-->ATTR_STRING
+data-->android.permission.SYSTEM_ALERT_WINDOW
+
+-------------------------End Tag Chunk--------position:5888
+chunkType:100103   chunkSize:18          lineNum:1e      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2f       <----> uses-permission
+
+--------------------------StartTagChunk----------position:5912
+chunkType:100102    chunkSize:38        lineNum:1f       unknown:ffffffff
+spaceUri:ffffffff   name:2f       <----> uses-permission
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:5948
+spaceUri:20       name:4        valueStr:34       type:3000008  data:34      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.permission.REBOOT
+type-->ATTR_STRING
+data-->android.permission.REBOOT
+
+-------------------------End Tag Chunk--------position:5968
+chunkType:100103   chunkSize:18          lineNum:1f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:2f       <----> uses-permission
+
+--------------------------StartTagChunk----------position:5992
+chunkType:100102    chunkSize:88        lineNum:21       unknown:ffffffff
+spaceUri:ffffffff   name:35       <----> application
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:6028
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020065
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837605
+spaceUri:20       name:4        valueStr:36       type:3000008  data:36      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.Application
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.Application
+spaceUri:20       name:e        valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->allowClearUserData
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:d        valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->allowBackup
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+
+--------------------------StartTagChunk----------position:6128
+chunkType:100102    chunkSize:ec        lineNum:27       unknown:ffffffff
+spaceUri:ffffffff   name:37       <----> activity
+flag:140014         attrCount:a          classAttr:0       
+Attributes<<<<<<<<position:6164
+spaceUri:20       name:17       valueStr:ffffffff type:1000008  data:7f090014
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->theme
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131296276
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020072
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837618
+spaceUri:20       name:4        valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:12       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->excludeFromRecents
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:15       valueStr:ffffffff type:10000008 data:2       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->launchMode
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->2
+spaceUri:20       name:11       valueStr:ffffffff type:11000008 data:5b4     
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->configChanges
+valueStr-->null
+type-->ATTR_HEX
+data-->1460
+spaceUri:20       name:16       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->noHistory
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:14       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->hardwareAccelerated
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+--------------------------StartTagChunk----------position:6364
+chunkType:100102    chunkSize:24        lineNum:32       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:6400
+
+--------------------------StartTagChunk----------position:6400
+chunkType:100102    chunkSize:38        lineNum:33       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:6436
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:6456
+chunkType:100103   chunkSize:18          lineNum:33      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+-------------------------End Tag Chunk--------position:6480
+chunkType:100103   chunkSize:18          lineNum:34      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:6504
+chunkType:100103   chunkSize:18          lineNum:35      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:37       <----> activity
+
+--------------------------StartTagChunk----------position:6528
+chunkType:100102    chunkSize:9c        lineNum:37       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:6          classAttr:0       
+Attributes<<<<<<<<position:6564
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020065
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837605
+spaceUri:20       name:4        valueStr:3d       type:3000008  data:3d      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-TV
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-TV
+spaceUri:20       name:18       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+spaceUri:20       name:19       valueStr:ffffffff type:1000008  data:7f02006a
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->logo
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837610
+
+--------------------------StartTagChunk----------position:6684
+chunkType:100102    chunkSize:24        lineNum:3e       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:6720
+
+--------------------------StartTagChunk----------position:6720
+chunkType:100102    chunkSize:38        lineNum:3f       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:6756
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:6776
+chunkType:100103   chunkSize:18          lineNum:3f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:6800
+chunkType:100102    chunkSize:38        lineNum:41       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:6836
+spaceUri:20       name:4        valueStr:3f       type:3000008  data:3f      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LEANBACK_LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LEANBACK_LAUNCHER
+
+-------------------------End Tag Chunk--------position:6856
+chunkType:100103   chunkSize:18          lineNum:41      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:6880
+chunkType:100103   chunkSize:18          lineNum:42      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:6904
+chunkType:100103   chunkSize:18          lineNum:43      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:6928
+chunkType:100102    chunkSize:88        lineNum:44       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:6964
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020065
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837605
+spaceUri:20       name:4        valueStr:40       type:3000008  data:40      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-Emblem
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-Emblem
+spaceUri:20       name:18       valueStr:ffffffff type:1000008  data:7f070001
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131165185
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:7064
+chunkType:100102    chunkSize:24        lineNum:4a       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:7100
+
+--------------------------StartTagChunk----------position:7100
+chunkType:100102    chunkSize:38        lineNum:4b       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7136
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:7156
+chunkType:100103   chunkSize:18          lineNum:4b      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:7180
+chunkType:100102    chunkSize:38        lineNum:4d       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7216
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:7236
+chunkType:100103   chunkSize:18          lineNum:4d      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:7260
+chunkType:100103   chunkSize:18          lineNum:4e      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:7284
+chunkType:100103   chunkSize:18          lineNum:4f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:7308
+chunkType:100102    chunkSize:88        lineNum:50       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:7344
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020066
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837606
+spaceUri:20       name:4        valueStr:42       type:3000008  data:42      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-Material
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-Material
+spaceUri:20       name:18       valueStr:ffffffff type:1000008  data:7f070002
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131165186
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:7444
+chunkType:100102    chunkSize:24        lineNum:56       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:7480
+
+--------------------------StartTagChunk----------position:7480
+chunkType:100102    chunkSize:38        lineNum:57       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7516
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:7536
+chunkType:100103   chunkSize:18          lineNum:57      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:7560
+chunkType:100102    chunkSize:38        lineNum:59       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7596
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:7616
+chunkType:100103   chunkSize:18          lineNum:59      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:7640
+chunkType:100103   chunkSize:18          lineNum:5a      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:7664
+chunkType:100103   chunkSize:18          lineNum:5b      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:7688
+chunkType:100102    chunkSize:88        lineNum:5c       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:7724
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020068
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837608
+spaceUri:20       name:4        valueStr:43       type:3000008  data:43      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-SuperAndy
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-SuperAndy
+spaceUri:20       name:18       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:7824
+chunkType:100102    chunkSize:24        lineNum:62       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:7860
+
+--------------------------StartTagChunk----------position:7860
+chunkType:100102    chunkSize:38        lineNum:63       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7896
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:7916
+chunkType:100103   chunkSize:18          lineNum:63      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:7940
+chunkType:100102    chunkSize:38        lineNum:65       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:7976
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:7996
+chunkType:100103   chunkSize:18          lineNum:65      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:8020
+chunkType:100103   chunkSize:18          lineNum:66      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:8044
+chunkType:100103   chunkSize:18          lineNum:67      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:8068
+chunkType:100102    chunkSize:88        lineNum:68       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:8104
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020067
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837607
+spaceUri:20       name:4        valueStr:44       type:3000008  data:44      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-Original
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-Original
+spaceUri:20       name:18       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:8204
+chunkType:100102    chunkSize:24        lineNum:6e       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:8240
+
+--------------------------StartTagChunk----------position:8240
+chunkType:100102    chunkSize:38        lineNum:6f       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:8276
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:8296
+chunkType:100103   chunkSize:18          lineNum:6f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:8320
+chunkType:100102    chunkSize:38        lineNum:71       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:8356
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:8376
+chunkType:100103   chunkSize:18          lineNum:71      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:8400
+chunkType:100103   chunkSize:18          lineNum:72      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:8424
+chunkType:100103   chunkSize:18          lineNum:73      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:8448
+chunkType:100102    chunkSize:88        lineNum:74       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:8484
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020064
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837604
+spaceUri:20       name:4        valueStr:45       type:3000008  data:45      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-Chip
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-Chip
+spaceUri:20       name:18       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:8584
+chunkType:100102    chunkSize:24        lineNum:7a       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:8620
+
+--------------------------StartTagChunk----------position:8620
+chunkType:100102    chunkSize:38        lineNum:7b       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:8656
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:8676
+chunkType:100103   chunkSize:18          lineNum:7b      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:8700
+chunkType:100102    chunkSize:38        lineNum:7d       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:8736
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:8756
+chunkType:100103   chunkSize:18          lineNum:7d      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:8780
+chunkType:100103   chunkSize:18          lineNum:7e      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:8804
+chunkType:100103   chunkSize:18          lineNum:7f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:8828
+chunkType:100102    chunkSize:88        lineNum:80       unknown:ffffffff
+spaceUri:ffffffff   name:3c       <----> activity-alias
+flag:140014         attrCount:5          classAttr:0       
+Attributes<<<<<<<<position:8864
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:f        valueStr:ffffffff type:1000008  data:7f020069
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->icon
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2130837609
+spaceUri:20       name:4        valueStr:46       type:3000008  data:46      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity-SuperSU
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity-SuperSU
+spaceUri:20       name:18       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->enabled
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:1a       valueStr:38       type:3000008  data:38      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->targetActivity
+valueStr-->eu.chainfire.supersu.MainActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity
+
+--------------------------StartTagChunk----------position:8964
+chunkType:100102    chunkSize:24        lineNum:86       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:9000
+
+--------------------------StartTagChunk----------position:9000
+chunkType:100102    chunkSize:38        lineNum:87       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:9036
+spaceUri:20       name:4        valueStr:3b       type:3000008  data:3b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MAIN
+type-->ATTR_STRING
+data-->android.intent.action.MAIN
+
+-------------------------End Tag Chunk--------position:9056
+chunkType:100103   chunkSize:18          lineNum:87      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:9080
+chunkType:100102    chunkSize:38        lineNum:89       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:9116
+spaceUri:20       name:4        valueStr:41       type:3000008  data:41      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.LAUNCHER
+type-->ATTR_STRING
+data-->android.intent.category.LAUNCHER
+
+-------------------------End Tag Chunk--------position:9136
+chunkType:100103   chunkSize:18          lineNum:89      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:9160
+chunkType:100103   chunkSize:18          lineNum:8a      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:9184
+chunkType:100103   chunkSize:18          lineNum:8b      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3c       <----> activity-alias
+
+--------------------------StartTagChunk----------position:9208
+chunkType:100102    chunkSize:b0        lineNum:8d       unknown:ffffffff
+spaceUri:ffffffff   name:37       <----> activity
+flag:140014         attrCount:7          classAttr:0       
+Attributes<<<<<<<<position:9244
+spaceUri:20       name:17       valueStr:ffffffff type:1000008  data:7f090058
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->theme
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131296344
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:4        valueStr:47       type:3000008  data:47      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.AppDetailActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.AppDetailActivity
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:12       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->excludeFromRecents
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:11       valueStr:ffffffff type:11000008 data:4       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->configChanges
+valueStr-->null
+type-->ATTR_HEX
+data-->4
+spaceUri:20       name:14       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->hardwareAccelerated
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+-------------------------End Tag Chunk--------position:9384
+chunkType:100103   chunkSize:18          lineNum:95      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:37       <----> activity
+
+--------------------------StartTagChunk----------position:9408
+chunkType:100102    chunkSize:c4        lineNum:96       unknown:ffffffff
+spaceUri:ffffffff   name:37       <----> activity
+flag:140014         attrCount:8          classAttr:0       
+Attributes<<<<<<<<position:9444
+spaceUri:20       name:17       valueStr:ffffffff type:1000008  data:7f090058
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->theme
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131296344
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:4        valueStr:48       type:3000008  data:48      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.LogDetailActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.LogDetailActivity
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:12       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->excludeFromRecents
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:11       valueStr:ffffffff type:11000008 data:4       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->configChanges
+valueStr-->null
+type-->ATTR_HEX
+data-->4
+spaceUri:20       name:16       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->noHistory
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:14       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->hardwareAccelerated
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+-------------------------End Tag Chunk--------position:9604
+chunkType:100103   chunkSize:18          lineNum:9f      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:37       <----> activity
+
+--------------------------StartTagChunk----------position:9628
+chunkType:100102    chunkSize:c4        lineNum:a0       unknown:ffffffff
+spaceUri:ffffffff   name:37       <----> activity
+flag:140014         attrCount:8          classAttr:0       
+Attributes<<<<<<<<position:9664
+spaceUri:20       name:17       valueStr:ffffffff type:1000008  data:7f090058
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->theme
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131296344
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:4        valueStr:49       type:3000008  data:49      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.PINActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.PINActivity
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:12       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->excludeFromRecents
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:11       valueStr:ffffffff type:11000008 data:4       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->configChanges
+valueStr-->null
+type-->ATTR_HEX
+data-->4
+spaceUri:20       name:16       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->noHistory
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:14       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->hardwareAccelerated
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+-------------------------End Tag Chunk--------position:9824
+chunkType:100103   chunkSize:18          lineNum:a9      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:37       <----> activity
+
+--------------------------StartTagChunk----------position:9848
+chunkType:100102    chunkSize:d8        lineNum:aa       unknown:ffffffff
+spaceUri:ffffffff   name:37       <----> activity
+flag:140014         attrCount:9          classAttr:0       
+Attributes<<<<<<<<position:9884
+spaceUri:20       name:17       valueStr:ffffffff type:1000008  data:7f090017
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->theme
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131296279
+spaceUri:20       name:10       valueStr:ffffffff type:1000008  data:7f05010b
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->label
+valueStr-->null
+type-->ATTR_REFERENCE
+data-->2131034379
+spaceUri:20       name:4        valueStr:4a       type:3000008  data:4a      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.PromptActivity
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.PromptActivity
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+spaceUri:20       name:12       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->excludeFromRecents
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:15       valueStr:ffffffff type:10000008 data:2       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->launchMode
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->2
+spaceUri:20       name:11       valueStr:ffffffff type:11000008 data:4       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->configChanges
+valueStr-->null
+type-->ATTR_HEX
+data-->4
+spaceUri:20       name:16       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->noHistory
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+spaceUri:20       name:14       valueStr:ffffffff type:12000008 data:ffffffff
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->hardwareAccelerated
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->-1
+
+-------------------------End Tag Chunk--------position:10064
+chunkType:100103   chunkSize:18          lineNum:b4      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:37       <----> activity
+
+--------------------------StartTagChunk----------position:10088
+chunkType:100102    chunkSize:38        lineNum:b6       unknown:ffffffff
+spaceUri:ffffffff   name:4b       <----> receiver
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10124
+spaceUri:20       name:4        valueStr:4c       type:3000008  data:4c      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.InstallReceiver
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.InstallReceiver
+
+--------------------------StartTagChunk----------position:10144
+chunkType:100102    chunkSize:24        lineNum:b7       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:10180
+
+--------------------------StartTagChunk----------position:10180
+chunkType:100102    chunkSize:38        lineNum:b8       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10216
+spaceUri:20       name:4        valueStr:4d       type:3000008  data:4d      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.PACKAGE_ADDED
+type-->ATTR_STRING
+data-->android.intent.action.PACKAGE_ADDED
+
+-------------------------End Tag Chunk--------position:10236
+chunkType:100103   chunkSize:18          lineNum:b8      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:10260
+chunkType:100102    chunkSize:38        lineNum:b9       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10296
+spaceUri:20       name:4        valueStr:4e       type:3000008  data:4e      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.PACKAGE_REMOVED
+type-->ATTR_STRING
+data-->android.intent.action.PACKAGE_REMOVED
+
+-------------------------End Tag Chunk--------position:10316
+chunkType:100103   chunkSize:18          lineNum:b9      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:10340
+chunkType:100102    chunkSize:38        lineNum:ba       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10376
+spaceUri:20       name:4        valueStr:4f       type:3000008  data:4f      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.PACKAGE_REPLACED
+type-->ATTR_STRING
+data-->android.intent.action.PACKAGE_REPLACED
+
+-------------------------End Tag Chunk--------position:10396
+chunkType:100103   chunkSize:18          lineNum:ba      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:10420
+chunkType:100102    chunkSize:38        lineNum:bc       unknown:ffffffff
+spaceUri:ffffffff   name:50       <----> data
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10456
+spaceUri:20       name:1b       valueStr:22       type:3000008  data:22      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->scheme
+valueStr-->package
+type-->ATTR_STRING
+data-->package
+
+-------------------------End Tag Chunk--------position:10476
+chunkType:100103   chunkSize:18          lineNum:bc      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:50       <----> data
+
+-------------------------End Tag Chunk--------position:10500
+chunkType:100103   chunkSize:18          lineNum:bd      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:10524
+chunkType:100103   chunkSize:18          lineNum:be      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:4b       <----> receiver
+
+--------------------------StartTagChunk----------position:10548
+chunkType:100102    chunkSize:4c        lineNum:bf       unknown:ffffffff
+spaceUri:ffffffff   name:4b       <----> receiver
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:10584
+spaceUri:20       name:4        valueStr:51       type:3000008  data:51      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.NativeAccessReceiver
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.NativeAccessReceiver
+spaceUri:20       name:1c       valueStr:2e       type:3000008  data:2e      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->permission
+valueStr-->eu.chainfire.supersu.permission.NATIVE
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.permission.NATIVE
+
+--------------------------StartTagChunk----------position:10624
+chunkType:100102    chunkSize:24        lineNum:c2       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:10660
+
+--------------------------StartTagChunk----------position:10660
+chunkType:100102    chunkSize:38        lineNum:c3       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10696
+spaceUri:20       name:4        valueStr:52       type:3000008  data:52      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.NativeAccess
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.NativeAccess
+
+-------------------------End Tag Chunk--------position:10716
+chunkType:100103   chunkSize:18          lineNum:c3      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+-------------------------End Tag Chunk--------position:10740
+chunkType:100103   chunkSize:18          lineNum:c4      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:10764
+chunkType:100103   chunkSize:18          lineNum:c5      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:4b       <----> receiver
+
+--------------------------StartTagChunk----------position:10788
+chunkType:100102    chunkSize:38        lineNum:c6       unknown:ffffffff
+spaceUri:ffffffff   name:4b       <----> receiver
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10824
+spaceUri:20       name:4        valueStr:53       type:3000008  data:53      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.BootCompleteReceiver
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.BootCompleteReceiver
+
+--------------------------StartTagChunk----------position:10844
+chunkType:100102    chunkSize:38        lineNum:c7       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10880
+spaceUri:20       name:1d       valueStr:ffffffff type:10000008 data:3e7     
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->priority
+valueStr-->null
+type-->ATTR_FIRSTINT
+data-->999
+
+--------------------------StartTagChunk----------position:10900
+chunkType:100102    chunkSize:38        lineNum:c8       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:10936
+spaceUri:20       name:4        valueStr:54       type:3000008  data:54      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.BOOT_COMPLETED
+type-->ATTR_STRING
+data-->android.intent.action.BOOT_COMPLETED
+
+-------------------------End Tag Chunk--------position:10956
+chunkType:100103   chunkSize:18          lineNum:c8      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:10980
+chunkType:100102    chunkSize:38        lineNum:ca       unknown:ffffffff
+spaceUri:ffffffff   name:3e       <----> category
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11016
+spaceUri:20       name:4        valueStr:55       type:3000008  data:55      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.category.HOME
+type-->ATTR_STRING
+data-->android.intent.category.HOME
+
+-------------------------End Tag Chunk--------position:11036
+chunkType:100103   chunkSize:18          lineNum:ca      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3e       <----> category
+
+-------------------------End Tag Chunk--------position:11060
+chunkType:100103   chunkSize:18          lineNum:cb      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+--------------------------StartTagChunk----------position:11084
+chunkType:100102    chunkSize:24        lineNum:cc       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:11120
+
+--------------------------StartTagChunk----------position:11120
+chunkType:100102    chunkSize:38        lineNum:cd       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11156
+spaceUri:20       name:4        valueStr:56       type:3000008  data:56      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.MY_PACKAGE_REPLACED
+type-->ATTR_STRING
+data-->android.intent.action.MY_PACKAGE_REPLACED
+
+-------------------------End Tag Chunk--------position:11176
+chunkType:100103   chunkSize:18          lineNum:cd      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+-------------------------End Tag Chunk--------position:11200
+chunkType:100103   chunkSize:18          lineNum:ce      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:11224
+chunkType:100103   chunkSize:18          lineNum:cf      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:4b       <----> receiver
+
+--------------------------StartTagChunk----------position:11248
+chunkType:100102    chunkSize:38        lineNum:d0       unknown:ffffffff
+spaceUri:ffffffff   name:4b       <----> receiver
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11284
+spaceUri:20       name:4        valueStr:57       type:3000008  data:57      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.UserPresentReceiver
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.UserPresentReceiver
+
+--------------------------StartTagChunk----------position:11304
+chunkType:100102    chunkSize:24        lineNum:d1       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:11340
+
+--------------------------StartTagChunk----------position:11340
+chunkType:100102    chunkSize:38        lineNum:d2       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11376
+spaceUri:20       name:4        valueStr:58       type:3000008  data:58      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.intent.action.USER_PRESENT
+type-->ATTR_STRING
+data-->android.intent.action.USER_PRESENT
+
+-------------------------End Tag Chunk--------position:11396
+chunkType:100103   chunkSize:18          lineNum:d2      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+-------------------------End Tag Chunk--------position:11420
+chunkType:100103   chunkSize:18          lineNum:d3      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:11444
+chunkType:100103   chunkSize:18          lineNum:d4      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:4b       <----> receiver
+
+--------------------------StartTagChunk----------position:11468
+chunkType:100102    chunkSize:38        lineNum:d5       unknown:ffffffff
+spaceUri:ffffffff   name:4b       <----> receiver
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11504
+spaceUri:20       name:4        valueStr:59       type:3000008  data:59      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.MainActivity$Launch
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.MainActivity$Launch
+
+--------------------------StartTagChunk----------position:11524
+chunkType:100102    chunkSize:24        lineNum:d6       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:11560
+
+--------------------------StartTagChunk----------position:11560
+chunkType:100102    chunkSize:38        lineNum:d7       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11596
+spaceUri:20       name:4        valueStr:5a       type:3000008  data:5a      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.provider.Telephony.SECRET_CODE
+type-->ATTR_STRING
+data-->android.provider.Telephony.SECRET_CODE
+
+-------------------------End Tag Chunk--------position:11616
+chunkType:100103   chunkSize:18          lineNum:d7      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:11640
+chunkType:100102    chunkSize:4c        lineNum:d9       unknown:ffffffff
+spaceUri:ffffffff   name:50       <----> data
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:11676
+spaceUri:20       name:1b       valueStr:5c       type:3000008  data:5c      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->scheme
+valueStr-->android_secret_code
+type-->ATTR_STRING
+data-->android_secret_code
+spaceUri:20       name:1e       valueStr:5b       type:3000008  data:5b      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->host
+valueStr-->1234
+type-->ATTR_STRING
+data-->1234
+
+-------------------------End Tag Chunk--------position:11716
+chunkType:100103   chunkSize:18          lineNum:db      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:50       <----> data
+
+-------------------------End Tag Chunk--------position:11740
+chunkType:100103   chunkSize:18          lineNum:dc      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+--------------------------StartTagChunk----------position:11764
+chunkType:100102    chunkSize:24        lineNum:dd       unknown:ffffffff
+spaceUri:ffffffff   name:39       <----> intent-filter
+flag:140014         attrCount:0          classAttr:0       
+Attributes<<<<<<<<position:11800
+
+--------------------------StartTagChunk----------position:11800
+chunkType:100102    chunkSize:38        lineNum:de       unknown:ffffffff
+spaceUri:ffffffff   name:3a       <----> action
+flag:140014         attrCount:1          classAttr:0       
+Attributes<<<<<<<<position:11836
+spaceUri:20       name:4        valueStr:5a       type:3000008  data:5a      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->android.provider.Telephony.SECRET_CODE
+type-->ATTR_STRING
+data-->android.provider.Telephony.SECRET_CODE
+
+-------------------------End Tag Chunk--------position:11856
+chunkType:100103   chunkSize:18          lineNum:de      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:3a       <----> action
+
+--------------------------StartTagChunk----------position:11880
+chunkType:100102    chunkSize:4c        lineNum:e0       unknown:ffffffff
+spaceUri:ffffffff   name:50       <----> data
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:11916
+spaceUri:20       name:1b       valueStr:5c       type:3000008  data:5c      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->scheme
+valueStr-->android_secret_code
+type-->ATTR_STRING
+data-->android_secret_code
+spaceUri:20       name:1e       valueStr:5d       type:3000008  data:5d      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->host
+valueStr-->7873778
+type-->ATTR_STRING
+data-->7873778
+
+-------------------------End Tag Chunk--------position:11956
+chunkType:100103   chunkSize:18          lineNum:e2      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:50       <----> data
+
+-------------------------End Tag Chunk--------position:11980
+chunkType:100103   chunkSize:18          lineNum:e3      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:39       <----> intent-filter
+
+-------------------------End Tag Chunk--------position:12004
+chunkType:100103   chunkSize:18          lineNum:e4      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:4b       <----> receiver
+
+--------------------------StartTagChunk----------position:12028
+chunkType:100102    chunkSize:4c        lineNum:e6       unknown:ffffffff
+spaceUri:ffffffff   name:5e       <----> service
+flag:140014         attrCount:2          classAttr:0       
+Attributes<<<<<<<<position:12064
+spaceUri:20       name:4        valueStr:5f       type:3000008  data:5f      
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->name
+valueStr-->eu.chainfire.supersu.SuperUserIntentService
+type-->ATTR_STRING
+data-->eu.chainfire.supersu.SuperUserIntentService
+spaceUri:20       name:13       valueStr:ffffffff type:12000008 data:0       
+namespaceUri-->http://schemas.android.com/apk/res/android
+name-->exported
+valueStr-->null
+type-->ATTR_BOOLEAN
+data-->0
+
+-------------------------End Tag Chunk--------position:12104
+chunkType:100103   chunkSize:18          lineNum:e8      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:5e       <----> service
+
+-------------------------End Tag Chunk--------position:12128
+chunkType:100103   chunkSize:18          lineNum:e9      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:35       <----> application
+
+-------------------------End Tag Chunk--------position:12152
+chunkType:100103   chunkSize:18          lineNum:eb      
+unknown:ffffffff
+nameSpaceUri:ffffffff <----> null
+name:25       <----> manifest
+
+--------------------------EndNamespaceChunk----position:12176
+chunkType:100101   chunkSize:18       lineNum:2        unknown:ffffffff
+prefix:1f      android
+uri:20         http://schemas.android.com/apk/res/android
+
+------------------parse end!---------------finish at 12200

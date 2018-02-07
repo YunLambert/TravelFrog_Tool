@@ -1,0 +1,23 @@
+!!brut.androlib.meta.MetaInfo
+apkFileName: AndriodTravelFrog.apk
+compressionType: false
+doNotCompress:
+- arsc
+- resource
+isFrameworkApk: false
+packageInfo:
+  forcedPackageId: '127'
+  renameManifestPackage: null
+sdkInfo:
+  minSdkVersion: '16'
+  targetSdkVersion: '26'
+sharedLibrary: false
+unknownFiles: {}
+usesFramework:
+  ids:
+  - 1
+  tag: null
+version: 2.2.4
+versionInfo:
+  versionCode: '1040'
+  versionName: 1.0.4

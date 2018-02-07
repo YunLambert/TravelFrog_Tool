@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="common_google_play_services_unknown_issue">%1$s има проблеми с услугите за Google Play. Моля, опитайте отново.</string>
+    <string name="s1">Запазване на изображението</string>
+    <string name="s2">Да се разреши ли на рекламата да съхрани изображение в галерията със снимки?</string>
+    <string name="s3">Приемам</string>
+    <string name="s4">Отхвърлям</string>
+    <string name="s5">Създаване на събитие в календара</string>
+    <string name="s6">Да се разреши ли на рекламата да създаде събитие в календара?</string>
+    <string name="s7">Тестова реклама</string>
+</resources>
